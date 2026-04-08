@@ -1,6 +1,13 @@
 import { useState, useMemo, useEffect } from "react";
+import DataSorter from "../utils/DataSorter";
+
+
 
 export default function JobFinder(){
+
+    //const { favorites, addToFav, removeFromFav } = useFavoriteMovies(); // use custom hook to get the favorites list and functions to add/remove movies from favorites
+    const dataFromLoader = null;//useLoaderData(); // get the data from the dashboard loader in MainRouter using useLoaderData
+
 
     const [data, setData] = useState(null); // the movie data
     const [sortType, setSortType] = useState("Date"); // default sort type
@@ -27,12 +34,18 @@ export default function JobFinder(){
         // if there is no filtered data, just use the normal data list
         if (!filteredData){
             console.log("Data is null");
-            //return DataSorter(sortType, ascending, data);
+            return DataSorter(sortType, ascending, data);
         }
         // otherwise, sort the filtered data
-        //return DataSorter(sortType, ascending, filteredData);
+        return DataSorter(sortType, ascending, filteredData);
     }, [filteredData, sortType, ascending, data]);
 
+        /* use useEffect here to get the data once its loaded from the loader, since it will take some time. */
+    useEffect(() => {
+        if (dataFromLoader) {
+            setData(dataFromLoader);
+        }
+    }, [dataFromLoader]);
 
 
 
@@ -95,7 +108,7 @@ export default function JobFinder(){
                         <div className="justify-end card-actions">
                         <button className={`text-xl transform transition-transform duration-75 hover:scale-125 hover:cursor-pointer
                         ${isFavorite(d) ? "text-primary hover:text-error" : "hover:text-success"}`}
-                            onClick={isFavorite(d) ? () => removeFromFav(d) : () => addToFav(d)}>
+                            >
                             <AiFillLike />
                         </button>
                         </div>
