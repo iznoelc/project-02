@@ -4,6 +4,10 @@ import JobFinder from "../components/JobFinder";
 import RecuiterDashboard from "../components/RecruiterDashboard";
 import JSDashboard from "../components/JSDashboard";
 import Root from "../layout/Root";
+import AdminDashboard from "../components/AdminDashboard";
+import AdminJobPage from "../components/AdminJobPage";
+import AdminStatsPage from "../components/AdminStatsPage";
+import AdminUserPage from "../components/AdminUserPage";
 
 const MainRouter = [
   {
@@ -12,6 +16,9 @@ const MainRouter = [
     children: [
       { index: true,
         Component: Home,},
+      { index: true,
+        Component: AdminDashboard,},
+
         
     //   { path: "signup", Component: SignUpPage },
     //   { path: "login", Component: LoginPage },
