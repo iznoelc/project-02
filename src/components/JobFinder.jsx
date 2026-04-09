@@ -9,6 +9,8 @@ export default function JobFinder(){
     //const { favorites, addToFav, removeFromFav } = useFavoriteMovies(); // use custom hook to get the favorites list and functions to add/remove movies from favorites
     const dataFromLoader = jobPostings;//useLoaderData(); // get the data from the dashboard loader in MainRouter using useLoaderData
 
+    // determains what buttons will be present on your device
+    const userType = "job_seeker";
 
     const [data, setData] = useState(null); // the movie data
     const [sortType, setSortType] = useState("Date"); // default sort type
@@ -49,6 +51,17 @@ export default function JobFinder(){
     }, [dataFromLoader]);
 
 
+    /*const handleButtonClick(){
+        switch(userType){
+            case "job_seeker":
+                break;
+            case "recruiter":
+                break;
+            case "admin":
+                break;
+        }
+        return;
+    };*/
 
     return(
         <>
@@ -97,7 +110,7 @@ export default function JobFinder(){
 
         {/* To be displayed if data is not loading and the current data length is bigger than zero */}
         {sortedData.length > 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mx-auto p-8"> 
+            <ul list bg-base-100 rounded-box shadow-md> 
 
             {sortedData.map((d, index) => (
                 <div key={index} className="card w-full bg-base-100 card-xs shadow-sm">
@@ -119,7 +132,7 @@ export default function JobFinder(){
                     </div>
                 </div>
             ))}
-            </div>
+            </ul>
         )}
         {/* To be displayed if data is not loading and the current data length is zero (i.e. no search results) */}
         {sortedData.length === 0 && (
