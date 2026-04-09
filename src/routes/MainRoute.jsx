@@ -1,9 +1,15 @@
 import React from "react";
 import Home from "../components/Home";
+import Root from "../layout/Root";
+
+import JobSeekerSignUpPage from "../components/authentication/JobSeekerSignUpPage";
+import RecruiterSignUpPage from "../components/authentication/RecruiterSignUpPage";
+import LoginPage from "../components/authentication/LoginPage";
+
 import JobFinder from "../components/JobFinder";
 import RecuiterDashboard from "../components/RecruiterDashboard";
 import JSDashboard from "../components/JSDashboard";
-import Root from "../layout/Root";
+
 import AdminDashboard from "../components/AdminDashboard";
 import ErrorPage from "../components/ErrorPage";
 
