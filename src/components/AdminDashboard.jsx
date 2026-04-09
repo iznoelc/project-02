@@ -1,22 +1,19 @@
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
-
 //npm install react-toastify
 
 export default function AdminDashboard({ admin_name, seekers, jobs, recruiters }){
     //States
     const [seekersList, setSeekersList] = useState(seekers);
-    const [jobsList, setJobsList] = useState(jobs);
+    const [jobsList] = useState(jobs);
     const [recruitersList, setRecruitersList] = useState(recruiters);
     //Search Query
     const [userQuery, setUserQuery] = useState("");
-    const [jobQuery, setJobQuery] = useState("");
 
     //make users list
     const users = [...recruitersList, ...seekersList];
     //Filtered results for searching
     const filteredUsers = Search(users, userQuery);
-    const filteredJobs = Search(jobsList, jobQuery);
 
     //Rand Stat
     const [randomNum] = useState(() => Math.floor(Math.random() * 1000));
@@ -65,7 +62,7 @@ export default function AdminDashboard({ admin_name, seekers, jobs, recruiters }
                             value={userQuery}
                             onChange={(e) => setUserQuery(e.target.value)}
                         />
-                        {filteredUsers.map((user, index) => (
+                        {filteredUsers.map((user) => (
                             <div key={user.id} className="card bg-base-200 shadow-xl p-6 text-center">
                                 <h2 className="text-4xl font-bold">{user.name}</h2>
                                 <p className="text-sm mt-2">{user.role}</p>
@@ -76,23 +73,6 @@ export default function AdminDashboard({ admin_name, seekers, jobs, recruiters }
                                         Delete(recruitersList, setRecruitersList, user.id);
                                     }
                                 }}>Delete</button>
-                            </div>
-                        ))}
-                    </div>
-                    {/*Jobs Page*/}
-                    <div className="flex flex-col items-center bg-base-200 p-4 rounded">
-                        <input
-                            type="text"
-                            placeholder="Search"
-                            className="input input-bordered w-full max-w-xs my-4"
-                            value={jobQuery}
-                            onChange={(e) => setJobQuery(e.target.value)}
-                        />
-                        {filteredJobs.map(job => (
-                            <div key={job.id} className="card bg-base-200 shadow-xl p-6 text-center">
-                                <h2 className="text-4xl font-bold">{job.name}</h2>
-                                <p className="text-sm mt-2">{job.type}</p>
-                                <button onClick={() => Delete(jobsList, setJobsList, job.id)}>Delete</button>
                             </div>
                         ))}
                     </div>
