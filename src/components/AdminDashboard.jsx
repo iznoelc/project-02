@@ -75,8 +75,8 @@ export default function AdminDashboard( ){
 
             <div >
                     {/*Users Page*/}
-                    <h3>Users</h3>
                     <div className="flex flex-col items-center bg-base-200 p-4 rounded">
+                        <h3 className="text-4xl font-bold">Users</h3>
                         <input
                             type="text"
                             placeholder="Search"
@@ -89,7 +89,7 @@ export default function AdminDashboard( ){
                                 key={user.id}
                                 className="card bg-base-100 shadow-xl p-6 w-full max-w-3xl mx-auto my-3"
                                 >
-                                <p className="text-4xl font-bold">{user.name}</p>
+                                <h3>{user.name}</h3>
                                 <p className="text-sm mt-2">{user.role}</p>
 
                                 <button
