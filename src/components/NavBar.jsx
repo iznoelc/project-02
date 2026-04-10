@@ -1,6 +1,37 @@
+import { useNavigate } from "react-router-dom";
+import { IoPersonCircle } from "react-icons/io5";
+import useAuth from "../hooks/useAuth";
+
 export default function NavBar(){
+    const { user, loggedIn, signOutUser } = useAuth();
+    const navigate = useNavigate();
+
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <>
+        {/* nav bar for when the user is logged out */}
+        {!loggedIn && (<>
+        <div className="navbar bg-base-200 shadow-sm fixed top-0 z-50 w-full">
+            <div className="navbar-start">
+                <div className="dropdown">
+                <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                </div>
+                </div>
+                <a className="btn btn-ghost text-3xl fontdiner-swanky-regular" onClick={() => navigate("/", {replace: true})}>Meow</a>
+            </div>
+            <div className="navbar-center hidden lg:flex">
+            </div>
+            <div className="navbar-end gap-2">
+                <button className="btn" onClick={() => navigate("/login")}>Login</button>
+                <button className="btn btn-primary" onClick={() => navigate("/job-seeker-signup")}>Get Started</button>
+            </div>
+            </div>
+
+        </>)}
+
+        {/* nav bar for when the user is logged in */}
+        {loggedIn && (<>
+        <div className="navbar bg-base-200 shadow-sm">
             <div className="flex-1">
                 <a className="btn btn-ghost text-xl">daisyUI</a>
             </div>
@@ -25,12 +56,8 @@ export default function NavBar(){
                 </div>
                 </div>
                 <div className="dropdown dropdown-end">
-                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full">
-                    <img
-                        alt="Tailwind CSS Navbar component"
-                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                    </div>
+                <div tabIndex={0} role="button" className="text-3xl btn btn-ghost btn-circle avatar">
+                    <IoPersonCircle />
                 </div>
                 <ul
                     tabIndex="-1"
@@ -42,10 +69,12 @@ export default function NavBar(){
                     </a>
                     </li>
                     <li><a>Settings</a></li>
-                    <li><a>Logout</a></li>
+                    <li><a onClick={signOutUser}>Logout</a></li>
                 </ul>
                 </div>
             </div>
         </div>
-    );
+    </>)}
+    </>
+     )
 }

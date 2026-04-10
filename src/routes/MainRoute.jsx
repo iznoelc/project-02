@@ -5,6 +5,7 @@ import Root from "../layout/Root";
 import JobSeekerSignUpPage from "../components/authentication/JobSeekerSignUpPage";
 import RecruiterSignUpPage from "../components/authentication/RecruiterSignUpPage";
 import LoginPage from "../components/authentication/LoginPage";
+import ForgotPasswordPage from "../components/authentication/ForgotPasswordPage";
 
 import JobFinder from "../components/JobFinder";
 import RecuiterDashboard from "../components/RecruiterDashboard";
@@ -33,6 +34,10 @@ const MainRouter = [
         { path: "recruiter-dashboard", Component: RecuiterDashboard },
         { path: "job-seeker-dashboard", Component: JSDashboard },
         { path: "admin-dashboard", Component: AdminDashboard },
+        { path: "job-seeker-signup", Component: JobSeekerSignUpPage },
+        { path: "recruiter-signup", Component: RecruiterSignUpPage },
+        { path: "login", Component: LoginPage },
+        { path: "forgot-password", Component: ForgotPasswordPage },
         { path: "job-details", Component: DetailsPage },
     ],
   },

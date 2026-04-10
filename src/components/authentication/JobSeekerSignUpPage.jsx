@@ -8,8 +8,21 @@ import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
+import { errorNotify, successNotify } from "../../utils/ToastifyNotifications";
+
+import {
+  GoogleAuthProvider,
+  updateProfile,
+} from "firebase/auth";
+import useAuth from "../../hooks/useAuth";
+
+import FallbackElement from "../../components/FallbackElement";
+
 export default function JobSeekerSignUpPage(){
     const navigate = useNavigate();
+
+    const { signInWithGoogle, createUser, loggedIn } = useAuth();
+    const [msg, setMsg] = useState("Error signing up. Please try again.");
 
     const [signUpLoading, setSignUpLoading] = useState(false);
     const [passwordVisibility, setPasswordVisibility] = useState(false);
@@ -38,12 +51,70 @@ export default function JobSeekerSignUpPage(){
     const handleSubmit = async (event) => {
         event.preventDefault(); // Prevents page reload
         console.log("Form Submitted:", formData);
-        //setSignUpLoading(true);
+        setSignUpLoading(true);
+
+        try {
+            const userCredential = await createUser(formData.email, formData.password);
+
+            // successful sign up
+            const user = userCredential.user;
+            console.log(user);
+            console.log("loggedIn: " + loggedIn);
+
+            await updateProfile(user, {
+                displayName: formData.display_name,
+            });
+            
+            setSignUpLoading(false);
+            successNotify("Account created successfully! You are now logged in.");
+            navigate("/", { replace: true });
+        } catch (error) {
+            // give the user an alert if sign up was unsuccessful and log errors for debugging
+            
+            setSignUpLoading(false);
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log("error code: ", errorCode);
+            console.log("error message: ", errorMessage);
+            setMsg("Error signing up: " + errorMessage);
+            errorNotify(msg);
+        };
         
     };
 
     const handleGoogleSignUp = () => {
-        console.log("Not implemented yet");
+        setSignUpLoading(true);
+
+        signInWithGoogle()
+        .then((result) => {
+            // successful sign in
+            const user = result.user;
+            console.log(user.displayName);
+            setSignUpLoading(false);
+            successNotify("Account created successfully! You are now logged in.");
+
+            navigate("/", { replace: true });
+        })
+        .catch((error) => {
+            // unsuccessful sign in, handle errors
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            setMsg("Error signing in with Google: " + errorMessage);
+            errorNotify(msg);
+
+            // The email of the user's account used.
+            const email = error.customData.email;
+
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            
+            console.log("error code: ", errorCode);
+            console.log("error message: ", errorMessage);
+            console.log("email: ", email);
+            console.log("credential: ", credential);
+
+            setSignUpLoading(false);
+      });
     };
 
     return (

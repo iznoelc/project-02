@@ -1,3 +1,4 @@
+// fields for authentication (email, )
 export default function RecruiterSignUpPage(){
     return (
         <>

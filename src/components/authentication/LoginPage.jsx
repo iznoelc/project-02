@@ -8,10 +8,21 @@ import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
+import FallbackElement from "../../components/FallbackElement";
+
+import { errorNotify, successNotify } from "../../utils/ToastifyNotifications";
+import {
+  GoogleAuthProvider,
+} from "firebase/auth";
+import useAuth from "../../hooks/useAuth";
+
 export default function LoginPage(){
     const navigate = useNavigate(); // used to navigate to a new page after successful login
+    const { signInUser, signInWithGoogle } = useAuth(); // get the signInUser method from the useAuth custom hook, which uses firebase authentication to sign the user in.
     const [loginLoading, setLoginLoading] = useState(false); // separate loading to determine if the user is currently being logged in. (this is separate from the loading in useAuth)
     const [passwordVisibility, setPasswordVisibility] = useState(false);
+
+    const [msg, setMsg] = useState("");
 
     // this is the form data that is updated when the user updates one of the fields
     const [formData, setFormData] = useState({
@@ -34,12 +45,72 @@ export default function LoginPage(){
     const handleSubmit = (event) => {
         event.preventDefault(); // prevents page reload
         console.log("Form Submitted:", formData); // logs the data entered into the form
+        setLoginLoading(true); // sets loading to true when the user clicks the submit button, which will show the loading screen until the login process is complete
 
+                // signs the user in. this method is from the useAuth custom hook, which uses firebase authentication to sign the user in.
+        signInUser(formData.email, formData.password)
+        .then((userCredential) => {
+            // successful sign in
+            const user = userCredential.user;
+            console.log(user);
+
+            setLoginLoading(false);
+
+            setMsg("Successfully signed in! Redirecting...");
+            successNotify(msg);
+
+            // take the user to the dashboard after they log in
+            navigate("/", { replace: true });
+        })
+        .catch((error) => {
+            // unsuccessful sign in, give the user an alert so they know to try again, log errors for debugging.
+            //alert("Incorrect email or password. Please try again.");
+
+            setLoginLoading(false);
+            const errorCode = error.code;
+            const errorMessage = error.message;
+
+            console.log("error code: ", errorCode);
+            console.log("error message: ", errorMessage);
+
+            setMsg("Error signing in: " + errorMessage + " Please try again.");
+            errorNotify(msg);
+        });
     };
 
     // this is whats called when the user signs in with google, using firebase authentication to sign the user in with google.
     const handleGoogleSignIn = () => {
-        console.log("not implemented yet");
+        setLoginLoading(true);
+
+        signInWithGoogle()
+        .then((result) => {
+            // successful sign in
+            const user = result.user;
+            console.log(user.displayName);
+            setLoginLoading(false)
+            navigate("/", { replace: true });
+        })
+        .catch((error) => {
+            // unsuccessful sign in, handle errors
+            setMsg("Error signing in with Google. Please try again!");
+            errorNotify(msg);
+
+            const errorCode = error.code;
+            const errorMessage = error.message;
+
+            // The email of the user's account used.
+            const email = error.customData.email;
+
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            
+            console.log("error code: ", errorCode);
+            console.log("error message: ", errorMessage);
+            console.log("email: ", email);
+            console.log("credential: ", credential);
+
+            setLoginLoading(false);
+      });
     }
 
     
@@ -110,7 +181,7 @@ export default function LoginPage(){
                         {passwordVisibility ? <FaEye /> : <FaEyeSlash />}
                     </i>
                 </label>
-                <p className="text-right hover:cursor-pointer hover:text-secondary" onClick={() => navigate("/forgotpassword")}>Forgot Password?</p>
+                <p className="text-right hover:cursor-pointer hover:text-primary" onClick={() => navigate("/forgot-password")}>Forgot Password?</p>
                 {/* buttons to sign in with email and password or with google */}
                 <button type="submit" className="btn btn-primary mt-4">Login</button>
                 <p className="secondary-font mt-4 text-center"><i>OR</i></p>
