@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-import FallbackElement from "../../components/FallbackElement";
+import FallbackElement from "../FallbackElement";
 
 import { errorNotify, successNotify } from "../../utils/ToastifyNotifications";
 import {
@@ -56,8 +56,8 @@ export default function LoginPage(){
 
             setLoginLoading(false);
 
-            setMsg("Successfully signed in! Redirecting...");
-            successNotify(msg);
+            
+            successNotify("Successfully signed in!");
 
             // take the user to the dashboard after they log in
             navigate("/", { replace: true });

@@ -16,7 +16,7 @@ import {
 } from "firebase/auth";
 import useAuth from "../../hooks/useAuth";
 
-import FallbackElement from "../../components/FallbackElement";
+import FallbackElement from "../FallbackElement";
 
 export default function JobSeekerSignUpPage(){
     const navigate = useNavigate();

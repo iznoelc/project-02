@@ -3,7 +3,7 @@ import { IoPersonCircle } from "react-icons/io5";
 import useAuth from "../hooks/useAuth";
 
 export default function NavBar(){
-    const { user, loggedIn, signOutUser } = useAuth();
+    const { loggedIn, signOutUser } = useAuth();
     const navigate = useNavigate();
 
     return (

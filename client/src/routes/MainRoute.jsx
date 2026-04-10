@@ -22,12 +22,6 @@ const MainRouter = [
     children: [
       { index: true,
         Component: Home,},
-      { index: true,
-        Component: AdminDashboard,},
-
-        
-    //   { path: "signup", Component: SignUpPage },
-    //   { path: "login", Component: LoginPage },
         { path: "error", Component: ErrorPage },
         { path: "*", Component: ErrorPage },
         { path: "search", Component: JobFinder },

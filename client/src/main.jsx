@@ -3,10 +3,10 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import FallbackElement from "./components/FallbackElement"
+import FallbackElement from "./components/FallbackElement.jsx"
 
 import MainRoute from "./routes/MainRoute.jsx";
-import AuthProvider from "./contexts/AuthProvider";
+import AuthProvider from "./contexts/AuthProvider.jsx";
 
 const router = createBrowserRouter(MainRoute);
 
