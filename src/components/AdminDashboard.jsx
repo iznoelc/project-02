@@ -2,7 +2,28 @@ import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 //npm install react-toastify
 
-export default function AdminDashboard({ admin_name, seekers, jobs, recruiters }){
+export default function AdminDashboard( ){
+    //Mock Data
+    const admin_name = "Steve";
+
+    const seekers = [
+    { id: 1, name: "Alice Johnson", role: "Job Seeker", skills: ["JavaScript", "React"], experience: 2 },
+    { id: 2, name: "Mark Thompson", role: "Job Seeker", skills: ["Python", "Django"], experience: 4 },
+    { id: 3, name: "Sarah Lee", role: "Job Seeker", skills: ["UI/UX", "Figma"], experience: 1 },
+    ];
+
+    const recruiters = [
+    { id: 101, name: "TechCorp HR", role: "Recruiter", company: "TechCorp" },
+    { id: 102, name: "BrightHire Agency", role: "Recruiter", company: "BrightHire" },
+    { id: 103, name: "InnovateX Talent", role: "Recruiter", company: "InnovateX" },
+    ];
+
+    const jobs = [
+    { id: 201, title: "Frontend Developer", company: "TechCorp", location: "Remote" },
+    { id: 202, title: "Backend Engineer", company: "BrightHire", location: "New York" },
+    { id: 203, title: "UI/UX Designer", company: "InnovateX", location: "San Francisco" },
+    ];
+
     //States
     const [seekersList, setSeekersList] = useState(seekers);
     const [jobsList] = useState(jobs);
@@ -52,8 +73,9 @@ export default function AdminDashboard({ admin_name, seekers, jobs, recruiters }
             </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-4">
+            <div >
                     {/*Users Page*/}
+                    <h3>Users</h3>
                     <div className="flex flex-col items-center bg-base-200 p-4 rounded">
                         <input
                             type="text"
@@ -63,16 +85,25 @@ export default function AdminDashboard({ admin_name, seekers, jobs, recruiters }
                             onChange={(e) => setUserQuery(e.target.value)}
                         />
                         {filteredUsers.map((user) => (
-                            <div key={user.id} className="card bg-base-200 shadow-xl p-6 text-center">
-                                <h2 className="text-4xl font-bold">{user.name}</h2>
+                            <div
+                                key={user.id}
+                                className="card bg-base-100 shadow-xl p-6 w-full max-w-3xl mx-auto my-3"
+                                >
+                                <p className="text-4xl font-bold">{user.name}</p>
                                 <p className="text-sm mt-2">{user.role}</p>
-                                <button onClick={() => {
+
+                                <button
+                                    className="btn btn-error btn-sm mt-4"
+                                    onClick={() => {
                                     if (seekersList.some(s => s.id === user.id)) {
                                         Delete(seekersList, setSeekersList, user.id);
                                     } else {
                                         Delete(recruitersList, setRecruitersList, user.id);
                                     }
-                                }}>Delete</button>
+                                    }}
+                                >
+                                    Delete
+                                </button>
                             </div>
                         ))}
                     </div>

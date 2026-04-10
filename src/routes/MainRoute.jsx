@@ -12,6 +12,7 @@ import JSDashboard from "../components/JSDashboard";
 
 import AdminDashboard from "../components/AdminDashboard";
 import ErrorPage from "../components/ErrorPage";
+import DetailsPage from "../components/DetailsPage";
 
 const MainRouter = [
   {
@@ -32,6 +33,7 @@ const MainRouter = [
         { path: "recruiter-dashboard", Component: RecuiterDashboard },
         { path: "job-seeker-dashboard", Component: JSDashboard },
         { path: "admin-dashboard", Component: AdminDashboard },
+        { path: "job-details", Component: DetailsPage },
     ],
   },
 ];
