@@ -1,16 +1,23 @@
 import { useState, useMemo, useEffect } from "react";
 import DataSorter from "../utils/DataSorter";
 import Search from "../utils/Search";
+import useFavoriteJob from "../hooks/useFavoriteJobs"
+import { AiFillLike } from "react-icons/ai";
 
 
 
 export default function JobFinder(){
 
-    //const { favorites, addToFav, removeFromFav } = useFavoriteMovies(); // use custom hook to get the favorites list and functions to add/remove movies from favorites
+    const { favorites, addToFav, removeFromFav } = useFavoriteJob(); // use custom hook to get the favorites list and functions to add/remove movies from favorites
     const dataFromLoader = jobPostings;//useLoaderData(); // get the data from the dashboard loader in MainRouter using useLoaderData
 
     // determains what buttons will be present on your device
-    const userType = "job_seeker";
+    let userType = "job_seeker";
+
+    // Number of entries being shown to the user
+    const [numShow, setNumShow] = useState(10);
+    const [currentPage, setCurrentPage] = useState(0);
+
 
     const [data, setData] = useState(null); // the movie data
     const [sortType, setSortType] = useState("Date"); // default sort type
@@ -51,6 +58,10 @@ export default function JobFinder(){
     }, [dataFromLoader]);
 
 
+    // check if movie is in favorites list by checking if the title of the movie is in the favorites list. return true if it is, false if it isnt.
+    const isFavorite = (jobPosting) => {
+        return favorites.some(fav => fav.job_title === jobPosting.job_title);
+    }
     /*const handleButtonClick(){
         switch(userType){
             case "job_seeker":
@@ -105,6 +116,21 @@ export default function JobFinder(){
                     <input type="checkbox" defaultChecked className="checkbox" onChange={() => setAscending(!ascending)}/>
                     Ascending Order
                 </label>
+                <label className="label secondary-font"> Number of Jobs Shown </label>
+                  <select
+                    value={numShow}
+                    className="select"
+                    onChange={(e) => {
+                      setNumShow(Number(e.target.value));
+                      setCurrentPage(0); // reset pagination
+                    }}
+                  >
+                    <option value={10}>10</option>
+                    <option value={15}>15</option>
+                    <option value={20}>20</option>
+                    <option value={50}>50</option>
+                    <option value={100}>100</option>
+                  </select>
             </fieldset>
         </div>
 
@@ -112,7 +138,7 @@ export default function JobFinder(){
         {sortedData.length > 0 && (
             <ul list bg-base-100 rounded-box shadow-md> 
 
-            {sortedData.map((d, index) => (
+            {sortedData.slice(currentPage * numShow, numShow + (currentPage * numShow) ).map((d, index) => (
                 <div key={index} className="card w-full bg-base-100 card-xs shadow-sm">
                     <div className="card-body">
                         {/* put the title and description of the movie in the cards */}
@@ -126,20 +152,50 @@ export default function JobFinder(){
                         <button className={`text-xl transform transition-transform duration-75 hover:scale-125 hover:cursor-pointer
                         `}
                             >
-                            
+                            button
                         </button>
+                        <div className="justify-end card-actions">
+                        <button className={`text-xl transform transition-transform duration-75 hover:scale-125 hover:cursor-pointer
+                        ${isFavorite(d) ? "text-primary hover:text-error" : "hover:text-success"}`}
+                            onClick={isFavorite(d) ? () => removeFromFav(d) : () => addToFav(d)}>
+                            <AiFillLike />
+                        </button>
+                        </div>
                         </div>
                     </div>
                 </div>
             ))}
             </ul>
         )}
+        <div className="flex justify-center gap-4 mt-6">
+          <button
+            className="btn"
+            disabled={currentPage === 0}
+            onClick={() => setCurrentPage(p => p - 1)}
+          >
+            Prev
+          </button>
+
+          <span className="secondary-font">
+            Page {currentPage + 1}
+          </span>
+
+          <button
+            className="btn"
+            disabled={(currentPage + 1) * numShow >= sortedData.length }
+            onClick={() => setCurrentPage(p => p + 1)}
+          >
+            Next
+          </button>
+        </div>
+
         {/* To be displayed if data is not loading and the current data length is zero (i.e. no search results) */}
         {sortedData.length === 0 && (
             <div className="flex flex-col items-center justify-center gap-5 p-16">
                 <h1 className="secondary-font text-2xl">No jobs found.</h1>
             </div>
         )}
+
         </>
     )
 

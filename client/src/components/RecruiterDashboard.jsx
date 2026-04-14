@@ -7,9 +7,13 @@ export default function RecuiterDashboard(){
 
     const dataFromLoader = jobPostings;//useLoaderData(); // get the data from the dashboard loader in MainRouter using useLoaderData
 
+
+    const [UID, setUID] = useState(null);
     const userCompany = "Nasa"
 
-    const [data, setData] = useState(null); // the movie data
+    const [data, setData] = useState(null); // the job data
+    const [tasksList, setTasksList] = useState([]);
+    const [tasksListId, setTasksListId] = useState(null);
     const [sortType, setSortType] = useState("Date"); // default sort type
     const [ascending, setAscending] = useState(true); // default sort direction 
 
@@ -45,6 +49,138 @@ export default function RecuiterDashboard(){
             setData(dataFromLoader);
         }
     }, [dataFromLoader]);
+
+    const [formData, setFormData] = useState({
+    job_title: "",
+    institution: userCompany,
+    category: "",
+    location: "",
+    salary_range: [],
+    description: "",
+    req_qualifications: [],
+    deadline: "", //YYYY-MM-DD
+    start_date: "", //YYYY-MM-DD
+    });
+
+  //Handles all edits to the form data
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+  // Handles edits to the salary
+  const handleSalaryChange = (index, value) => {
+    setFormData(prev => {
+      const updatedSalary = [...prev.salary_range];
+      updatedSalary[index] = Number(value);
+
+      return {
+        ...prev,
+        salary_range: updatedSalary,
+      };
+    });
+  };
+  // Handles changes to the qualifications for the job
+  const handleQualificationsChange = (e) => {
+    const value = e.target.value;
+
+    setFormData(prev => ({
+      ...prev,
+      req_qualifications: value
+        .split(",")
+        .map(q => q.trim())
+        .filter(Boolean),
+    }));
+  };
+
+
+
+  const addJob = async () => {
+    if (!jobListId) return;
+
+    const {
+      job_title,
+      institution,
+      category,
+      location,
+      salary_range,
+      description,
+      req_qualifications,
+      deadline,
+      start_date,
+    } = formData;
+
+    // Basic validation
+    if (
+      !job_title.trim() ||
+      !institution.trim() ||
+      !deadline
+    ) {
+      errorNotify("Job title, institution, and deadline are required.");
+      return;
+    }
+
+    // Duplicate check
+    const alreadyExists = jobList.some(job => {
+      return (
+        job.job_title.toLowerCase() === job_title.trim().toLowerCase() &&
+        job.institution.toLowerCase() === institution.trim().toLowerCase() &&
+        job.deadline === deadline
+      );
+    });
+
+    if (alreadyExists) {
+      errorNotify("This job posting already exists.");
+      return;
+    }
+    
+    if (new Date(deadline) < new Date()) {
+      errorNotify("Deadline cannot be in the past.");
+      return;
+    }
+
+
+    await addDoc(
+      collection(db, "jobList", jobListId, "jobs"),
+      {
+        job_title: job_title.trim(),
+        institution: institution.trim(),
+        category,
+        location,
+        salary_range,
+        description: description.trim(),
+        req_qualifications,
+        deadline,
+        start_date,
+        createdAt: serverTimestamp(),
+      }
+    );
+
+    // Reset form
+    setFormData({
+      job_title: "",
+      institution: userCompany,
+      category: "",
+      location: "",
+      salary_range: [],
+      description: "",
+      req_qualifications: [],
+      deadline: "",
+      start_date: "",
+    });
+  };
+
+
+  const removeJob = async (jobId) => {
+    if (!jobListId) return;
+
+    await deleteDoc(
+      doc(db, "jobList", jobListId, "jobs", jobId)
+    );
+  };
 
 
     return(
@@ -128,10 +264,139 @@ export default function RecuiterDashboard(){
 
 
             <list>
-                <button className="btn btn-xs sm:btn-sm md:btn-sm lg:btn-sm xl:btn-xl">
-                    Create New Job Posting
-                </button>
-                <a href="/search" className="btn btn-xs sm:btn-sm md:btn-sm lg:btn-sm xl:btn-xl">Search All Jobs</a>
+              {/* Open the modal using document.getElementById('ID').showModal() method */}
+                <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md xl:btn-xl" onClick={()=>document.getElementById('my_modal_1').showModal()}>Create New Job Posting</button>
+
+        <dialog id="my_modal_1" className="modal">
+          <div className="modal-box">
+            <h3 className="font-bold text-lg mb-4">
+              Create New Job Posting
+            </h3>
+
+            {/* Job Title */}
+            <fieldset className="fieldset">
+              <legend className="fieldset-legend">Job Title</legend>
+              <input
+                type="text"
+                className="input w-full"
+                name="job_title"
+                value={formData.job_title}
+                onChange={handleChange}
+                placeholder="e.g. Software Engineer"
+              />
+            </fieldset>
+
+            {/* Category */}
+            <fieldset className="fieldset">
+              <legend className="fieldset-legend">Category</legend>
+              <input
+                type="text"
+                className="input w-full"
+                name="category"
+                value={formData.category}
+                onChange={handleChange}
+              />
+            </fieldset>
+
+            {/* Location */}
+            <fieldset className="fieldset">
+              <legend className="fieldset-legend">Location</legend>
+              <input
+                type="text"
+                className="input w-full"
+                name="location"
+                value={formData.location}
+                onChange={handleChange}
+              />
+            </fieldset>
+
+            {/* Salary Range */}
+            <fieldset className="fieldset">
+              <legend className="fieldset-legend">Salary Range</legend>
+              <div className="flex gap-3">
+                <input
+                  type="number"
+                  className="input w-full"
+                  placeholder="Min"
+                  value={formData.salary_range[0] || ""}
+                  onChange={e => handleSalaryChange(0, e.target.value)}
+                />
+                <input
+                  type="number"
+                  className="input w-full"
+                  placeholder="Max"
+                  value={formData.salary_range[1] || ""}
+                  onChange={e => handleSalaryChange(1, e.target.value)}
+                />
+              </div>
+            </fieldset>
+
+            {/* Description */}
+            <fieldset className="fieldset">
+              <legend className="fieldset-legend">Description</legend>
+              <textarea
+                className="textarea w-full"
+                name="description"
+                value={formData.description}
+                onChange={handleChange}
+              />
+            </fieldset>
+
+            {/* Qualifications */}
+            <fieldset className="fieldset">
+              <legend className="fieldset-legend">
+                Required Qualifications (comma separated)
+              </legend>
+              <input
+                type="text"
+                className="input w-full"
+                onChange={handleQualificationsChange}
+                placeholder=""
+              />
+            </fieldset>
+
+            {/* Deadline */}
+            <fieldset className="fieldset">
+              <legend className="fieldset-legend">Application Deadline</legend>
+              <input
+                type="date"
+                className="input w-full"
+                name="deadline"
+                value={formData.deadline}
+                onChange={handleChange}
+              />
+            </fieldset>
+
+            {/* Start Date */}
+            <fieldset className="fieldset">
+              <legend className="fieldset-legend">Start Date</legend>
+              <input
+                type="date"
+                className="input w-full"
+                name="start_date"
+                value={formData.start_date}
+                onChange={handleChange}
+              />
+            </fieldset>
+
+            {/* Actions */}
+            <div className="modal-action">
+              <button
+                className="btn btn-primary"
+                onClick={addJob}
+              >
+                Create Job
+              </button>
+
+              <form method="dialog">
+                <button className="btn">Cancel</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+
+
+                <a href="/search" className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md xl:btn-xl">Search All Jobs</a>
             </list>
         </div>
         </>
