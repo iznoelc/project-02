@@ -64,7 +64,31 @@ export default function JobSeekerSignUpPage(){
             await updateProfile(user, {
                 displayName: formData.display_name,
             });
+
+            // create the user in the database
+            try {
+                const response = await fetch("http://localhost:3000/users", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        uid: user.uid,
+                        display_name: formData.display_name,
+                        email: formData.email,
+                        role: formData.role,
+                    }),
+            });
+
+                const text = await response.text();
+                console.log("RAW RESPONSE: ", text);
+                // const data = await response.json();
+                // console.log("User successfully created in database:", data); 
+            } catch (error) {
+                console.error("Error creating user in database:", error);
+            };
             
+
             setSignUpLoading(false);
             successNotify("Account created successfully! You are now logged in.");
             navigate("/", { replace: true });
@@ -76,7 +100,7 @@ export default function JobSeekerSignUpPage(){
             const errorMessage = error.message;
             console.log("error code: ", errorCode);
             console.log("error message: ", errorMessage);
-            setMsg("Error signing up: " + errorMessage);
+            setMsg("Error signing up, please try again.");
             errorNotify(msg);
         };
         
