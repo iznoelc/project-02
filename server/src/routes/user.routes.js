@@ -7,4 +7,6 @@ router.post("/", createUser);
 // get a specific user by their uid
 router.get("/:uid", getUserByUID);
 
+router.delete("/:id", deleteUser);
+
 module.exports = router;
