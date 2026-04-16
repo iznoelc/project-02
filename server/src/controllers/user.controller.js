@@ -33,26 +33,22 @@ async function createUser(req, res) {
         console.error(err);
         res.status(500).json({ message: "Server error" });
     } 
-}
+};
 
-const User = require("../models/user.model");
-
-async function deleteUser(req, res) {
+async function getUserByUID(req, res) {
     try {
-        const userId = req.params.id;
+        const user = await User.findOne({ uid: req.params.uid }); // try to find the user by the request param
 
-        const deleted = await User.findByIdAndDelete(userId);
-
-        if (!deleted) {
-            return res.status(404).json({ message: "User not found" });
+        // if the user couldnt be found, send a bad request response with an error msg
+        if (!user) {
+            return res.status(400).json({ error: "User not found" });
         }
 
-        res.json({ message: "User deleted successfully" });
+        res.status(200).json({ user }); // if the user was found, send a success response with the user
     } catch (err) {
-        console.error("Delete error:", err);
+        console.error(err);
         res.status(500).json({ message: "Server error" });
     }
-}
+};
 
-module.exports = { createUser };
-module.exports = { deleteUser };
+module.exports = { createUser, getUserByUID };
