@@ -48,9 +48,28 @@ const AuthProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       console.log("Auth state changed:", currentUser);
       setUser(currentUser);
+
+      if (!currentUser) {
+        setRole(null);
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const res = await fetch(`http://localhost:3000/users/${currentUser.uid}`);
+        const data = await res.json();
+
+        console.log("ROLE RESPONSE: ", data);
+
+        setRole(data.user?.role || data.role);
+      } catch (err) {
+        console.error("Error fetching user role:", err);
+        setRole(null);
+      }
+
       setLoading(false);
     });
 
@@ -59,22 +78,9 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  useEffect(() => {
-    const fetchRole = async () => {
-      if (!user) return; // no user
+  // useEffect(() => {
 
-      const res = await fetch(`http://localhost:3000/users/${user.uid}`);
-      const data = await res.json();
-
-      try {
-        setRole(data.user.role);
-      } catch (err) {
-        console.error("Error fetching user role:", err);
-      }
-    }
-
-    fetchRole();
-  }, [user]);
+  // }, [user]);
 
   // prevents error if auth is still loading and the user is trying to access a protected route
   // i.e. if user is trying to access dashboard and refreshes, prevents an error from showing if they are already logged in 

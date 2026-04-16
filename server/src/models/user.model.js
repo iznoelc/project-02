@@ -6,6 +6,7 @@
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
+    // REQUIRED FIELDS
     uid: {
         type: String, required: true, unique: true
     },
@@ -14,6 +15,20 @@ const userSchema = new mongoose.Schema({
     },
     role: {
         type: String, enum: ["job_seeker", "recruiter", "admin"], default: "job_seeker"
+    },
+
+    // CONDITIONAL FIELDS FOR RECRUITERS
+    organization: { 
+        type: String,
+        required: function() { return this.role === "recruiter"; }
+     },
+    location: {
+        type: String,
+        required: function() { return this.role === "recruiter"; }
+    },
+    website: {
+        type: String,
+        required: function() { return this.role === "recruiter"; }
     }
 }, { 
     timestamps: true
