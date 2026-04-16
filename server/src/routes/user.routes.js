@@ -11,4 +11,6 @@ router.get("/", (req, res) => {
     res.send("User route is working");
 });
 
+router.delete("/:id", deleteUser);
+
 module.exports = router;

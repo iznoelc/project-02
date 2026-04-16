@@ -35,4 +35,24 @@ async function createUser(req, res) {
     } 
 }
 
+const User = require("../models/user.model");
+
+async function deleteUser(req, res) {
+    try {
+        const userId = req.params.id;
+
+        const deleted = await User.findByIdAndDelete(userId);
+
+        if (!deleted) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        res.json({ message: "User deleted successfully" });
+    } catch (err) {
+        console.error("Delete error:", err);
+        res.status(500).json({ message: "Server error" });
+    }
+}
+
 module.exports = { createUser };
+module.exports = { deleteUser };

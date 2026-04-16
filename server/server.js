@@ -13,6 +13,8 @@ app.use(cors());
 
 // routes
 const userRoutes = require("./src/routes/user.routes");
+const applicationRoutes = require("./src/routes/application.routes");
+
 
 // validations
 // import from "validations/..." like const { validateAuth } = require("validations/auth.validations.js");'
@@ -25,6 +27,8 @@ app.use("/users", userRoutes); // use the user routes
 app.get("/", (req, res) => {
   res.send("Backend is running");
 });
+
+app.use("/applications", applicationRoutes); //use the application route
 
 // async function run() {
 //   try {
