@@ -25,6 +25,7 @@ const AuthProvider = ({ children }) => {
     
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [role, setRole] = useState(null);
 
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -58,6 +59,23 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const fetchRole = async () => {
+      if (!user) return; // no user
+
+      const res = await fetch(`http://localhost:3000/users/${user.uid}`);
+      const data = await res.json();
+
+      try {
+        setRole(data.user.role);
+      } catch (err) {
+        console.error("Error fetching user role:", err);
+      }
+    }
+
+    fetchRole();
+  }, [user]);
+
   // prevents error if auth is still loading and the user is trying to access a protected route
   // i.e. if user is trying to access dashboard and refreshes, prevents an error from showing if they are already logged in 
   if (loading) {
@@ -74,6 +92,7 @@ const AuthProvider = ({ children }) => {
     user,
     loading,
     loggedIn: !!user,
+    role,
   };
   return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;
 };

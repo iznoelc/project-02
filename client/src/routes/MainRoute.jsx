@@ -1,6 +1,8 @@
 import React from "react";
 import Home from "../components/Home";
 import Root from "../layout/Root";
+import PrivateRoute from "./PrivateRoute";
+import FallbackElement from "../components/FallbackElement";
 
 import JobSeekerSignUpPage from "../components/authentication/JobSeekerSignUpPage";
 import RecruiterSignUpPage from "../components/authentication/RecruiterSignUpPage";
@@ -12,22 +14,52 @@ import RecuiterDashboard from "../components/RecruiterDashboard";
 import JSDashboard from "../components/JSDashboard";
 
 import AdminDashboard from "../components/AdminDashboard";
-import ErrorPage from "../components/ErrorPage";
+import ErrorPage, { ErrorBoundary } from "../components/ErrorPage";
 import DetailsPage from "../components/DetailsPage";
 
 const MainRouter = [
   {
     path: "/",
     Component: Root,
+    ErrorBoundary: ErrorBoundary,
     children: [
       { index: true,
-        Component: Home,},
-        { path: "error", Component: ErrorPage },
+        Component: Home,
+        HydrateFallback: FallbackElement,
+      },
         { path: "*", Component: ErrorPage },
-        { path: "search", Component: JobFinderPage },
-        { path: "recruiter-dashboard", Component: RecuiterDashboard },
-        { path: "job-seeker-dashboard", Component: JSDashboard },
-        { path: "admin-dashboard", Component: AdminDashboard },
+
+        { path: "search",
+          element: (
+            <PrivateRoute allowedRoles={["job-seeker", "admin"]}>
+              <JobFinderPage />
+            </PrivateRoute>
+          )
+        },
+
+        { path: "recruiter-dashboard",
+          element: (
+            <PrivateRoute allowedRoles={["recruiter", "admin"]}>
+              <RecuiterDashboard />
+            </PrivateRoute>
+          )
+        },
+
+        { path: "job-seeker-dashboard",
+          element: (
+          <PrivateRoute allowedRoles={["job-seeker", "admin"]}>
+            <JSDashboard />
+          </PrivateRoute>
+          )
+        },
+
+        { path: "admin-dashboard",
+          element: (
+            <PrivateRoute allowedRoles={["job-seeker", "admin"]}> {/*// job seeker allowed for now for testing */}
+              <AdminDashboard />
+            </PrivateRoute>
+          )
+        },
         { path: "job-seeker-signup", Component: JobSeekerSignUpPage },
         { path: "recruiter-signup", Component: RecruiterSignUpPage },
         { path: "login", Component: LoginPage },
@@ -35,6 +67,7 @@ const MainRouter = [
         { path: "job-details", Component: DetailsPage },
     ],
   },
+  { path: "*", Component: ErrorPage }, {path: "/error", Component: ErrorPage}
 ];
 
 export default MainRouter;

@@ -33,6 +33,22 @@ async function createUser(req, res) {
         console.error(err);
         res.status(500).json({ message: "Server error" });
     } 
-}
+};
 
-module.exports = { createUser };
+async function getUserByUID(req, res) {
+    try {
+        const user = await User.findOne({ uid: req.params.uid }); // try to find the user by the request param
+
+        // if the user couldnt be found, send a bad request response with an error msg
+        if (!user) {
+            return res.status(400).json({ error: "User not found" });
+        }
+
+        res.status(200).json({ user }); // if the user was found, send a success response with the user
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "Server error" });
+    }
+};
+
+module.exports = { createUser, getUserByUID };
