@@ -13,7 +13,7 @@ export default function FavoriteJobProvider({children}) {
     /* add a movie to the favorites list, but dont add it if its already in the list. if its already in the list, give an alert */
     const addToFav = (job) => {
       setFavMovies(currentItems => {
-          const existingItem = currentItems.find(item => item.job_title === job.job_title);
+          const existingItem = currentItems.find(item => item.job_id === job.job_id);
             
           if (!existingItem) {
             return [...currentItems, job]
@@ -27,10 +27,10 @@ export default function FavoriteJobProvider({children}) {
     /* remove a job from the favorites list. It takes in a job object as an argument and updates the favMovies state by filtering out the movie with the matching title. */
     const removeFromFav = (job) => {
       setFavMovies(currentItems => {
-          const existingItem = currentItems.find(item => item.job_title === job.job_title);
+          const existingItem = currentItems.find(item => item.job_id === job.job_id);
   
           if (existingItem) {
-            return currentItems.filter(item => item.job_title !== job.job_title);
+            return currentItems.filter(item => item.job_id !== job.job_id);
           } else {
             return currentItems;
           }
