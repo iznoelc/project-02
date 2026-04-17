@@ -5,9 +5,6 @@ import Search from "../utils/Search";
 
 export default function RecuiterDashboard(){
 
-    const dataFromLoader = jobPostings;//useLoaderData(); // get the data from the dashboard loader in MainRouter using useLoaderData
-
-
     const [UID, setUID] = useState(null);
     const userCompany = "Nasa"
 
@@ -45,10 +42,19 @@ export default function RecuiterDashboard(){
 
         /* use useEffect here to get the data once its loaded from the loader, since it will take some time. */
     useEffect(() => {
-        if (dataFromLoader) {
-            setData(dataFromLoader);
-        }
-    }, [dataFromLoader]);
+        fetchData(setData)
+    }, []);
+
+    async function fetchData(setData) {
+    try {
+        const res = await fetch("/job_posting");
+        const data = await res.json();
+
+        setData(data);
+    } catch (err) {
+        console.error("Failed to fetch Job Postings:", err);
+    }
+}
 
     const [formData, setFormData] = useState({
     job_title: "",
