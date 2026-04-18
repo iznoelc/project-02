@@ -2,31 +2,24 @@ import { useState, useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
 export default function AdminDashboard({ currentUser }) {
-    // set the admin to the current user, if current user has no valid name set the default name of Admin
     const admin_name = currentUser?.name || "Admin";
 
-    // states
     const [seekersList, setSeekersList] = useState([]);
     const [recruitersList, setRecruitersList] = useState([]);
     const [userQuery, setUserQuery] = useState("");
 
-    // fetch users
     useEffect(() => {
-    fetchUsers(setSeekersList, setRecruitersList);
-}, []);
+        if (!currentUser) return;
+        fetchUsers(setSeekersList, setRecruitersList, currentUser);
+    }, [currentUser]);
 
-
-
-    // combine users for search
     const users = [...seekersList, ...recruitersList];
     const filteredUsers = Search(users, userQuery);
 
-    // rand stat for views on the page
     const [randomNum] = useState(() => Math.floor(Math.random() * 1000));
 
     return (
         <div>
-            {/* Stats Page */}
             <div className="hero bg-base-200 min-h-screen">
                 <div className="hero-content text-center">
                     <div className="max-w-md">
@@ -48,7 +41,6 @@ export default function AdminDashboard({ currentUser }) {
                 </div>
             </div>
 
-            {/* Users Page */}
             <div className="flex flex-col items-center bg-base-200 p-4 rounded">
                 <h3 className="text-4xl font-bold">Users</h3>
 
@@ -72,9 +64,9 @@ export default function AdminDashboard({ currentUser }) {
                             className="btn btn-error btn-sm mt-4"
                             onClick={() => {
                                 if (seekersList.some(s => s._id === user._id)) {
-                                    Delete(user._id, setSeekersList);
+                                    Delete(user._id, setSeekersList, currentUser);
                                 } else {
-                                    Delete(user._id, setRecruitersList);
+                                    Delete(user._id, setRecruitersList, currentUser);
                                 }
                             }}
                         >
@@ -89,8 +81,6 @@ export default function AdminDashboard({ currentUser }) {
     );
 }
 
-//helper component to make teh top easier to read
-
 function StatCard({ number, label }) {
     return (
         <div className="flex flex-col items-center bg-base-200 p-4 rounded">
@@ -100,12 +90,16 @@ function StatCard({ number, label }) {
     );
 }
 
-//helper functions
-//for fetch and deltee reference server auth provider file has izzys example line 62
-async function fetchUsers(setSeekersList, setRecruitersList) {
-
+async function fetchUsers(setSeekersList, setRecruitersList, currentUser) {
     try {
-        const res = await fetch("http://localhost:3000/users");
+        const token = await currentUser.getIdToken();
+
+        const res = await fetch("http://localhost:3000/users", {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
+
         const data = await res.json();
         console.log("FETCHED USERS:", data);
 
@@ -116,12 +110,17 @@ async function fetchUsers(setSeekersList, setRecruitersList) {
     }
 }
 
-async function Delete(userId, setList) {
+async function Delete(userId, setList, currentUser) {
     const confirmed = await confirmToast("Delete this user?");
     if (!confirmed) return;
 
+    const token = await currentUser.getIdToken();
+
     const res = await fetch(`http://localhost:3000/users/${userId}`, {
-    method: "DELETE"
+        method: "DELETE",
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
     });
 
     if (res.ok) {
