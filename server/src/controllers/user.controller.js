@@ -3,14 +3,7 @@ const validator = require("../validators/user.validator");
 
 async function createUser(req, res) {
     try {
-        const { uid, display_name, email, role } = req.body;
-        const userInput = {
-            uid: req.body.uid,
-            display_name: req.body.display_name,
-            email: req.body.email,
-            role: req.body.role,
-        };
-        const { error, value } = validator.validateUser(userInput);
+        const { error, value } = validator.validateUser(req.body);
 
         // make sure fields are properly validated before creating the user
         if (error) {
@@ -19,10 +12,14 @@ async function createUser(req, res) {
             // create a new user with the provided fields and then save it to the database
             // then, return a success response with the created user
             const user = new User({
-                uid,
-                email,
-                display_name,
-                role,
+                uid: value.uid,
+                email: value.email,
+                display_name: value.display_name,
+                role: value.role,
+                organization: value.organization,
+                website: value.website,
+                location: value.location,
+                approved: value.approved,
             });
             await user.save();
 
