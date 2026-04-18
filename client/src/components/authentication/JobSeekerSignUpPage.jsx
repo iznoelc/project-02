@@ -70,7 +70,8 @@ export default function JobSeekerSignUpPage(){
                 const response = await fetch("http://localhost:3000/users", {
                     method: "POST",
                     headers: {
-                        "Content-Type": "application/json"
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${await user.getIdToken()}`, // include the Firebase ID token in the Authorization header
                     },
                     body: JSON.stringify({
                         uid: user.uid,

@@ -60,10 +60,39 @@ const MainRouter = [
             </PrivateRoute>
           )
         },
-        { path: "job-seeker-signup", Component: JobSeekerSignUpPage },
-        { path: "recruiter-signup", Component: RecruiterSignUpPage },
-        { path: "login", Component: LoginPage },
-        { path: "forgot-password", Component: ForgotPasswordPage },
+
+        { path: "job-seeker-signup",
+          element: (
+            <PrivateRoute>
+              <JobSeekerSignUpPage />
+            </PrivateRoute>
+          )
+        },
+
+        { path: "recruiter-signup",
+          element: (
+            <PrivateRoute>
+              <RecruiterSignUpPage />
+            </PrivateRoute>
+          )
+        },
+
+        { path: "login",
+          element: (
+            <PrivateRoute>
+              <LoginPage />
+            </PrivateRoute>
+          )
+        },
+
+        { path: "forgot-password",
+          element: (
+            <PrivateRoute>
+              <ForgotPasswordPage />
+            </PrivateRoute>
+          )
+        },
+        
         { path: "job-details", Component: DetailsPage },
     ],
   },
