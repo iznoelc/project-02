@@ -1,2002 +1,2032 @@
 [
   {
-    "job_title": "Operations Manager",
-    "job_id": "JOB0001",
-    "institution": "Alpha Solutions",
-    "category": "Operations",
-    "location": "United Kingdom",
-    "salary_range": [
-      79562,
-      125324
-    ],
-    "description": "This is a Operations Manager role in the Operations department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC001"
-  },
-  {
     "job_title": "Teacher",
-    "job_id": "JOB0002",
-    "institution": "GlobalSoft",
-    "category": "Education",
-    "location": "United States",
+    "institution": "Uber",
+    "category": "Technology",
+    "location": "Australia",
     "salary_range": [
-      116421,
-      143544
+      106753,
+      131679
     ],
-    "description": "This is a Teacher role in the Education department.",
+    "description": "As a Teacher, you will play a key role at Uber, contributing to high-impact projects in Technology. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
     "req_qualifications": [
-      "Relevant degree or experience",
+      "Bachelor's degree or equivalent experience",
       "Strong communication skills",
-      "Problem-solving ability"
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Teaching experience or credentials"
     ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC012"
+    "deadline": "2026-08-15",
+    "start_date": "2026-11-06",
+    "recruiter_id": "REC5516"
   },
   {
-    "job_title": "HR Specialist",
-    "job_id": "JOB0003",
-    "institution": "Creative Labs",
-    "category": "Human Resources",
+    "job_title": "Sales Manager",
+    "institution": "Uber",
+    "category": "Technology",
     "location": "Canada",
     "salary_range": [
-      108143,
-      125019
+      82030,
+      136722
     ],
-    "description": "This is a HR Specialist role in the Human Resources department.",
+    "description": "As a Sales Manager, you will play a key role at Uber, contributing to high-impact projects in Technology. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
     "req_qualifications": [
-      "Relevant degree or experience",
+      "Bachelor's degree or equivalent experience",
       "Strong communication skills",
+      "Experience in relevant field",
       "Problem-solving ability"
     ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC019"
+    "deadline": "2026-08-04",
+    "start_date": "2026-03-10",
+    "recruiter_id": "REC9203"
   },
   {
-    "job_title": "Systems Administrator",
-    "job_id": "JOB0004",
-    "institution": "Insight Analytics",
-    "category": "IT",
-    "location": "United Kingdom",
-    "salary_range": [
-      90226,
-      164782
-    ],
-    "description": "This is a Systems Administrator role in the IT department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC006"
-  },
-  {
-    "job_title": "Security Engineer",
-    "job_id": "JOB0005",
-    "institution": "UrbanTech",
-    "category": "Security",
-    "location": "Remote",
-    "salary_range": [
-      76724,
-      132451
-    ],
-    "description": "This is a Security Engineer role in the Security department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC010"
-  },
-  {
-    "job_title": "Front Desk Associate",
-    "job_id": "JOB0006",
-    "institution": "BluePeak Labs",
-    "category": "Hospitality",
-    "location": "United States",
-    "salary_range": [
-      55650,
-      103448
-    ],
-    "description": "This is a Front Desk Associate role in the Hospitality department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC007"
-  },
-  {
-    "job_title": "SEO Manager",
-    "job_id": "JOB0007",
-    "institution": "NextGen Systems",
-    "category": "Marketing",
-    "location": "United Kingdom",
-    "salary_range": [
-      88981,
-      161868
-    ],
-    "description": "This is a SEO Manager role in the Marketing department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC004"
-  },
-  {
-    "job_title": "Project Coordinator",
-    "job_id": "JOB0008",
-    "institution": "BrightMind Corp",
-    "category": "Operations",
-    "location": "United States",
-    "salary_range": [
-      53790,
-      78265
-    ],
-    "description": "This is a Project Coordinator role in the Operations department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC013"
-  },
-  {
-    "job_title": "Account Executive",
-    "job_id": "JOB0009",
-    "institution": "NextGen Systems",
-    "category": "Sales",
-    "location": "Remote",
-    "salary_range": [
-      102516,
-      141596
-    ],
-    "description": "This is a Account Executive role in the Sales department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC016"
-  },
-  {
-    "job_title": "DevOps Engineer",
-    "job_id": "JOB0010",
-    "institution": "BluePeak Labs",
-    "category": "Engineering",
-    "location": "Canada",
-    "salary_range": [
-      92588,
-      110775
-    ],
-    "description": "This is a DevOps Engineer role in the Engineering department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC007"
-  },
-  {
-    "job_title": "Content Producer",
-    "job_id": "JOB0011",
-    "institution": "NextGen Systems",
-    "category": "Media",
-    "location": "United Kingdom",
-    "salary_range": [
-      64197,
-      130218
-    ],
-    "description": "This is a Content Producer role in the Media department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC018"
-  },
-  {
-    "job_title": "Product Manager",
-    "job_id": "JOB0012",
-    "institution": "BrightMind Corp",
-    "category": "Product Management",
-    "location": "United Kingdom",
-    "salary_range": [
-      59487,
-      112709
-    ],
-    "description": "This is a Product Manager role in the Product Management department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC017"
-  },
-  {
-    "job_title": "Financial Analyst",
-    "job_id": "JOB0013",
-    "institution": "Insight Analytics",
-    "category": "Finance",
-    "location": "Remote",
-    "salary_range": [
-      102407,
-      151571
-    ],
-    "description": "This is a Financial Analyst role in the Finance department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC014"
-  },
-  {
-    "job_title": "Financial Analyst",
-    "job_id": "JOB0014",
-    "institution": "Insight Analytics",
-    "category": "Finance",
-    "location": "Remote",
-    "salary_range": [
-      106703,
-      137801
-    ],
-    "description": "This is a Financial Analyst role in the Finance department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC008"
-  },
-  {
-    "job_title": "Systems Administrator",
-    "job_id": "JOB0015",
-    "institution": "Creative Labs",
-    "category": "IT",
-    "location": "United Kingdom",
-    "salary_range": [
-      104829,
-      156408
-    ],
-    "description": "This is a Systems Administrator role in the IT department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC010"
-  },
-  {
-    "job_title": "Product Manager",
-    "job_id": "JOB0016",
-    "institution": "BrightMind Corp",
-    "category": "Product Management",
-    "location": "Remote",
-    "salary_range": [
-      105185,
-      146842
-    ],
-    "description": "This is a Product Manager role in the Product Management department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC011"
-  },
-  {
-    "job_title": "Supply Chain Analyst",
-    "job_id": "JOB0017",
-    "institution": "Insight Analytics",
+    "job_title": "Technical Writer",
+    "institution": "Intel",
     "category": "Logistics",
     "location": "Canada",
     "salary_range": [
-      71812,
-      140653
+      52969,
+      102161
     ],
-    "description": "This is a Supply Chain Analyst role in the Logistics department.",
+    "description": "As a Technical Writer, you will play a key role at Intel, contributing to high-impact projects in Logistics. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
     "req_qualifications": [
-      "Relevant degree or experience",
+      "Bachelor's degree or equivalent experience",
       "Strong communication skills",
+      "Experience in relevant field",
       "Problem-solving ability"
     ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC019"
-  },
-  {
-    "job_title": "Site Engineer",
-    "job_id": "JOB0018",
-    "institution": "GlobalSoft",
-    "category": "Construction",
-    "location": "United States",
-    "salary_range": [
-      74329,
-      105298
-    ],
-    "description": "This is a Site Engineer role in the Construction department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC010"
-  },
-  {
-    "job_title": "Hotel Manager",
-    "job_id": "JOB0019",
-    "institution": "BluePeak Labs",
-    "category": "Hospitality",
-    "location": "United States",
-    "salary_range": [
-      61566,
-      95739
-    ],
-    "description": "This is a Hotel Manager role in the Hospitality department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC011"
-  },
-  {
-    "job_title": "HR Specialist",
-    "job_id": "JOB0020",
-    "institution": "UrbanTech",
-    "category": "Human Resources",
-    "location": "Canada",
-    "salary_range": [
-      79416,
-      129753
-    ],
-    "description": "This is a HR Specialist role in the Human Resources department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC005"
-  },
-  {
-    "job_title": "Associate Product Manager",
-    "job_id": "JOB0021",
-    "institution": "Alpha Solutions",
-    "category": "Product Management",
-    "location": "Remote",
-    "salary_range": [
-      88043,
-      161588
-    ],
-    "description": "This is a Associate Product Manager role in the Product Management department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC013"
-  },
-  {
-    "job_title": "Sales Representative",
-    "job_id": "JOB0022",
-    "institution": "Creative Labs",
-    "category": "Sales",
-    "location": "Canada",
-    "salary_range": [
-      117716,
-      168960
-    ],
-    "description": "This is a Sales Representative role in the Sales department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC014"
-  },
-  {
-    "job_title": "Associate Product Manager",
-    "job_id": "JOB0023",
-    "institution": "FutureWorks",
-    "category": "Product Management",
-    "location": "Remote",
-    "salary_range": [
-      65940,
-      123610
-    ],
-    "description": "This is a Associate Product Manager role in the Product Management department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC003"
-  },
-  {
-    "job_title": "Teacher",
-    "job_id": "JOB0024",
-    "institution": "Alpha Solutions",
-    "category": "Education",
-    "location": "United Kingdom",
-    "salary_range": [
-      96147,
-      116914
-    ],
-    "description": "This is a Teacher role in the Education department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC010"
-  },
-  {
-    "job_title": "Logistics Coordinator",
-    "job_id": "JOB0025",
-    "institution": "FutureWorks",
-    "category": "Logistics",
-    "location": "United Kingdom",
-    "salary_range": [
-      79884,
-      140835
-    ],
-    "description": "This is a Logistics Coordinator role in the Logistics department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC010"
-  },
-  {
-    "job_title": "Medical Assistant",
-    "job_id": "JOB0026",
-    "institution": "BluePeak Labs",
-    "category": "Healthcare",
-    "location": "United States",
-    "salary_range": [
-      91507,
-      131696
-    ],
-    "description": "This is a Medical Assistant role in the Healthcare department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC018"
-  },
-  {
-    "job_title": "Research Assistant",
-    "job_id": "JOB0027",
-    "institution": "UrbanTech",
-    "category": "Research",
-    "location": "United Kingdom",
-    "salary_range": [
-      73993,
-      127492
-    ],
-    "description": "This is a Research Assistant role in the Research department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC002"
-  },
-  {
-    "job_title": "Cybersecurity Analyst",
-    "job_id": "JOB0028",
-    "institution": "Insight Analytics",
-    "category": "Security",
-    "location": "Canada",
-    "salary_range": [
-      79294,
-      143535
-    ],
-    "description": "This is a Cybersecurity Analyst role in the Security department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC013"
-  },
-  {
-    "job_title": "Account Executive",
-    "job_id": "JOB0029",
-    "institution": "Insight Analytics",
-    "category": "Sales",
-    "location": "Remote",
-    "salary_range": [
-      51030,
-      128523
-    ],
-    "description": "This is a Account Executive role in the Sales department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC019"
-  },
-  {
-    "job_title": "Paralegal",
-    "job_id": "JOB0030",
-    "institution": "BrightMind Corp",
-    "category": "Legal",
-    "location": "United States",
-    "salary_range": [
-      108023,
-      139473
-    ],
-    "description": "This is a Paralegal role in the Legal department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC001"
-  },
-  {
-    "job_title": "Recruiter",
-    "job_id": "JOB0031",
-    "institution": "Creative Labs",
-    "category": "Human Resources",
-    "location": "United States",
-    "salary_range": [
-      106157,
-      146163
-    ],
-    "description": "This is a Recruiter role in the Human Resources department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC020"
-  },
-  {
-    "job_title": "Systems Administrator",
-    "job_id": "JOB0032",
-    "institution": "TechNova Inc.",
-    "category": "IT",
-    "location": "Remote",
-    "salary_range": [
-      113958,
-      189234
-    ],
-    "description": "This is a Systems Administrator role in the IT department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC014"
-  },
-  {
-    "job_title": "Sales Representative",
-    "job_id": "JOB0033",
-    "institution": "Creative Labs",
-    "category": "Sales",
-    "location": "Remote",
-    "salary_range": [
-      84039,
-      113477
-    ],
-    "description": "This is a Sales Representative role in the Sales department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC016"
-  },
-  {
-    "job_title": "Marketing Specialist",
-    "job_id": "JOB0034",
-    "institution": "Creative Labs",
-    "category": "Marketing",
-    "location": "Remote",
-    "salary_range": [
-      107046,
-      170921
-    ],
-    "description": "This is a Marketing Specialist role in the Marketing department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC013"
-  },
-  {
-    "job_title": "IT Support Specialist",
-    "job_id": "JOB0035",
-    "institution": "GlobalSoft",
-    "category": "IT",
-    "location": "United Kingdom",
-    "salary_range": [
-      111546,
-      151647
-    ],
-    "description": "This is a IT Support Specialist role in the IT department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC006"
-  },
-  {
-    "job_title": "UX Designer",
-    "job_id": "JOB0036",
-    "institution": "NextGen Systems",
-    "category": "Design",
-    "location": "United States",
-    "salary_range": [
-      53764,
-      69931
-    ],
-    "description": "This is a UX Designer role in the Design department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC001"
-  },
-  {
-    "job_title": "Accountant",
-    "job_id": "JOB0037",
-    "institution": "GlobalSoft",
-    "category": "Finance",
-    "location": "Remote",
-    "salary_range": [
-      84638,
-      132686
-    ],
-    "description": "This is a Accountant role in the Finance department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC013"
-  },
-  {
-    "job_title": "Research Assistant",
-    "job_id": "JOB0038",
-    "institution": "TechNova Inc.",
-    "category": "Research",
-    "location": "Remote",
-    "salary_range": [
-      72791,
-      84104
-    ],
-    "description": "This is a Research Assistant role in the Research department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC011"
-  },
-  {
-    "job_title": "Machine Learning Engineer",
-    "job_id": "JOB0039",
-    "institution": "Alpha Solutions",
-    "category": "Data Science",
-    "location": "Canada",
-    "salary_range": [
-      68956,
-      145774
-    ],
-    "description": "This is a Machine Learning Engineer role in the Data Science department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC014"
-  },
-  {
-    "job_title": "IT Support Specialist",
-    "job_id": "JOB0040",
-    "institution": "NextGen Systems",
-    "category": "IT",
-    "location": "Remote",
-    "salary_range": [
-      50636,
-      107326
-    ],
-    "description": "This is a IT Support Specialist role in the IT department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC017"
-  },
-  {
-    "job_title": "Associate Product Manager",
-    "job_id": "JOB0041",
-    "institution": "BluePeak Labs",
-    "category": "Product Management",
-    "location": "United Kingdom",
-    "salary_range": [
-      61790,
-      129311
-    ],
-    "description": "This is a Associate Product Manager role in the Product Management department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC014"
-  },
-  {
-    "job_title": "IT Support Specialist",
-    "job_id": "JOB0042",
-    "institution": "GlobalSoft",
-    "category": "IT",
-    "location": "Canada",
-    "salary_range": [
-      113728,
-      153234
-    ],
-    "description": "This is a IT Support Specialist role in the IT department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC005"
-  },
-  {
-    "job_title": "Associate Product Manager",
-    "job_id": "JOB0043",
-    "institution": "UrbanTech",
-    "category": "Product Management",
-    "location": "Remote",
-    "salary_range": [
-      90229,
-      107220
-    ],
-    "description": "This is a Associate Product Manager role in the Product Management department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC013"
-  },
-  {
-    "job_title": "Frontend Engineer",
-    "job_id": "JOB0044",
-    "institution": "NextGen Systems",
-    "category": "Engineering",
-    "location": "Remote",
-    "salary_range": [
-      117957,
-      189369
-    ],
-    "description": "This is a Frontend Engineer role in the Engineering department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC019"
-  },
-  {
-    "job_title": "Recruiter",
-    "job_id": "JOB0045",
-    "institution": "FutureWorks",
-    "category": "Human Resources",
-    "location": "Canada",
-    "salary_range": [
-      114616,
-      168414
-    ],
-    "description": "This is a Recruiter role in the Human Resources department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC018"
-  },
-  {
-    "job_title": "Teacher",
-    "job_id": "JOB0046",
-    "institution": "FutureWorks",
-    "category": "Education",
-    "location": "Remote",
-    "salary_range": [
-      91387,
-      124377
-    ],
-    "description": "This is a Teacher role in the Education department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC008"
-  },
-  {
-    "job_title": "Front Desk Associate",
-    "job_id": "JOB0047",
-    "institution": "GlobalSoft",
-    "category": "Hospitality",
-    "location": "United Kingdom",
-    "salary_range": [
-      81843,
-      119097
-    ],
-    "description": "This is a Front Desk Associate role in the Hospitality department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC020"
-  },
-  {
-    "job_title": "Research Assistant",
-    "job_id": "JOB0048",
-    "institution": "TechNova Inc.",
-    "category": "Research",
-    "location": "United States",
-    "salary_range": [
-      112661,
-      136755
-    ],
-    "description": "This is a Research Assistant role in the Research department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC020"
-  },
-  {
-    "job_title": "SEO Manager",
-    "job_id": "JOB0049",
-    "institution": "UrbanTech",
-    "category": "Marketing",
-    "location": "Canada",
-    "salary_range": [
-      68328,
-      84772
-    ],
-    "description": "This is a SEO Manager role in the Marketing department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC003"
-  },
-  {
-    "job_title": "Associate Product Manager",
-    "job_id": "JOB0050",
-    "institution": "FutureWorks",
-    "category": "Product Management",
-    "location": "United States",
-    "salary_range": [
-      108021,
-      177840
-    ],
-    "description": "This is a Associate Product Manager role in the Product Management department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC009"
-  },
-  {
-    "job_title": "Customer Success Manager",
-    "job_id": "JOB0051",
-    "institution": "Alpha Solutions",
-    "category": "Customer Support",
-    "location": "Canada",
-    "salary_range": [
-      88775,
-      106833
-    ],
-    "description": "This is a Customer Success Manager role in the Customer Support department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC009"
-  },
-  {
-    "job_title": "Cybersecurity Analyst",
-    "job_id": "JOB0052",
-    "institution": "GlobalSoft",
-    "category": "Security",
-    "location": "Remote",
-    "salary_range": [
-      56043,
-      131582
-    ],
-    "description": "This is a Cybersecurity Analyst role in the Security department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC014"
-  },
-  {
-    "job_title": "Customer Success Manager",
-    "job_id": "JOB0053",
-    "institution": "FutureWorks",
-    "category": "Customer Support",
-    "location": "Remote",
-    "salary_range": [
-      61946,
-      105907
-    ],
-    "description": "This is a Customer Success Manager role in the Customer Support department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC006"
-  },
-  {
-    "job_title": "Curriculum Developer",
-    "job_id": "JOB0054",
-    "institution": "FutureWorks",
-    "category": "Education",
-    "location": "Canada",
-    "salary_range": [
-      90974,
-      128461
-    ],
-    "description": "This is a Curriculum Developer role in the Education department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC008"
-  },
-  {
-    "job_title": "Software Engineer",
-    "job_id": "JOB0055",
-    "institution": "GlobalSoft",
-    "category": "Engineering",
-    "location": "United Kingdom",
-    "salary_range": [
-      110043,
-      144809
-    ],
-    "description": "This is a Software Engineer role in the Engineering department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC005"
-  },
-  {
-    "job_title": "Accountant",
-    "job_id": "JOB0056",
-    "institution": "TechNova Inc.",
-    "category": "Finance",
-    "location": "United States",
-    "salary_range": [
-      100504,
-      152132
-    ],
-    "description": "This is a Accountant role in the Finance department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC001"
-  },
-  {
-    "job_title": "Hotel Manager",
-    "job_id": "JOB0057",
-    "institution": "BluePeak Labs",
-    "category": "Hospitality",
-    "location": "United Kingdom",
-    "salary_range": [
-      111057,
-      184119
-    ],
-    "description": "This is a Hotel Manager role in the Hospitality department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC007"
-  },
-  {
-    "job_title": "DevOps Engineer",
-    "job_id": "JOB0058",
-    "institution": "FutureWorks",
-    "category": "Engineering",
-    "location": "United Kingdom",
-    "salary_range": [
-      58358,
-      95228
-    ],
-    "description": "This is a DevOps Engineer role in the Engineering department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC017"
-  },
-  {
-    "job_title": "SEO Manager",
-    "job_id": "JOB0059",
-    "institution": "BluePeak Labs",
-    "category": "Marketing",
-    "location": "United States",
-    "salary_range": [
-      115743,
-      172236
-    ],
-    "description": "This is a SEO Manager role in the Marketing department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC006"
-  },
-  {
-    "job_title": "Operations Manager",
-    "job_id": "JOB0060",
-    "institution": "BluePeak Labs",
-    "category": "Operations",
-    "location": "United States",
-    "salary_range": [
-      57373,
-      88952
-    ],
-    "description": "This is a Operations Manager role in the Operations department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC010"
-  },
-  {
-    "job_title": "Customer Success Manager",
-    "job_id": "JOB0061",
-    "institution": "Insight Analytics",
-    "category": "Customer Support",
-    "location": "United Kingdom",
-    "salary_range": [
-      85390,
-      118951
-    ],
-    "description": "This is a Customer Success Manager role in the Customer Support department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC010"
-  },
-  {
-    "job_title": "Backend Engineer",
-    "job_id": "JOB0062",
-    "institution": "Alpha Solutions",
-    "category": "Engineering",
-    "location": "United States",
-    "salary_range": [
-      71627,
-      98317
-    ],
-    "description": "This is a Backend Engineer role in the Engineering department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC017"
-  },
-  {
-    "job_title": "Systems Administrator",
-    "job_id": "JOB0063",
-    "institution": "Insight Analytics",
-    "category": "IT",
-    "location": "United States",
-    "salary_range": [
-      76781,
-      89657
-    ],
-    "description": "This is a Systems Administrator role in the IT department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC001"
-  },
-  {
-    "job_title": "Associate Product Manager",
-    "job_id": "JOB0064",
-    "institution": "BrightMind Corp",
-    "category": "Product Management",
-    "location": "United Kingdom",
-    "salary_range": [
-      87531,
-      132377
-    ],
-    "description": "This is a Associate Product Manager role in the Product Management department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC003"
-  },
-  {
-    "job_title": "Project Coordinator",
-    "job_id": "JOB0065",
-    "institution": "Insight Analytics",
-    "category": "Operations",
-    "location": "United Kingdom",
-    "salary_range": [
-      57203,
-      103495
-    ],
-    "description": "This is a Project Coordinator role in the Operations department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC012"
-  },
-  {
-    "job_title": "Curriculum Developer",
-    "job_id": "JOB0066",
-    "institution": "UrbanTech",
-    "category": "Education",
-    "location": "United Kingdom",
-    "salary_range": [
-      60334,
-      83690
-    ],
-    "description": "This is a Curriculum Developer role in the Education department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC006"
-  },
-  {
-    "job_title": "Systems Administrator",
-    "job_id": "JOB0067",
-    "institution": "Insight Analytics",
-    "category": "IT",
-    "location": "Remote",
-    "salary_range": [
-      85736,
-      97147
-    ],
-    "description": "This is a Systems Administrator role in the IT department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC005"
-  },
-  {
-    "job_title": "Research Assistant",
-    "job_id": "JOB0068",
-    "institution": "UrbanTech",
-    "category": "Research",
-    "location": "United States",
-    "salary_range": [
-      75897,
-      109622
-    ],
-    "description": "This is a Research Assistant role in the Research department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC002"
-  },
-  {
-    "job_title": "Frontend Engineer",
-    "job_id": "JOB0069",
-    "institution": "UrbanTech",
-    "category": "Engineering",
-    "location": "United States",
-    "salary_range": [
-      58346,
-      101354
-    ],
-    "description": "This is a Frontend Engineer role in the Engineering department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC005"
-  },
-  {
-    "job_title": "Research Assistant",
-    "job_id": "JOB0070",
-    "institution": "UrbanTech",
-    "category": "Research",
-    "location": "Remote",
-    "salary_range": [
-      86266,
-      142503
-    ],
-    "description": "This is a Research Assistant role in the Research department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC017"
-  },
-  {
-    "job_title": "Paralegal",
-    "job_id": "JOB0071",
-    "institution": "FutureWorks",
-    "category": "Legal",
-    "location": "United Kingdom",
-    "salary_range": [
-      90387,
-      165444
-    ],
-    "description": "This is a Paralegal role in the Legal department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC014"
-  },
-  {
-    "job_title": "Systems Administrator",
-    "job_id": "JOB0072",
-    "institution": "BluePeak Labs",
-    "category": "IT",
-    "location": "United States",
-    "salary_range": [
-      62255,
-      89624
-    ],
-    "description": "This is a Systems Administrator role in the IT department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC020"
-  },
-  {
-    "job_title": "Recruiter",
-    "job_id": "JOB0073",
-    "institution": "BrightMind Corp",
-    "category": "Human Resources",
-    "location": "United Kingdom",
-    "salary_range": [
-      66407,
-      122945
-    ],
-    "description": "This is a Recruiter role in the Human Resources department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC002"
-  },
-  {
-    "job_title": "Customer Success Manager",
-    "job_id": "JOB0074",
-    "institution": "FutureWorks",
-    "category": "Customer Support",
-    "location": "Canada",
-    "salary_range": [
-      103656,
-      157321
-    ],
-    "description": "This is a Customer Success Manager role in the Customer Support department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC011"
-  },
-  {
-    "job_title": "Machine Learning Engineer",
-    "job_id": "JOB0075",
-    "institution": "NextGen Systems",
-    "category": "Data Science",
-    "location": "United Kingdom",
-    "salary_range": [
-      80415,
-      141873
-    ],
-    "description": "This is a Machine Learning Engineer role in the Data Science department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC001"
-  },
-  {
-    "job_title": "Hotel Manager",
-    "job_id": "JOB0076",
-    "institution": "BluePeak Labs",
-    "category": "Hospitality",
-    "location": "United States",
-    "salary_range": [
-      116356,
-      135000
-    ],
-    "description": "This is a Hotel Manager role in the Hospitality department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC011"
-  },
-  {
-    "job_title": "Research Assistant",
-    "job_id": "JOB0077",
-    "institution": "TechNova Inc.",
-    "category": "Research",
-    "location": "Remote",
-    "salary_range": [
-      118155,
-      148723
-    ],
-    "description": "This is a Research Assistant role in the Research department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC019"
-  },
-  {
-    "job_title": "Account Executive",
-    "job_id": "JOB0078",
-    "institution": "Insight Analytics",
-    "category": "Sales",
-    "location": "Remote",
-    "salary_range": [
-      58592,
-      120172
-    ],
-    "description": "This is a Account Executive role in the Sales department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC011"
-  },
-  {
-    "job_title": "Video Editor",
-    "job_id": "JOB0079",
-    "institution": "BrightMind Corp",
-    "category": "Media",
-    "location": "Remote",
-    "salary_range": [
-      78844,
-      95932
-    ],
-    "description": "This is a Video Editor role in the Media department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC012"
-  },
-  {
-    "job_title": "Cybersecurity Analyst",
-    "job_id": "JOB0080",
-    "institution": "GlobalSoft",
-    "category": "Security",
-    "location": "United States",
-    "salary_range": [
-      113811,
-      129084
-    ],
-    "description": "This is a Cybersecurity Analyst role in the Security department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC006"
-  },
-  {
-    "job_title": "Frontend Engineer",
-    "job_id": "JOB0081",
-    "institution": "NextGen Systems",
-    "category": "Engineering",
-    "location": "United Kingdom",
-    "salary_range": [
-      111611,
-      134479
-    ],
-    "description": "This is a Frontend Engineer role in the Engineering department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC006"
-  },
-  {
-    "job_title": "UX Designer",
-    "job_id": "JOB0082",
-    "institution": "Alpha Solutions",
-    "category": "Design",
-    "location": "Remote",
-    "salary_range": [
-      68044,
-      138888
-    ],
-    "description": "This is a UX Designer role in the Design department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC013"
-  },
-  {
-    "job_title": "Front Desk Associate",
-    "job_id": "JOB0083",
-    "institution": "Insight Analytics",
-    "category": "Hospitality",
-    "location": "Remote",
-    "salary_range": [
-      83295,
-      162663
-    ],
-    "description": "This is a Front Desk Associate role in the Hospitality department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC001"
+    "deadline": "2026-05-06",
+    "start_date": "2026-04-24",
+    "recruiter_id": "REC1242"
   },
   {
     "job_title": "Data Scientist",
-    "job_id": "JOB0084",
-    "institution": "Alpha Solutions",
-    "category": "Data Science",
+    "institution": "Amazon",
+    "category": "Operations",
     "location": "United States",
     "salary_range": [
-      85737,
-      127187
+      58479,
+      132561
     ],
-    "description": "This is a Data Scientist role in the Data Science department.",
+    "description": "As a Data Scientist, you will play a key role at Amazon, contributing to high-impact projects in Operations. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
     "req_qualifications": [
-      "Relevant degree or experience",
+      "Bachelor's degree or equivalent experience",
       "Strong communication skills",
+      "Experience in relevant field",
       "Problem-solving ability"
     ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC001"
+    "deadline": "2026-07-23",
+    "start_date": "2026-11-28",
+    "recruiter_id": "REC8205"
   },
   {
-    "job_title": "Systems Administrator",
-    "job_id": "JOB0085",
-    "institution": "Creative Labs",
-    "category": "IT",
-    "location": "Canada",
-    "salary_range": [
-      58921,
-      81261
-    ],
-    "description": "This is a Systems Administrator role in the IT department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC019"
-  },
-  {
-    "job_title": "Systems Administrator",
-    "job_id": "JOB0086",
-    "institution": "Alpha Solutions",
-    "category": "IT",
-    "location": "Remote",
-    "salary_range": [
-      115362,
-      128585
-    ],
-    "description": "This is a Systems Administrator role in the IT department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC012"
-  },
-  {
-    "job_title": "Customer Success Manager",
-    "job_id": "JOB0087",
-    "institution": "UrbanTech",
-    "category": "Customer Support",
-    "location": "Remote",
-    "salary_range": [
-      87164,
-      166531
-    ],
-    "description": "This is a Customer Success Manager role in the Customer Support department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC003"
-  },
-  {
-    "job_title": "Data Analyst",
-    "job_id": "JOB0088",
-    "institution": "BrightMind Corp",
-    "category": "Data Science",
-    "location": "United Kingdom",
-    "salary_range": [
-      76394,
-      113988
-    ],
-    "description": "This is a Data Analyst role in the Data Science department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC001"
-  },
-  {
-    "job_title": "Product Designer",
-    "job_id": "JOB0089",
-    "institution": "TechNova Inc.",
-    "category": "Design",
-    "location": "United States",
-    "salary_range": [
-      66469,
-      134059
-    ],
-    "description": "This is a Product Designer role in the Design department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC007"
-  },
-  {
-    "job_title": "Video Editor",
-    "job_id": "JOB0090",
-    "institution": "BluePeak Labs",
-    "category": "Media",
-    "location": "United Kingdom",
-    "salary_range": [
-      52852,
-      82315
-    ],
-    "description": "This is a Video Editor role in the Media department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC009"
-  },
-  {
-    "job_title": "Research Assistant",
-    "job_id": "JOB0091",
-    "institution": "BluePeak Labs",
-    "category": "Research",
-    "location": "Canada",
-    "salary_range": [
-      79027,
-      153759
-    ],
-    "description": "This is a Research Assistant role in the Research department.",
-    "req_qualifications": [
-      "Relevant degree or experience",
-      "Strong communication skills",
-      "Problem-solving ability"
-    ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC014"
-  },
-  {
-    "job_title": "Logistics Coordinator",
-    "job_id": "JOB0092",
-    "institution": "BrightMind Corp",
+    "job_title": "Software Engineer",
+    "institution": "WHO",
     "category": "Logistics",
+    "location": "Australia",
+    "salary_range": [
+      56342,
+      166374
+    ],
+    "description": "As a Software Engineer, you will play a key role at WHO, contributing to high-impact projects in Logistics. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-06-28",
+    "start_date": "2026-12-10",
+    "recruiter_id": "REC2849"
+  },
+  {
+    "job_title": "Pharmacist",
+    "institution": "Lockheed Martin",
+    "category": "Space Exploration",
+    "location": "Germany",
+    "salary_range": [
+      58710,
+      172636
+    ],
+    "description": "As a Pharmacist, you will play a key role at Lockheed Martin, contributing to high-impact projects in Space Exploration. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-04-01",
+    "start_date": "2026-01-18",
+    "recruiter_id": "REC6765"
+  },
+  {
+    "job_title": "DevOps Engineer",
+    "institution": "Meta",
+    "category": "Marketing",
+    "location": "Australia",
+    "salary_range": [
+      83306,
+      204900
+    ],
+    "description": "As a DevOps Engineer, you will play a key role at Meta, contributing to high-impact projects in Marketing. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-05-06",
+    "start_date": "2026-05-17",
+    "recruiter_id": "REC7550"
+  },
+  {
+    "job_title": "Mechanical Engineer",
+    "institution": "Apple",
+    "category": "Science",
+    "location": "Remote",
+    "salary_range": [
+      77022,
+      144763
+    ],
+    "description": "As a Mechanical Engineer, you will play a key role at Apple, contributing to high-impact projects in Science. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-06-21",
+    "start_date": "2026-02-06",
+    "recruiter_id": "REC4167"
+  },
+  {
+    "job_title": "Pharmacist",
+    "institution": "Harvard University",
+    "category": "Science",
+    "location": "Remote",
+    "salary_range": [
+      83189,
+      115289
+    ],
+    "description": "As a Pharmacist, you will play a key role at Harvard University, contributing to high-impact projects in Science. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-09-10",
+    "start_date": "2026-02-25",
+    "recruiter_id": "REC7453"
+  },
+  {
+    "job_title": "Technical Writer",
+    "institution": "NVIDIA",
+    "category": "Education",
+    "location": "Japan",
+    "salary_range": [
+      101692,
+      217281
+    ],
+    "description": "As a Technical Writer, you will play a key role at NVIDIA, contributing to high-impact projects in Education. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-09-08",
+    "start_date": "2026-11-12",
+    "recruiter_id": "REC6233"
+  },
+  {
+    "job_title": "Civil Engineer",
+    "institution": "WHO",
+    "category": "Finance",
+    "location": "Japan",
+    "salary_range": [
+      90110,
+      138715
+    ],
+    "description": "As a Civil Engineer, you will play a key role at WHO, contributing to high-impact projects in Finance. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-09-24",
+    "start_date": "2026-09-26",
+    "recruiter_id": "REC4972"
+  },
+  {
+    "job_title": "Astronomy Researcher",
+    "institution": "NASA",
+    "category": "Healthcare",
+    "location": "Australia",
+    "salary_range": [
+      95789,
+      228416
+    ],
+    "description": "As a Astronomy Researcher, you will play a key role at NASA, contributing to high-impact projects in Healthcare. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-09-27",
+    "start_date": "2026-02-05",
+    "recruiter_id": "REC6385"
+  },
+  {
+    "job_title": "Blockchain Developer",
+    "institution": "Microsoft",
+    "category": "Finance",
+    "location": "Remote",
+    "salary_range": [
+      108788,
+      245670
+    ],
+    "description": "As a Blockchain Developer, you will play a key role at Microsoft, contributing to high-impact projects in Finance. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-07-14",
+    "start_date": "2026-04-25",
+    "recruiter_id": "REC8009"
+  },
+  {
+    "job_title": "Architect",
+    "institution": "IBM",
+    "category": "Research",
+    "location": "Germany",
+    "salary_range": [
+      78674,
+      224928
+    ],
+    "description": "As a Architect, you will play a key role at IBM, contributing to high-impact projects in Research. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-17",
+    "start_date": "2026-02-20",
+    "recruiter_id": "REC5355"
+  },
+  {
+    "job_title": "Database Administrator",
+    "institution": "IBM",
+    "category": "Space Exploration",
+    "location": "Japan",
+    "salary_range": [
+      94512,
+      244161
+    ],
+    "description": "As a Database Administrator, you will play a key role at IBM, contributing to high-impact projects in Space Exploration. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-09-19",
+    "start_date": "2026-04-04",
+    "recruiter_id": "REC5481"
+  },
+  {
+    "job_title": "AI Researcher",
+    "institution": "WHO",
+    "category": "Space Exploration",
+    "location": "France",
+    "salary_range": [
+      118249,
+      183423
+    ],
+    "description": "As a AI Researcher, you will play a key role at WHO, contributing to high-impact projects in Space Exploration. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-08-11",
+    "start_date": "2026-12-05",
+    "recruiter_id": "REC2041"
+  },
+  {
+    "job_title": "Blockchain Developer",
+    "institution": "Boeing",
+    "category": "Management",
     "location": "United Kingdom",
     "salary_range": [
-      93826,
-      152971
+      58277,
+      134746
     ],
-    "description": "This is a Logistics Coordinator role in the Logistics department.",
+    "description": "As a Blockchain Developer, you will play a key role at Boeing, contributing to high-impact projects in Management. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
     "req_qualifications": [
-      "Relevant degree or experience",
+      "Bachelor's degree or equivalent experience",
       "Strong communication skills",
-      "Problem-solving ability"
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
     ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC015"
+    "deadline": "2026-07-28",
+    "start_date": "2026-09-27",
+    "recruiter_id": "REC2500"
   },
   {
-    "job_title": "Data Analyst",
-    "job_id": "JOB0093",
-    "institution": "NextGen Systems",
-    "category": "Data Science",
+    "job_title": "Network Engineer",
+    "institution": "MIT",
+    "category": "Logistics",
     "location": "United States",
     "salary_range": [
-      115974,
-      154067
+      90464,
+      184924
     ],
-    "description": "This is a Data Analyst role in the Data Science department.",
+    "description": "As a Network Engineer, you will play a key role at MIT, contributing to high-impact projects in Logistics. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
     "req_qualifications": [
-      "Relevant degree or experience",
+      "Bachelor's degree or equivalent experience",
       "Strong communication skills",
-      "Problem-solving ability"
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
     ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC011"
+    "deadline": "2026-07-18",
+    "start_date": "2026-12-26",
+    "recruiter_id": "REC7859"
   },
   {
-    "job_title": "Healthcare Analyst",
-    "job_id": "JOB0094",
-    "institution": "GlobalSoft",
+    "job_title": "Product Manager",
+    "institution": "Intel",
+    "category": "Design",
+    "location": "Canada",
+    "salary_range": [
+      119623,
+      263391
+    ],
+    "description": "As a Product Manager, you will play a key role at Intel, contributing to high-impact projects in Design. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-08-14",
+    "start_date": "2026-10-31",
+    "recruiter_id": "REC7527"
+  },
+  {
+    "job_title": "Nurse Practitioner",
+    "institution": "Apple",
+    "category": "Finance",
+    "location": "Remote",
+    "salary_range": [
+      112422,
+      229722
+    ],
+    "description": "As a Nurse Practitioner, you will play a key role at Apple, contributing to high-impact projects in Finance. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Valid medical certification"
+    ],
+    "deadline": "2026-09-24",
+    "start_date": "2026-10-18",
+    "recruiter_id": "REC1592"
+  },
+  {
+    "job_title": "Physics Researcher",
+    "institution": "MIT",
+    "category": "Healthcare",
+    "location": "Remote",
+    "salary_range": [
+      74125,
+      159259
+    ],
+    "description": "As a Physics Researcher, you will play a key role at MIT, contributing to high-impact projects in Healthcare. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-08",
+    "start_date": "2026-04-23",
+    "recruiter_id": "REC9064"
+  },
+  {
+    "job_title": "Cloud Architect",
+    "institution": "Airbus",
+    "category": "Healthcare",
+    "location": "Australia",
+    "salary_range": [
+      86863,
+      189851
+    ],
+    "description": "As a Cloud Architect, you will play a key role at Airbus, contributing to high-impact projects in Healthcare. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-20",
+    "start_date": "2026-12-18",
+    "recruiter_id": "REC8411"
+  },
+  {
+    "job_title": "Sales Manager",
+    "institution": "Apple",
+    "category": "Research",
+    "location": "Japan",
+    "salary_range": [
+      75346,
+      148327
+    ],
+    "description": "As a Sales Manager, you will play a key role at Apple, contributing to high-impact projects in Research. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-05-13",
+    "start_date": "2026-06-18",
+    "recruiter_id": "REC7122"
+  },
+  {
+    "job_title": "Doctor",
+    "institution": "Harvard University",
     "category": "Healthcare",
     "location": "Canada",
     "salary_range": [
-      100972,
-      168681
+      84247,
+      151231
     ],
-    "description": "This is a Healthcare Analyst role in the Healthcare department.",
+    "description": "As a Doctor, you will play a key role at Harvard University, contributing to high-impact projects in Healthcare. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
     "req_qualifications": [
-      "Relevant degree or experience",
+      "Bachelor's degree or equivalent experience",
       "Strong communication skills",
-      "Problem-solving ability"
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Valid medical certification"
     ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC002"
+    "deadline": "2026-08-16",
+    "start_date": "2026-11-21",
+    "recruiter_id": "REC4893"
   },
   {
-    "job_title": "Curriculum Developer",
-    "job_id": "JOB0095",
-    "institution": "Insight Analytics",
+    "job_title": "Construction Manager",
+    "institution": "NVIDIA",
     "category": "Education",
-    "location": "United Kingdom",
+    "location": "France",
     "salary_range": [
-      54067,
-      66112
+      67280,
+      140293
     ],
-    "description": "This is a Curriculum Developer role in the Education department.",
+    "description": "As a Construction Manager, you will play a key role at NVIDIA, contributing to high-impact projects in Education. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
     "req_qualifications": [
-      "Relevant degree or experience",
+      "Bachelor's degree or equivalent experience",
       "Strong communication skills",
+      "Experience in relevant field",
       "Problem-solving ability"
     ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC017"
+    "deadline": "2026-09-26",
+    "start_date": "2026-08-14",
+    "recruiter_id": "REC6810"
   },
   {
-    "job_title": "Backend Engineer",
-    "job_id": "JOB0096",
-    "institution": "BrightMind Corp",
-    "category": "Engineering",
+    "job_title": "Robotics Engineer",
+    "institution": "Harvard University",
+    "category": "Operations",
+    "location": "France",
+    "salary_range": [
+      87387,
+      120384
+    ],
+    "description": "As a Robotics Engineer, you will play a key role at Harvard University, contributing to high-impact projects in Operations. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-06-27",
+    "start_date": "2026-10-15",
+    "recruiter_id": "REC5263"
+  },
+  {
+    "job_title": "Customer Success Manager",
+    "institution": "NASA",
+    "category": "Education",
     "location": "Canada",
     "salary_range": [
-      77625,
-      98866
+      99834,
+      225083
     ],
-    "description": "This is a Backend Engineer role in the Engineering department.",
+    "description": "As a Customer Success Manager, you will play a key role at NASA, contributing to high-impact projects in Education. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
     "req_qualifications": [
-      "Relevant degree or experience",
+      "Bachelor's degree or equivalent experience",
       "Strong communication skills",
+      "Experience in relevant field",
       "Problem-solving ability"
     ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC016"
+    "deadline": "2026-09-14",
+    "start_date": "2026-12-01",
+    "recruiter_id": "REC2750"
+  },
+  {
+    "job_title": "Astronomy Researcher",
+    "institution": "Harvard University",
+    "category": "Design",
+    "location": "Germany",
+    "salary_range": [
+      69794,
+      178102
+    ],
+    "description": "As a Astronomy Researcher, you will play a key role at Harvard University, contributing to high-impact projects in Design. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-08-19",
+    "start_date": "2026-06-19",
+    "recruiter_id": "REC7367"
+  },
+  {
+    "job_title": "Pilot",
+    "institution": "Harvard University",
+    "category": "Logistics",
+    "location": "Canada",
+    "salary_range": [
+      106877,
+      232254
+    ],
+    "description": "As a Pilot, you will play a key role at Harvard University, contributing to high-impact projects in Logistics. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-28",
+    "start_date": "2026-07-08",
+    "recruiter_id": "REC3513"
+  },
+  {
+    "job_title": "AI Ethics Researcher",
+    "institution": "Boeing",
+    "category": "Security",
+    "location": "Germany",
+    "salary_range": [
+      106378,
+      202731
+    ],
+    "description": "As a AI Ethics Researcher, you will play a key role at Boeing, contributing to high-impact projects in Security. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-05-19",
+    "start_date": "2026-08-15",
+    "recruiter_id": "REC7641"
+  },
+  {
+    "job_title": "Geologist",
+    "institution": "NASA",
+    "category": "Security",
+    "location": "United States",
+    "salary_range": [
+      52134,
+      93419
+    ],
+    "description": "As a Geologist, you will play a key role at NASA, contributing to high-impact projects in Security. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-05-10",
+    "start_date": "2026-12-03",
+    "recruiter_id": "REC1430"
   },
   {
     "job_title": "Operations Manager",
-    "job_id": "JOB0097",
-    "institution": "BrightMind Corp",
+    "institution": "Tesla",
+    "category": "Research",
+    "location": "Germany",
+    "salary_range": [
+      60587,
+      88411
+    ],
+    "description": "As a Operations Manager, you will play a key role at Tesla, contributing to high-impact projects in Research. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-04-11",
+    "start_date": "2026-08-27",
+    "recruiter_id": "REC4903"
+  },
+  {
+    "job_title": "Software Engineer",
+    "institution": "Harvard University",
+    "category": "Technology",
+    "location": "United States",
+    "salary_range": [
+      61732,
+      157002
+    ],
+    "description": "As a Software Engineer, you will play a key role at Harvard University, contributing to high-impact projects in Technology. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-08-24",
+    "start_date": "2026-02-19",
+    "recruiter_id": "REC2961"
+  },
+  {
+    "job_title": "Software Engineer",
+    "institution": "Meta",
     "category": "Operations",
     "location": "United Kingdom",
     "salary_range": [
-      106617,
-      126198
+      83010,
+      142968
     ],
-    "description": "This is a Operations Manager role in the Operations department.",
+    "description": "As a Software Engineer, you will play a key role at Meta, contributing to high-impact projects in Operations. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
     "req_qualifications": [
-      "Relevant degree or experience",
+      "Bachelor's degree or equivalent experience",
       "Strong communication skills",
-      "Problem-solving ability"
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
     ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC006"
+    "deadline": "2026-04-26",
+    "start_date": "2026-05-17",
+    "recruiter_id": "REC9695"
   },
   {
-    "job_title": "Legal Assistant",
-    "job_id": "JOB0098",
-    "institution": "Alpha Solutions",
-    "category": "Legal",
+    "job_title": "Astronaut",
+    "institution": "Airbus",
+    "category": "Management",
+    "location": "Japan",
+    "salary_range": [
+      78113,
+      123256
+    ],
+    "description": "As a Astronaut, you will play a key role at Airbus, contributing to high-impact projects in Management. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-17",
+    "start_date": "2026-03-20",
+    "recruiter_id": "REC8908"
+  },
+  {
+    "job_title": "Sound Engineer",
+    "institution": "Stanford University",
+    "category": "Research",
     "location": "Remote",
     "salary_range": [
-      113585,
-      161354
+      96798,
+      213567
     ],
-    "description": "This is a Legal Assistant role in the Legal department.",
+    "description": "As a Sound Engineer, you will play a key role at Stanford University, contributing to high-impact projects in Research. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
     "req_qualifications": [
-      "Relevant degree or experience",
+      "Bachelor's degree or equivalent experience",
       "Strong communication skills",
-      "Problem-solving ability"
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
     ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC006"
+    "deadline": "2026-05-13",
+    "start_date": "2026-12-28",
+    "recruiter_id": "REC2170"
   },
   {
-    "job_title": "Site Engineer",
-    "job_id": "JOB0099",
-    "institution": "UrbanTech",
-    "category": "Construction",
+    "job_title": "Supply Chain Analyst",
+    "institution": "Boeing",
+    "category": "Space Exploration",
     "location": "United States",
     "salary_range": [
-      58153,
-      134647
+      73716,
+      189350
     ],
-    "description": "This is a Site Engineer role in the Construction department.",
+    "description": "As a Supply Chain Analyst, you will play a key role at Boeing, contributing to high-impact projects in Space Exploration. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
     "req_qualifications": [
-      "Relevant degree or experience",
+      "Bachelor's degree or equivalent experience",
       "Strong communication skills",
+      "Experience in relevant field",
       "Problem-solving ability"
     ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC006"
+    "deadline": "2026-06-03",
+    "start_date": "2026-05-30",
+    "recruiter_id": "REC1312"
   },
   {
-    "job_title": "Accountant",
-    "job_id": "JOB0100",
-    "institution": "FutureWorks",
-    "category": "Finance",
-    "location": "Canada",
+    "job_title": "Network Engineer",
+    "institution": "Microsoft",
+    "category": "Technology",
+    "location": "Japan",
     "salary_range": [
-      68933,
-      97814
+      65541,
+      118748
     ],
-    "description": "This is a Accountant role in the Finance department.",
+    "description": "As a Network Engineer, you will play a key role at Microsoft, contributing to high-impact projects in Technology. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
     "req_qualifications": [
-      "Relevant degree or experience",
+      "Bachelor's degree or equivalent experience",
       "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-07-01",
+    "start_date": "2026-04-25",
+    "recruiter_id": "REC2241"
+  },
+  {
+    "job_title": "Urban Planner",
+    "institution": "WHO",
+    "category": "Marketing",
+    "location": "Australia",
+    "salary_range": [
+      114234,
+      185726
+    ],
+    "description": "As a Urban Planner, you will play a key role at WHO, contributing to high-impact projects in Marketing. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
       "Problem-solving ability"
     ],
-    "deadline": "2026-06-30",
-    "start_date": "2026-08-01",
-    "recruiter_id": "REC005"
+    "deadline": "2026-04-10",
+    "start_date": "2026-10-15",
+    "recruiter_id": "REC8789"
+  },
+  {
+    "job_title": "Robotics Engineer",
+    "institution": "Harvard University",
+    "category": "Space Exploration",
+    "location": "United States",
+    "salary_range": [
+      103160,
+      149216
+    ],
+    "description": "As a Robotics Engineer, you will play a key role at Harvard University, contributing to high-impact projects in Space Exploration. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-08-02",
+    "start_date": "2026-08-24",
+    "recruiter_id": "REC6252"
+  },
+  {
+    "job_title": "Civil Engineer",
+    "institution": "Apple",
+    "category": "Design",
+    "location": "Canada",
+    "salary_range": [
+      100137,
+      123792
+    ],
+    "description": "As a Civil Engineer, you will play a key role at Apple, contributing to high-impact projects in Design. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-07-15",
+    "start_date": "2026-01-09",
+    "recruiter_id": "REC3513"
+  },
+  {
+    "job_title": "Astronomy Researcher",
+    "institution": "NVIDIA",
+    "category": "Marketing",
+    "location": "United Kingdom",
+    "salary_range": [
+      113103,
+      158840
+    ],
+    "description": "As a Astronomy Researcher, you will play a key role at NVIDIA, contributing to high-impact projects in Marketing. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-31",
+    "start_date": "2026-02-01",
+    "recruiter_id": "REC7903"
+  },
+  {
+    "job_title": "Lawyer",
+    "institution": "MIT",
+    "category": "Education",
+    "location": "United States",
+    "salary_range": [
+      113184,
+      211188
+    ],
+    "description": "As a Lawyer, you will play a key role at MIT, contributing to high-impact projects in Education. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-28",
+    "start_date": "2026-11-24",
+    "recruiter_id": "REC1932"
+  },
+  {
+    "job_title": "Urban Planner",
+    "institution": "SpaceX",
+    "category": "Logistics",
+    "location": "France",
+    "salary_range": [
+      80645,
+      203108
+    ],
+    "description": "As a Urban Planner, you will play a key role at SpaceX, contributing to high-impact projects in Logistics. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-15",
+    "start_date": "2026-08-27",
+    "recruiter_id": "REC7489"
+  },
+  {
+    "job_title": "Astronaut",
+    "institution": "Meta",
+    "category": "Management",
+    "location": "United Kingdom",
+    "salary_range": [
+      96104,
+      189943
+    ],
+    "description": "As a Astronaut, you will play a key role at Meta, contributing to high-impact projects in Management. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-29",
+    "start_date": "2026-01-03",
+    "recruiter_id": "REC2465"
+  },
+  {
+    "job_title": "Urban Planner",
+    "institution": "Airbus",
+    "category": "Science",
+    "location": "Remote",
+    "salary_range": [
+      54267,
+      118784
+    ],
+    "description": "As a Urban Planner, you will play a key role at Airbus, contributing to high-impact projects in Science. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-05-12",
+    "start_date": "2026-09-01",
+    "recruiter_id": "REC7123"
+  },
+  {
+    "job_title": "Professor",
+    "institution": "Lockheed Martin",
+    "category": "Logistics",
+    "location": "Canada",
+    "salary_range": [
+      72375,
+      120591
+    ],
+    "description": "As a Professor, you will play a key role at Lockheed Martin, contributing to high-impact projects in Logistics. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Teaching experience or credentials"
+    ],
+    "deadline": "2026-08-05",
+    "start_date": "2026-10-07",
+    "recruiter_id": "REC5404"
+  },
+  {
+    "job_title": "Architect",
+    "institution": "IBM",
+    "category": "Healthcare",
+    "location": "Australia",
+    "salary_range": [
+      56089,
+      167425
+    ],
+    "description": "As a Architect, you will play a key role at IBM, contributing to high-impact projects in Healthcare. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-10-01",
+    "start_date": "2026-03-01",
+    "recruiter_id": "REC9341"
+  },
+  {
+    "job_title": "Nurse Practitioner",
+    "institution": "NVIDIA",
+    "category": "Marketing",
+    "location": "United States",
+    "salary_range": [
+      67461,
+      154012
+    ],
+    "description": "As a Nurse Practitioner, you will play a key role at NVIDIA, contributing to high-impact projects in Marketing. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Valid medical certification"
+    ],
+    "deadline": "2026-06-24",
+    "start_date": "2026-06-14",
+    "recruiter_id": "REC5717"
+  },
+  {
+    "job_title": "Marketing Specialist",
+    "institution": "NVIDIA",
+    "category": "Space Exploration",
+    "location": "Canada",
+    "salary_range": [
+      95076,
+      157350
+    ],
+    "description": "As a Marketing Specialist, you will play a key role at NVIDIA, contributing to high-impact projects in Space Exploration. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-08-18",
+    "start_date": "2026-05-22",
+    "recruiter_id": "REC8960"
+  },
+  {
+    "job_title": "Electrical Engineer",
+    "institution": "Boeing",
+    "category": "Technology",
+    "location": "Canada",
+    "salary_range": [
+      64273,
+      181727
+    ],
+    "description": "As a Electrical Engineer, you will play a key role at Boeing, contributing to high-impact projects in Technology. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-08-10",
+    "start_date": "2026-08-12",
+    "recruiter_id": "REC6762"
+  },
+  {
+    "job_title": "Logistics Coordinator",
+    "institution": "NASA",
+    "category": "Space Exploration",
+    "location": "Canada",
+    "salary_range": [
+      105493,
+      175638
+    ],
+    "description": "As a Logistics Coordinator, you will play a key role at NASA, contributing to high-impact projects in Space Exploration. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-05-11",
+    "start_date": "2026-05-24",
+    "recruiter_id": "REC3352"
+  },
+  {
+    "job_title": "Database Administrator",
+    "institution": "NASA",
+    "category": "Space Exploration",
+    "location": "Australia",
+    "salary_range": [
+      89718,
+      200528
+    ],
+    "description": "As a Database Administrator, you will play a key role at NASA, contributing to high-impact projects in Space Exploration. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-05-09",
+    "start_date": "2026-12-17",
+    "recruiter_id": "REC6032"
+  },
+  {
+    "job_title": "Cloud Architect",
+    "institution": "Google",
+    "category": "Design",
+    "location": "Australia",
+    "salary_range": [
+      82443,
+      174888
+    ],
+    "description": "As a Cloud Architect, you will play a key role at Google, contributing to high-impact projects in Design. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-04-07",
+    "start_date": "2026-01-11",
+    "recruiter_id": "REC2831"
+  },
+  {
+    "job_title": "Technical Writer",
+    "institution": "CDC",
+    "category": "Design",
+    "location": "Canada",
+    "salary_range": [
+      95985,
+      116970
+    ],
+    "description": "As a Technical Writer, you will play a key role at CDC, contributing to high-impact projects in Design. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-15",
+    "start_date": "2026-05-08",
+    "recruiter_id": "REC1358"
+  },
+  {
+    "job_title": "AI Ethics Researcher",
+    "institution": "Stanford University",
+    "category": "Operations",
+    "location": "United Kingdom",
+    "salary_range": [
+      116624,
+      264169
+    ],
+    "description": "As a AI Ethics Researcher, you will play a key role at Stanford University, contributing to high-impact projects in Operations. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-08-30",
+    "start_date": "2026-02-27",
+    "recruiter_id": "REC1570"
+  },
+  {
+    "job_title": "Chemist",
+    "institution": "SpaceX",
+    "category": "Design",
+    "location": "United Kingdom",
+    "salary_range": [
+      90687,
+      131911
+    ],
+    "description": "As a Chemist, you will play a key role at SpaceX, contributing to high-impact projects in Design. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-26",
+    "start_date": "2026-03-08",
+    "recruiter_id": "REC6607"
+  },
+  {
+    "job_title": "Professor",
+    "institution": "Google",
+    "category": "Education",
+    "location": "Australia",
+    "salary_range": [
+      119080,
+      217326
+    ],
+    "description": "As a Professor, you will play a key role at Google, contributing to high-impact projects in Education. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Teaching experience or credentials"
+    ],
+    "deadline": "2026-04-30",
+    "start_date": "2026-02-22",
+    "recruiter_id": "REC6159"
+  },
+  {
+    "job_title": "Machine Learning Engineer",
+    "institution": "IBM",
+    "category": "Logistics",
+    "location": "Canada",
+    "salary_range": [
+      79046,
+      174335
+    ],
+    "description": "As a Machine Learning Engineer, you will play a key role at IBM, contributing to high-impact projects in Logistics. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-07-14",
+    "start_date": "2026-12-21",
+    "recruiter_id": "REC5991"
+  },
+  {
+    "job_title": "Sales Manager",
+    "institution": "Intel",
+    "category": "Finance",
+    "location": "Remote",
+    "salary_range": [
+      117593,
+      245828
+    ],
+    "description": "As a Sales Manager, you will play a key role at Intel, contributing to high-impact projects in Finance. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-05-15",
+    "start_date": "2026-02-09",
+    "recruiter_id": "REC5032"
+  },
+  {
+    "job_title": "Sales Manager",
+    "institution": "MIT",
+    "category": "Security",
+    "location": "Japan",
+    "salary_range": [
+      54278,
+      180674
+    ],
+    "description": "As a Sales Manager, you will play a key role at MIT, contributing to high-impact projects in Security. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-19",
+    "start_date": "2026-02-15",
+    "recruiter_id": "REC2577"
+  },
+  {
+    "job_title": "Electrical Engineer",
+    "institution": "Apple",
+    "category": "Marketing",
+    "location": "Japan",
+    "salary_range": [
+      80591,
+      121031
+    ],
+    "description": "As a Electrical Engineer, you will play a key role at Apple, contributing to high-impact projects in Marketing. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-09-29",
+    "start_date": "2026-10-19",
+    "recruiter_id": "REC6134"
+  },
+  {
+    "job_title": "Sales Manager",
+    "institution": "Airbus",
+    "category": "Management",
+    "location": "Remote",
+    "salary_range": [
+      94844,
+      133198
+    ],
+    "description": "As a Sales Manager, you will play a key role at Airbus, contributing to high-impact projects in Management. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-05-29",
+    "start_date": "2026-02-23",
+    "recruiter_id": "REC2592"
+  },
+  {
+    "job_title": "Customer Success Manager",
+    "institution": "SpaceX",
+    "category": "Healthcare",
+    "location": "United Kingdom",
+    "salary_range": [
+      75801,
+      104833
+    ],
+    "description": "As a Customer Success Manager, you will play a key role at SpaceX, contributing to high-impact projects in Healthcare. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-09-26",
+    "start_date": "2026-05-06",
+    "recruiter_id": "REC3339"
+  },
+  {
+    "job_title": "Physics Researcher",
+    "institution": "Lockheed Martin",
+    "category": "Science",
+    "location": "Australia",
+    "salary_range": [
+      62994,
+      165422
+    ],
+    "description": "As a Physics Researcher, you will play a key role at Lockheed Martin, contributing to high-impact projects in Science. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-10",
+    "start_date": "2026-04-23",
+    "recruiter_id": "REC7939"
+  },
+  {
+    "job_title": "Cloud Architect",
+    "institution": "SpaceX",
+    "category": "Space Exploration",
+    "location": "Japan",
+    "salary_range": [
+      98651,
+      181390
+    ],
+    "description": "As a Cloud Architect, you will play a key role at SpaceX, contributing to high-impact projects in Space Exploration. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-09-06",
+    "start_date": "2026-10-27",
+    "recruiter_id": "REC8118"
+  },
+  {
+    "job_title": "Environmental Scientist",
+    "institution": "NVIDIA",
+    "category": "Finance",
+    "location": "Japan",
+    "salary_range": [
+      58296,
+      192407
+    ],
+    "description": "As a Environmental Scientist, you will play a key role at NVIDIA, contributing to high-impact projects in Finance. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-20",
+    "start_date": "2026-02-05",
+    "recruiter_id": "REC4049"
+  },
+  {
+    "job_title": "Technical Writer",
+    "institution": "Boeing",
+    "category": "Engineering",
+    "location": "Canada",
+    "salary_range": [
+      61988,
+      188334
+    ],
+    "description": "As a Technical Writer, you will play a key role at Boeing, contributing to high-impact projects in Engineering. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-05-09",
+    "start_date": "2026-10-29",
+    "recruiter_id": "REC3952"
+  },
+  {
+    "job_title": "Chemist",
+    "institution": "Lockheed Martin",
+    "category": "Education",
+    "location": "United Kingdom",
+    "salary_range": [
+      114346,
+      134787
+    ],
+    "description": "As a Chemist, you will play a key role at Lockheed Martin, contributing to high-impact projects in Education. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-08-15",
+    "start_date": "2026-09-09",
+    "recruiter_id": "REC7580"
+  },
+  {
+    "job_title": "Professor",
+    "institution": "Meta",
+    "category": "Operations",
+    "location": "Canada",
+    "salary_range": [
+      82436,
+      206179
+    ],
+    "description": "As a Professor, you will play a key role at Meta, contributing to high-impact projects in Operations. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Teaching experience or credentials"
+    ],
+    "deadline": "2026-09-05",
+    "start_date": "2026-07-05",
+    "recruiter_id": "REC7595"
+  },
+  {
+    "job_title": "Machine Learning Engineer",
+    "institution": "MIT",
+    "category": "Space Exploration",
+    "location": "Australia",
+    "salary_range": [
+      98161,
+      194672
+    ],
+    "description": "As a Machine Learning Engineer, you will play a key role at MIT, contributing to high-impact projects in Space Exploration. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-07-23",
+    "start_date": "2026-09-19",
+    "recruiter_id": "REC6658"
+  },
+  {
+    "job_title": "Physics Researcher",
+    "institution": "CDC",
+    "category": "Engineering",
+    "location": "Japan",
+    "salary_range": [
+      118278,
+      159914
+    ],
+    "description": "As a Physics Researcher, you will play a key role at CDC, contributing to high-impact projects in Engineering. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-04-28",
+    "start_date": "2026-02-04",
+    "recruiter_id": "REC4271"
+  },
+  {
+    "job_title": "Financial Analyst",
+    "institution": "Intel",
+    "category": "Research",
+    "location": "United Kingdom",
+    "salary_range": [
+      77756,
+      151254
+    ],
+    "description": "As a Financial Analyst, you will play a key role at Intel, contributing to high-impact projects in Research. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-08-09",
+    "start_date": "2026-01-07",
+    "recruiter_id": "REC8730"
+  },
+  {
+    "job_title": "Customer Success Manager",
+    "institution": "Boeing",
+    "category": "Finance",
+    "location": "France",
+    "salary_range": [
+      65708,
+      206381
+    ],
+    "description": "As a Customer Success Manager, you will play a key role at Boeing, contributing to high-impact projects in Finance. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-12",
+    "start_date": "2026-10-03",
+    "recruiter_id": "REC5766"
+  },
+  {
+    "job_title": "Doctor",
+    "institution": "Apple",
+    "category": "Logistics",
+    "location": "United States",
+    "salary_range": [
+      114524,
+      165916
+    ],
+    "description": "As a Doctor, you will play a key role at Apple, contributing to high-impact projects in Logistics. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Valid medical certification"
+    ],
+    "deadline": "2026-07-20",
+    "start_date": "2026-01-31",
+    "recruiter_id": "REC8677"
+  },
+  {
+    "job_title": "Astronomy Researcher",
+    "institution": "MIT",
+    "category": "Security",
+    "location": "United Kingdom",
+    "salary_range": [
+      72341,
+      202546
+    ],
+    "description": "As a Astronomy Researcher, you will play a key role at MIT, contributing to high-impact projects in Security. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-09-08",
+    "start_date": "2026-07-01",
+    "recruiter_id": "REC1200"
+  },
+  {
+    "job_title": "Astronaut",
+    "institution": "NASA",
+    "category": "Marketing",
+    "location": "United Kingdom",
+    "salary_range": [
+      88176,
+      171957
+    ],
+    "description": "As a Astronaut, you will play a key role at NASA, contributing to high-impact projects in Marketing. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-27",
+    "start_date": "2026-01-20",
+    "recruiter_id": "REC6999"
+  },
+  {
+    "job_title": "Construction Manager",
+    "institution": "Harvard University",
+    "category": "Design",
+    "location": "United States",
+    "salary_range": [
+      88574,
+      144303
+    ],
+    "description": "As a Construction Manager, you will play a key role at Harvard University, contributing to high-impact projects in Design. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-05-05",
+    "start_date": "2026-05-19",
+    "recruiter_id": "REC7879"
+  },
+  {
+    "job_title": "Video Editor",
+    "institution": "Intel",
+    "category": "Engineering",
+    "location": "Germany",
+    "salary_range": [
+      116984,
+      207917
+    ],
+    "description": "As a Video Editor, you will play a key role at Intel, contributing to high-impact projects in Engineering. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-29",
+    "start_date": "2026-07-03",
+    "recruiter_id": "REC4070"
+  },
+  {
+    "job_title": "Operations Manager",
+    "institution": "WHO",
+    "category": "Research",
+    "location": "United States",
+    "salary_range": [
+      64631,
+      130848
+    ],
+    "description": "As a Operations Manager, you will play a key role at WHO, contributing to high-impact projects in Research. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-08-29",
+    "start_date": "2026-06-28",
+    "recruiter_id": "REC1930"
+  },
+  {
+    "job_title": "Marketing Specialist",
+    "institution": "MIT",
+    "category": "Marketing",
+    "location": "United Kingdom",
+    "salary_range": [
+      61408,
+      100354
+    ],
+    "description": "As a Marketing Specialist, you will play a key role at MIT, contributing to high-impact projects in Marketing. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-05-07",
+    "start_date": "2026-05-07",
+    "recruiter_id": "REC8409"
+  },
+  {
+    "job_title": "Database Administrator",
+    "institution": "Microsoft",
+    "category": "Finance",
+    "location": "Germany",
+    "salary_range": [
+      114361,
+      262193
+    ],
+    "description": "As a Database Administrator, you will play a key role at Microsoft, contributing to high-impact projects in Finance. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-08-28",
+    "start_date": "2026-03-15",
+    "recruiter_id": "REC8698"
+  },
+  {
+    "job_title": "Physics Researcher",
+    "institution": "Google",
+    "category": "Healthcare",
+    "location": "Remote",
+    "salary_range": [
+      83594,
+      172340
+    ],
+    "description": "As a Physics Researcher, you will play a key role at Google, contributing to high-impact projects in Healthcare. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-08-19",
+    "start_date": "2026-01-19",
+    "recruiter_id": "REC4670"
+  },
+  {
+    "job_title": "Supply Chain Analyst",
+    "institution": "NASA",
+    "category": "Operations",
+    "location": "Japan",
+    "salary_range": [
+      104730,
+      246371
+    ],
+    "description": "As a Supply Chain Analyst, you will play a key role at NASA, contributing to high-impact projects in Operations. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-05",
+    "start_date": "2026-06-28",
+    "recruiter_id": "REC7816"
+  },
+  {
+    "job_title": "DevOps Engineer",
+    "institution": "Boeing",
+    "category": "Management",
+    "location": "Japan",
+    "salary_range": [
+      69870,
+      171403
+    ],
+    "description": "As a DevOps Engineer, you will play a key role at Boeing, contributing to high-impact projects in Management. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-05-15",
+    "start_date": "2026-02-14",
+    "recruiter_id": "REC8189"
+  },
+  {
+    "job_title": "UX Designer",
+    "institution": "Google",
+    "category": "Operations",
+    "location": "Germany",
+    "salary_range": [
+      67810,
+      183115
+    ],
+    "description": "As a UX Designer, you will play a key role at Google, contributing to high-impact projects in Operations. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-05-09",
+    "start_date": "2026-11-08",
+    "recruiter_id": "REC3482"
+  },
+  {
+    "job_title": "Logistics Coordinator",
+    "institution": "SpaceX",
+    "category": "Science",
+    "location": "Germany",
+    "salary_range": [
+      52307,
+      146667
+    ],
+    "description": "As a Logistics Coordinator, you will play a key role at SpaceX, contributing to high-impact projects in Science. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-16",
+    "start_date": "2026-05-31",
+    "recruiter_id": "REC1745"
+  },
+  {
+    "job_title": "Software Engineer",
+    "institution": "CDC",
+    "category": "Operations",
+    "location": "Japan",
+    "salary_range": [
+      58542,
+      108511
+    ],
+    "description": "As a Software Engineer, you will play a key role at CDC, contributing to high-impact projects in Operations. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-08-14",
+    "start_date": "2026-08-26",
+    "recruiter_id": "REC9703"
+  },
+  {
+    "job_title": "Doctor",
+    "institution": "Harvard University",
+    "category": "Engineering",
+    "location": "United Kingdom",
+    "salary_range": [
+      92886,
+      129373
+    ],
+    "description": "As a Doctor, you will play a key role at Harvard University, contributing to high-impact projects in Engineering. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Valid medical certification"
+    ],
+    "deadline": "2026-04-28",
+    "start_date": "2026-02-28",
+    "recruiter_id": "REC9128"
+  },
+  {
+    "job_title": "Pharmacist",
+    "institution": "Apple",
+    "category": "Technology",
+    "location": "Canada",
+    "salary_range": [
+      118173,
+      265115
+    ],
+    "description": "As a Pharmacist, you will play a key role at Apple, contributing to high-impact projects in Technology. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-05-31",
+    "start_date": "2026-11-12",
+    "recruiter_id": "REC2102"
+  },
+  {
+    "job_title": "Lawyer",
+    "institution": "SpaceX",
+    "category": "Space Exploration",
+    "location": "France",
+    "salary_range": [
+      80917,
+      126293
+    ],
+    "description": "As a Lawyer, you will play a key role at SpaceX, contributing to high-impact projects in Space Exploration. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-09",
+    "start_date": "2026-06-09",
+    "recruiter_id": "REC1516"
+  },
+  {
+    "job_title": "Sales Manager",
+    "institution": "Google",
+    "category": "Operations",
+    "location": "United States",
+    "salary_range": [
+      77890,
+      201687
+    ],
+    "description": "As a Sales Manager, you will play a key role at Google, contributing to high-impact projects in Operations. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-04-23",
+    "start_date": "2026-05-26",
+    "recruiter_id": "REC3363"
+  },
+  {
+    "job_title": "Software Engineer",
+    "institution": "Airbus",
+    "category": "Security",
+    "location": "United Kingdom",
+    "salary_range": [
+      86062,
+      216450
+    ],
+    "description": "As a Software Engineer, you will play a key role at Airbus, contributing to high-impact projects in Security. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability",
+      "Proficiency in relevant programming/tools"
+    ],
+    "deadline": "2026-04-10",
+    "start_date": "2026-02-06",
+    "recruiter_id": "REC1113"
+  },
+  {
+    "job_title": "Construction Manager",
+    "institution": "WHO",
+    "category": "Science",
+    "location": "United Kingdom",
+    "salary_range": [
+      96440,
+      154283
+    ],
+    "description": "As a Construction Manager, you will play a key role at WHO, contributing to high-impact projects in Science. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-11",
+    "start_date": "2026-05-26",
+    "recruiter_id": "REC7786"
+  },
+  {
+    "job_title": "AI Ethics Researcher",
+    "institution": "MIT",
+    "category": "Management",
+    "location": "United States",
+    "salary_range": [
+      55307,
+      181085
+    ],
+    "description": "As a AI Ethics Researcher, you will play a key role at MIT, contributing to high-impact projects in Management. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-17",
+    "start_date": "2026-09-14",
+    "recruiter_id": "REC5489"
+  },
+  {
+    "job_title": "Financial Analyst",
+    "institution": "Airbus",
+    "category": "Management",
+    "location": "Canada",
+    "salary_range": [
+      74087,
+      99274
+    ],
+    "description": "As a Financial Analyst, you will play a key role at Airbus, contributing to high-impact projects in Management. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-04-18",
+    "start_date": "2026-06-22",
+    "recruiter_id": "REC8480"
+  },
+  {
+    "job_title": "Data Scientist",
+    "institution": "Tesla",
+    "category": "Management",
+    "location": "United States",
+    "salary_range": [
+      60132,
+      180506
+    ],
+    "description": "As a Data Scientist, you will play a key role at Tesla, contributing to high-impact projects in Management. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-09-01",
+    "start_date": "2026-04-18",
+    "recruiter_id": "REC7781"
+  },
+  {
+    "job_title": "Customer Success Manager",
+    "institution": "Google",
+    "category": "Design",
+    "location": "Germany",
+    "salary_range": [
+      118572,
+      160670
+    ],
+    "description": "As a Customer Success Manager, you will play a key role at Google, contributing to high-impact projects in Design. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-07-02",
+    "start_date": "2026-06-16",
+    "recruiter_id": "REC1658"
+  },
+  {
+    "job_title": "Operations Manager",
+    "institution": "Intel",
+    "category": "Healthcare",
+    "location": "Germany",
+    "salary_range": [
+      96458,
+      165195
+    ],
+    "description": "As a Operations Manager, you will play a key role at Intel, contributing to high-impact projects in Healthcare. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-09-23",
+    "start_date": "2026-07-24",
+    "recruiter_id": "REC6086"
+  },
+  {
+    "job_title": "Pharmacist",
+    "institution": "Tesla",
+    "category": "Logistics",
+    "location": "Canada",
+    "salary_range": [
+      55471,
+      148714
+    ],
+    "description": "As a Pharmacist, you will play a key role at Tesla, contributing to high-impact projects in Logistics. This role involves collaboration across teams, problem-solving, and delivering innovative solutions. You will be expected to maintain high standards of performance and adapt to evolving project needs.",
+    "req_qualifications": [
+      "Bachelor's degree or equivalent experience",
+      "Strong communication skills",
+      "Experience in relevant field",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-08-11",
+    "start_date": "2026-11-13",
+    "recruiter_id": "REC3218"
   }
 ]

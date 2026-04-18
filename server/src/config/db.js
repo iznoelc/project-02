@@ -27,7 +27,8 @@ const jobPostingData = require("../data/jobs_100_seed.json");
 async function connectDB() {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    //await JobPosting.insertMany(jobPostingData); // insert job posting data
+    // await JobPosting.collection.dropIndex("job_id_1");
+    // await JobPosting.insertMany(jobPostingData); // insert job posting data
     
     console.log("MongoDB connected with Mongoose");
   } catch (err) {

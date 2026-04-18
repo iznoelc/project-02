@@ -10,8 +10,6 @@ const jobPostingSchema = new mongoose.Schema({
 
 	job_title: {type: String, required: true}, //Astronaut,
 
-	job_id: {type: String, required: true, unique: true}, //id for the job
-
 	institution: {type: String, required: true,}, //,
 
 	category: {type: String, required: true,}, //Mission Specialist,

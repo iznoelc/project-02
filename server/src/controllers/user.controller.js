@@ -1,34 +1,33 @@
 const User = require("../models/user.model");
+const validator = require("../validators/user.validator");
 
 async function createUser(req, res) {
     try {
         const { uid, display_name, email, role } = req.body;
+        const userInput = {
+            uid: req.body.uid,
+            display_name: req.body.display_name,
+            email: req.body.email,
+            role: req.body.role,
+        };
+        const { error, value } = validator.validateUser(userInput);
 
-        // make sure all fields are provided
-        if (!uid) {
-            return res.status(400).json({ error: "UID is required" });
-        }
-        if (!display_name) {
-            return res.status(400).json({ error: "Display name is required" });
-        }
-        if (!email) {
-            return res.status(400).json({ error: "Email is required" });
-        }
-        if (!role) {
-            return res.status(400).json({ error: "Role is required" });
-        }
+        // make sure fields are properly validated before creating the user
+        if (error) {
+            return res.status(400).send(error.message);
+        } else {
+            // create a new user with the provided fields and then save it to the database
+            // then, return a success response with the created user
+            const user = new User({
+                uid,
+                email,
+                display_name,
+                role,
+            });
+            await user.save();
 
-        // create a new user with the provided fields and then save it to the database
-        // then, return a success response with the created user
-        const user = new User({
-            uid,
-            email,
-            display_name,
-            role,
-        });
-        await user.save();
-
-        res.status(201).json({ message: "User created successfully", user });
+            res.status(201).json({ message: "User created successfully", user });
+        }
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: "Server error" });
