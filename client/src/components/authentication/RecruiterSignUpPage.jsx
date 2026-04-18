@@ -4,47 +4,21 @@ import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import useAuth from "../../hooks/useAuth";
 import FallbackElement from "../FallbackElement";
+import fields from "../../utils/RecruiterSignUpFields.js";
+
+import {
+  updateProfile,
+} from "firebase/auth";
+
+import { errorNotify, successNotify } from "../../utils/ToastifyNotifications.js";
 
 export default function RecruiterSignUpPage(){
+    const { createUser, loggedIn } = useAuth(); // get the createUser function from the useAuth hook
     const navigate = useNavigate(); // used to navigate to a new page after successful login
-    const [loginLoading, setLoginLoading] = useState(false); // separate loading to determine if the user is currently being logged in. (this is separate from the loading in useAuth)
+    const [loginLoading, setSignUpLoading] = useState(false); // separate loading to determine if the user is currently being logged in. (this is separate from the loading in useAuth)
     const [passwordVisibility, setPasswordVisibility] = useState(false);
 
     const [msg, setMsg] = useState("");
-
-    const fields = [
-        {
-            label: "Enter Organization Name",
-            value: "formData.org_name",
-            placeholder: "Gleebus Inc.",
-            type: "text",
-            id: "org_name",
-            name: "org_name",
-            required: true,
-            validator_hint: "Enter valid organization name",
-            // icon: 
-        },
-        {
-            label: "Enter Organization Website",
-            value: "formData.org_website",
-            placeholder: "https://gleebus.com",
-            type: "url",
-            id: "org_website",
-            name: "org_website",
-            required: true,
-            validator_hint: "Enter valid organization website, must have form http://www.example.com",
-        },
-        {
-            label: "Enter Organization Location",
-            value: "formData.org_location",
-            placeholder: "New York, NY",
-            type: "text",
-            id: "org_location",
-            name: "org_location",
-            required: true,
-            validator_hint: "Enter valid organization location",
-        },
-    ];
 
     // this is the form data that is updated when the user updates one of the fields
     const [formData, setFormData] = useState({
@@ -53,11 +27,92 @@ export default function RecruiterSignUpPage(){
         org_location: "",
         email: "",
         password: "",
-        
+        role: "recruiter",
+        display_name: "",
     });
 
-    const handleSubmit = async (e) => {
-        e.preventDefault(); // prevent the default form submission behavior
+    const handleSubmit = async (event) => {
+        event.preventDefault(); // Prevents page reload
+        console.log("Form Submitted:", formData);
+        setSignUpLoading(true);
+        
+        try {
+            const userCredential = await createUser(formData.email, formData.password);
+            const user = userCredential.user;
+            // create the user in the database
+            try {
+                const response = await fetch("http://localhost:3000/users", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${await user.getIdToken()}`, // include the Firebase ID token in the Authorization header
+                    },
+                    body: JSON.stringify({
+                        uid: user.uid,
+                        display_name: formData.display_name,
+                        email: formData.email,
+                        role: formData.role,
+                        organization: formData.org_name,
+                        website: formData.org_website,
+                        location: formData.org_location,
+                        approved: false,
+                    }),
+            });
+
+                // console.log("FINAL PAYLOAD:", {
+                //     uid: user.uid,
+                //     display_name: formData.display_name,
+                //     email: formData.email,
+                //     role: formData.role,
+                //     organization: formData.org_name,
+                //     website: formData.org_website,
+                //     location: formData.org_location,
+                //     approved: false,});
+
+                // const text = await response.text();
+                // console.log("RAW RESPONSE: ", text);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                // const data = await response.json();
+                // console.log("User successfully created in database:", data); 
+            } catch (error) {
+                setSignUpLoading(false);
+                console.error("Error creating user in database:", error);
+                if (user) {
+                    try {
+                        await user.delete();
+                    } catch (deleteError) {
+                        console.error("Error deleting user after failed database creation:", deleteError);   
+                    }
+                }
+            };
+
+            
+            // successful sign up
+            
+            console.log(user);
+            console.log("loggedIn: " + loggedIn);
+
+            await updateProfile(user, {
+                displayName: formData.display_name,
+            });
+            
+
+            setSignUpLoading(false);
+            successNotify("Account created successfully! You are now logged in.");
+            navigate("/", { replace: true });
+        } catch (error) {
+            // give the user an alert if sign up was unsuccessful and log errors for debugging
+            
+            setSignUpLoading(false);
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log("error code: ", errorCode);
+            console.log("error message: ", errorMessage);
+            setMsg("Error signing up, please try again.");
+            errorNotify(msg);
+        };
     };
 
     const handleChange = (event) => {
