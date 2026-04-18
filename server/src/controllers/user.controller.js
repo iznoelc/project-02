@@ -51,6 +51,16 @@ async function getUserByUID(req, res) {
     }
 };
 
+async function getAllUsers(req, res) {
+    try {
+        const users = await User.find();
+        res.json(users);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "Server error" });
+    }
+}
+
 async function deleteUser(req, res) {
     try {
         const userId = req.params.id;
@@ -68,4 +78,4 @@ async function deleteUser(req, res) {
     }
 }
 
-module.exports = { createUser, getUserByUID, deleteUser };
+module.exports = { createUser, getUserByUID, getAllUsers, deleteUser };

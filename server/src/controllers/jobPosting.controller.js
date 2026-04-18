@@ -2,14 +2,11 @@ const jobPosting = require("../models/jobPosting.model");
 
 async function createJobPosting(req, res) {
     try {
-        const { job_title, job_id, institution, category, location, salary_range, description, req_qualifications, deadline, start_date, recruiter_id  } = req.body;
+        const { job_title, institution, category, location, salary_range, description, req_qualifications, deadline, start_date, recruiter_id  } = req.body;
 
         // make sure all fields are provided
         if (!job_title){
             return res.status(400).json({ error: "Job Title is required" })
-        }
-        if (!job_id) {
-            return res.status(400).json({ error: "ID is required" });
         }
         if (!institution) {
             return res.status(400).json({ error: "Institution name is required" });
@@ -43,7 +40,6 @@ async function createJobPosting(req, res) {
         // then, return a success response with the created job posting
         const job_posting = new jobPosting({
             job_title,
-            job_id,
             institution,
             category,
             location,
@@ -65,11 +61,11 @@ async function createJobPosting(req, res) {
 
 async function getJobPostingByID(req, res) {
     try {
-        const job_posting = await jobPosting.findOne({ job_id: req.params.job_id }); // try to find the user by the request param
+        const job_posting = await jobPosting.findOne({req.params.id }); // try to find the user by the request param
 
         // if the user couldnt be found, send a bad request response with an error msg
         if (!job_posting) {
-            return res.status(400).json({ error: "Job posting not found" });
+            return res.status(404).json({ error: "Job posting not found" });
         }
 
         res.status(200).json({ job_posting }); // if the user was found, send a success response with the user
@@ -81,9 +77,7 @@ async function getJobPostingByID(req, res) {
 
 async function deleteJobPosting(req, res) {
     try {
-        const jobId = req.params.job_id;
-
-        const deleted = await jobPosting.findByIdAndDelete(jobId);
+        const deleted = await jobPosting.findByIdAndDelete(req_params.id);
 
         if (!deleted) {
             return res.status(404).json({ message: "Job Posting not found" });

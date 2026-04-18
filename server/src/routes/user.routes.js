@@ -4,6 +4,9 @@ const { createUser, getUserByUID, deleteUser } = require("../controllers/user.co
 
 router.post("/", createUser);
 
+//get all users
+router.get("/", getAllUsers);
+
 // get a specific user by their uid
 router.get("/:uid", getUserByUID);
 

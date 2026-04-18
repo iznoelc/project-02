@@ -99,10 +99,10 @@ function StatCard({ number, label }) {
 }
 
 //helper functions
-
+//for fetch and deltee reference server auth provider file has izzys example line 62
 async function fetchUsers(setSeekersList, setRecruitersList) {
     try {
-        const res = await fetch("/users");
+        const res = await fetch("http://localhost:3000/users");
         const data = await res.json();
 
         setSeekersList(data.filter(u => u.role === "Job Seeker"));
@@ -116,8 +116,8 @@ async function Delete(userId, setList) {
     const confirmed = await confirmToast("Delete this user?");
     if (!confirmed) return;
 
-    const res = await fetch(`/users/${userId}`, {
-        method: "DELETE"
+    const res = await fetch(`http://localhost:3000/users/${userId}`, {
+    method: "DELETE"
     });
 
     if (res.ok) {

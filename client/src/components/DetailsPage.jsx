@@ -9,32 +9,31 @@ export default function DetailsPage({ job, currentUser }) {
     <div>
       <div className="card lg:card-side bg-base-100 shadow-sm">
 
-        {job.photo && (
-          <figure>
-            <img src={job.photo} alt="Job Image" />
-          </figure>
-        )}
-
         <div className="card-body">
-          <h2 className="card-title">{job.job_name}</h2>
+          <h2 className="card-title">{job.job_title}<br />{job.institution}</h2>
 
           <p>
-            <strong>About Us</strong><br />
-            {job.about_us}
+            <strong>Details</strong><br />
+            Category: {job.category}<br />
+            Location: {job.location}<br />
+            Salary Range: {job.salary_range}<br />
+            Job Description: {job.description}<br />
           </p>
 
-          {job.requirements?.length > 0 && (
+          {job.req_qualifications?.length > 0 && (
             <>
-              <p><strong>Requirements</strong></p>
+              <p><strong>Required Qualifications</strong></p>
               <ul className="list-disc ml-6">
-                {job.requirements.map(req => (
+                {job.req_qualifications.map(req => (
                   <li key={req}>{req}</li>
                 ))}
               </ul>
             </>
           )}
 
-          <p><strong>Expected Pay:</strong> {job.pay}</p>
+
+          <p><strong>Application deadline: {job.deadline}</strong></p>
+          <p><strong>Expected start date: {job.start_date}</strong></p>
 
           <div className="card-actions justify-end">
             <button className="btn btn-primary" onClick={() => setShowPopup(true)}>
@@ -104,7 +103,7 @@ async function submitApplication(
     return;
   }
 
-  const response = await fetch("/applications", {
+  const response = await fetch("http://localhost:3000/applications", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
