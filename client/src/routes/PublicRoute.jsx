@@ -1,0 +1,22 @@
+import { Navigate } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
+import FallbackElement from "../components/FallbackElement";
+
+// pass children as props, which should be just the page that the user is allowed to go to if they are signed in
+const PublicRoute = ({ children }) => {
+  const { user, loading } = useAuth();
+
+  // if authentication is still loading the user, show the fallback element
+  if (loading) {
+    return <FallbackElement />;
+  }
+
+  // if the user is signed in, redirect them to the home page
+  if (user) {
+    return <Navigate to="/"></Navigate>;
+  }
+
+  return children;
+};
+
+export default PublicRoute;
