@@ -12,8 +12,10 @@ export default function AdminDashboard({ currentUser }) {
 
     // fetch users
     useEffect(() => {
-        fetchUsers(setSeekersList, setRecruitersList);
+    fetchUsers(setSeekersList, setRecruitersList);
     }, []);
+
+
 
     // combine users for search
     const users = [...seekersList, ...recruitersList];
@@ -63,7 +65,7 @@ export default function AdminDashboard({ currentUser }) {
                         key={user._id}
                         className="card bg-base-100 shadow-xl p-6 w-full max-w-3xl mx-auto my-3"
                     >
-                        <h3>{user.name}</h3>
+                        <h3>{user.display_name}</h3>
                         <p className="text-sm mt-2">{user.role}</p>
 
                         <button
@@ -101,12 +103,14 @@ function StatCard({ number, label }) {
 //helper functions
 //for fetch and deltee reference server auth provider file has izzys example line 62
 async function fetchUsers(setSeekersList, setRecruitersList) {
+
     try {
         const res = await fetch("http://localhost:3000/users");
         const data = await res.json();
+        console.log("FETCHED USERS:", data);
 
-        setSeekersList(data.filter(u => u.role === "Job Seeker"));
-        setRecruitersList(data.filter(u => u.role === "Recruiter"));
+        setSeekersList(data.filter(u => u.role === "job_seeker"));
+        setRecruitersList(data.filter(u => u.role === "recruiter"));
     } catch (err) {
         console.error("Failed to fetch users:", err);
     }
