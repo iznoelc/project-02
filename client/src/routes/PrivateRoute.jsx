@@ -11,6 +11,11 @@ const PrivateRoute = ({ children, allowedRoles }) => {
     return <FallbackElement />;
   }
 
+  // if the user is signed in they shouldn't be allowed to access the login or signup pages
+  if (user){
+    return <Navigate to="/" />;
+  }
+
   // if the user is not signed in, redirect them to the login page
   if (!user || !allowedRoles) {
     return <Navigate state={location?.pathname} to="/login"></Navigate>;

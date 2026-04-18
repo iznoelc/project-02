@@ -2,6 +2,7 @@ import React from "react";
 import Home from "../components/Home";
 import Root from "../layout/Root";
 import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
 import FallbackElement from "../components/FallbackElement";
 
 import JobSeekerSignUpPage from "../components/authentication/JobSeekerSignUpPage";
@@ -60,10 +61,39 @@ const MainRouter = [
             </PrivateRoute>
           )
         },
-        { path: "job-seeker-signup", Component: JobSeekerSignUpPage },
-        { path: "recruiter-signup", Component: RecruiterSignUpPage },
-        { path: "login", Component: LoginPage },
-        { path: "forgot-password", Component: ForgotPasswordPage },
+
+        { path: "job-seeker-signup",
+          element: (
+            <PublicRoute>
+              <JobSeekerSignUpPage />
+            </PublicRoute>
+          )
+        },
+
+        { path: "recruiter-signup",
+          element: (
+            <PublicRoute>
+              <RecruiterSignUpPage />
+            </PublicRoute>
+          )
+        },
+
+        { path: "login",
+          element: (
+            <PublicRoute>
+              <LoginPage />
+            </PublicRoute>
+          )
+        },
+
+        { path: "forgot-password",
+          element: (
+            <PublicRoute>
+              <ForgotPasswordPage />
+            </PublicRoute>
+          )
+        },
+
         { path: "job-details", Component: DetailsPage },
     ],
   },

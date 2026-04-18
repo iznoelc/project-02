@@ -70,7 +70,8 @@ export default function JobSeekerSignUpPage(){
                 const response = await fetch("http://localhost:3000/users", {
                     method: "POST",
                     headers: {
-                        "Content-Type": "application/json"
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${await user.getIdToken()}`, // include the Firebase ID token in the Authorization header
                     },
                     body: JSON.stringify({
                         uid: user.uid,
@@ -80,12 +81,13 @@ export default function JobSeekerSignUpPage(){
                     }),
             });
 
-                const text = await response.text();
-                console.log("RAW RESPONSE: ", text);
-                // const data = await response.json();
-                // console.log("User successfully created in database:", data); 
+                // const text = await response.text();
+                // console.log("RAW RESPONSE: ", text);
+                const data = await response.json();
+                console.log("User successfully created in database:", data); 
             } catch (error) {
                 console.error("Error creating user in database:", error);
+                errorNotify("There was an error creating your account. Please try again.");
             };
             
 

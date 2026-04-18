@@ -29,6 +29,11 @@ const userSchema = new mongoose.Schema({
     website: {
         type: String,
         required: function() { return this.role === "recruiter"; }
+    },
+    approved: {
+        type: Boolean, 
+        default: false,
+        required: function() { return this.role === "recruiter" ? false: undefined; } // default for recruiters is false, but doesn't apply to other users
     }
 }, { 
     timestamps: true

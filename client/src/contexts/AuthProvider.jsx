@@ -59,7 +59,11 @@ const AuthProvider = ({ children }) => {
       }
 
       try {
-        const res = await fetch(`http://localhost:3000/users/${currentUser.uid}`);
+        const res = await fetch(`http://localhost:3000/users/${currentUser.uid}`, {
+          headers: {
+            Authorization: `Bearer ${await currentUser.getIdToken()}`,
+          },
+        });
         const data = await res.json();
 
         console.log("ROLE RESPONSE: ", data);
