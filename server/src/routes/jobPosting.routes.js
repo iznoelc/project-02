@@ -7,9 +7,9 @@ const { createJobPosting, getJobPostingByID, deleteJobPosting } = require("../co
 router.post("/:uid", verifyFirebaseToken, createJobPosting);
 
 // GET job by MongoDB _id
-router.get("/::uid", verifyFirebaseToken, getJobPostingByID);
+router.get("/:uid", verifyFirebaseToken, getJobPostingByID);
 
 // DELETE job by MongoDB _id
-router.delete("/::uid", verifyFirebaseToken, deleteJobPosting);
+router.delete("/:uid", verifyFirebaseToken, deleteJobPosting);
 
 module.exports = router;
