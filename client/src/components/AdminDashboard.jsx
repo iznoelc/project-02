@@ -13,7 +13,7 @@ export default function AdminDashboard({ currentUser }) {
     // fetch users
     useEffect(() => {
     fetchUsers(setSeekersList, setRecruitersList);
-    }, []);
+}, []);
 
 
 
