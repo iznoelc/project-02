@@ -7,6 +7,9 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 const mongoose = require("mongoose");
 const uri = process.env.MONGO_URI;
 
+const JobPosting = require("../models/jobPosting.model");
+const jobPostingData = require("../data/jobs_100_seed.json");
+
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 // const client = new MongoClient(uri, {
 //   serverApi: {
@@ -24,6 +27,8 @@ const uri = process.env.MONGO_URI;
 async function connectDB() {
   try {
     await mongoose.connect(process.env.MONGO_URI);
+    //await JobPosting.insertMany(jobPostingData); // insert job posting data
+    
     console.log("MongoDB connected with Mongoose");
   } catch (err) {
     console.error(err);

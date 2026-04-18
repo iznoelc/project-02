@@ -61,7 +61,7 @@ async function createJobPosting(req, res) {
 
 async function getJobPostingByID(req, res) {
     try {
-        const job_posting = await jobPosting.findOne({req.params.id }); // try to find the user by the request param
+        const job_posting = await jobPosting.findOne({_id: req.params._id }); // try to find the user by the request param
 
         // if the user couldnt be found, send a bad request response with an error msg
         if (!job_posting) {

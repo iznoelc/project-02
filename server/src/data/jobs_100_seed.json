@@ -1,0 +1,2002 @@
+[
+  {
+    "job_title": "Operations Manager",
+    "job_id": "JOB0001",
+    "institution": "Alpha Solutions",
+    "category": "Operations",
+    "location": "United Kingdom",
+    "salary_range": [
+      79562,
+      125324
+    ],
+    "description": "This is a Operations Manager role in the Operations department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC001"
+  },
+  {
+    "job_title": "Teacher",
+    "job_id": "JOB0002",
+    "institution": "GlobalSoft",
+    "category": "Education",
+    "location": "United States",
+    "salary_range": [
+      116421,
+      143544
+    ],
+    "description": "This is a Teacher role in the Education department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC012"
+  },
+  {
+    "job_title": "HR Specialist",
+    "job_id": "JOB0003",
+    "institution": "Creative Labs",
+    "category": "Human Resources",
+    "location": "Canada",
+    "salary_range": [
+      108143,
+      125019
+    ],
+    "description": "This is a HR Specialist role in the Human Resources department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC019"
+  },
+  {
+    "job_title": "Systems Administrator",
+    "job_id": "JOB0004",
+    "institution": "Insight Analytics",
+    "category": "IT",
+    "location": "United Kingdom",
+    "salary_range": [
+      90226,
+      164782
+    ],
+    "description": "This is a Systems Administrator role in the IT department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC006"
+  },
+  {
+    "job_title": "Security Engineer",
+    "job_id": "JOB0005",
+    "institution": "UrbanTech",
+    "category": "Security",
+    "location": "Remote",
+    "salary_range": [
+      76724,
+      132451
+    ],
+    "description": "This is a Security Engineer role in the Security department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC010"
+  },
+  {
+    "job_title": "Front Desk Associate",
+    "job_id": "JOB0006",
+    "institution": "BluePeak Labs",
+    "category": "Hospitality",
+    "location": "United States",
+    "salary_range": [
+      55650,
+      103448
+    ],
+    "description": "This is a Front Desk Associate role in the Hospitality department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC007"
+  },
+  {
+    "job_title": "SEO Manager",
+    "job_id": "JOB0007",
+    "institution": "NextGen Systems",
+    "category": "Marketing",
+    "location": "United Kingdom",
+    "salary_range": [
+      88981,
+      161868
+    ],
+    "description": "This is a SEO Manager role in the Marketing department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC004"
+  },
+  {
+    "job_title": "Project Coordinator",
+    "job_id": "JOB0008",
+    "institution": "BrightMind Corp",
+    "category": "Operations",
+    "location": "United States",
+    "salary_range": [
+      53790,
+      78265
+    ],
+    "description": "This is a Project Coordinator role in the Operations department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC013"
+  },
+  {
+    "job_title": "Account Executive",
+    "job_id": "JOB0009",
+    "institution": "NextGen Systems",
+    "category": "Sales",
+    "location": "Remote",
+    "salary_range": [
+      102516,
+      141596
+    ],
+    "description": "This is a Account Executive role in the Sales department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC016"
+  },
+  {
+    "job_title": "DevOps Engineer",
+    "job_id": "JOB0010",
+    "institution": "BluePeak Labs",
+    "category": "Engineering",
+    "location": "Canada",
+    "salary_range": [
+      92588,
+      110775
+    ],
+    "description": "This is a DevOps Engineer role in the Engineering department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC007"
+  },
+  {
+    "job_title": "Content Producer",
+    "job_id": "JOB0011",
+    "institution": "NextGen Systems",
+    "category": "Media",
+    "location": "United Kingdom",
+    "salary_range": [
+      64197,
+      130218
+    ],
+    "description": "This is a Content Producer role in the Media department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC018"
+  },
+  {
+    "job_title": "Product Manager",
+    "job_id": "JOB0012",
+    "institution": "BrightMind Corp",
+    "category": "Product Management",
+    "location": "United Kingdom",
+    "salary_range": [
+      59487,
+      112709
+    ],
+    "description": "This is a Product Manager role in the Product Management department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC017"
+  },
+  {
+    "job_title": "Financial Analyst",
+    "job_id": "JOB0013",
+    "institution": "Insight Analytics",
+    "category": "Finance",
+    "location": "Remote",
+    "salary_range": [
+      102407,
+      151571
+    ],
+    "description": "This is a Financial Analyst role in the Finance department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC014"
+  },
+  {
+    "job_title": "Financial Analyst",
+    "job_id": "JOB0014",
+    "institution": "Insight Analytics",
+    "category": "Finance",
+    "location": "Remote",
+    "salary_range": [
+      106703,
+      137801
+    ],
+    "description": "This is a Financial Analyst role in the Finance department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC008"
+  },
+  {
+    "job_title": "Systems Administrator",
+    "job_id": "JOB0015",
+    "institution": "Creative Labs",
+    "category": "IT",
+    "location": "United Kingdom",
+    "salary_range": [
+      104829,
+      156408
+    ],
+    "description": "This is a Systems Administrator role in the IT department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC010"
+  },
+  {
+    "job_title": "Product Manager",
+    "job_id": "JOB0016",
+    "institution": "BrightMind Corp",
+    "category": "Product Management",
+    "location": "Remote",
+    "salary_range": [
+      105185,
+      146842
+    ],
+    "description": "This is a Product Manager role in the Product Management department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC011"
+  },
+  {
+    "job_title": "Supply Chain Analyst",
+    "job_id": "JOB0017",
+    "institution": "Insight Analytics",
+    "category": "Logistics",
+    "location": "Canada",
+    "salary_range": [
+      71812,
+      140653
+    ],
+    "description": "This is a Supply Chain Analyst role in the Logistics department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC019"
+  },
+  {
+    "job_title": "Site Engineer",
+    "job_id": "JOB0018",
+    "institution": "GlobalSoft",
+    "category": "Construction",
+    "location": "United States",
+    "salary_range": [
+      74329,
+      105298
+    ],
+    "description": "This is a Site Engineer role in the Construction department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC010"
+  },
+  {
+    "job_title": "Hotel Manager",
+    "job_id": "JOB0019",
+    "institution": "BluePeak Labs",
+    "category": "Hospitality",
+    "location": "United States",
+    "salary_range": [
+      61566,
+      95739
+    ],
+    "description": "This is a Hotel Manager role in the Hospitality department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC011"
+  },
+  {
+    "job_title": "HR Specialist",
+    "job_id": "JOB0020",
+    "institution": "UrbanTech",
+    "category": "Human Resources",
+    "location": "Canada",
+    "salary_range": [
+      79416,
+      129753
+    ],
+    "description": "This is a HR Specialist role in the Human Resources department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC005"
+  },
+  {
+    "job_title": "Associate Product Manager",
+    "job_id": "JOB0021",
+    "institution": "Alpha Solutions",
+    "category": "Product Management",
+    "location": "Remote",
+    "salary_range": [
+      88043,
+      161588
+    ],
+    "description": "This is a Associate Product Manager role in the Product Management department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC013"
+  },
+  {
+    "job_title": "Sales Representative",
+    "job_id": "JOB0022",
+    "institution": "Creative Labs",
+    "category": "Sales",
+    "location": "Canada",
+    "salary_range": [
+      117716,
+      168960
+    ],
+    "description": "This is a Sales Representative role in the Sales department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC014"
+  },
+  {
+    "job_title": "Associate Product Manager",
+    "job_id": "JOB0023",
+    "institution": "FutureWorks",
+    "category": "Product Management",
+    "location": "Remote",
+    "salary_range": [
+      65940,
+      123610
+    ],
+    "description": "This is a Associate Product Manager role in the Product Management department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC003"
+  },
+  {
+    "job_title": "Teacher",
+    "job_id": "JOB0024",
+    "institution": "Alpha Solutions",
+    "category": "Education",
+    "location": "United Kingdom",
+    "salary_range": [
+      96147,
+      116914
+    ],
+    "description": "This is a Teacher role in the Education department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC010"
+  },
+  {
+    "job_title": "Logistics Coordinator",
+    "job_id": "JOB0025",
+    "institution": "FutureWorks",
+    "category": "Logistics",
+    "location": "United Kingdom",
+    "salary_range": [
+      79884,
+      140835
+    ],
+    "description": "This is a Logistics Coordinator role in the Logistics department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC010"
+  },
+  {
+    "job_title": "Medical Assistant",
+    "job_id": "JOB0026",
+    "institution": "BluePeak Labs",
+    "category": "Healthcare",
+    "location": "United States",
+    "salary_range": [
+      91507,
+      131696
+    ],
+    "description": "This is a Medical Assistant role in the Healthcare department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC018"
+  },
+  {
+    "job_title": "Research Assistant",
+    "job_id": "JOB0027",
+    "institution": "UrbanTech",
+    "category": "Research",
+    "location": "United Kingdom",
+    "salary_range": [
+      73993,
+      127492
+    ],
+    "description": "This is a Research Assistant role in the Research department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC002"
+  },
+  {
+    "job_title": "Cybersecurity Analyst",
+    "job_id": "JOB0028",
+    "institution": "Insight Analytics",
+    "category": "Security",
+    "location": "Canada",
+    "salary_range": [
+      79294,
+      143535
+    ],
+    "description": "This is a Cybersecurity Analyst role in the Security department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC013"
+  },
+  {
+    "job_title": "Account Executive",
+    "job_id": "JOB0029",
+    "institution": "Insight Analytics",
+    "category": "Sales",
+    "location": "Remote",
+    "salary_range": [
+      51030,
+      128523
+    ],
+    "description": "This is a Account Executive role in the Sales department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC019"
+  },
+  {
+    "job_title": "Paralegal",
+    "job_id": "JOB0030",
+    "institution": "BrightMind Corp",
+    "category": "Legal",
+    "location": "United States",
+    "salary_range": [
+      108023,
+      139473
+    ],
+    "description": "This is a Paralegal role in the Legal department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC001"
+  },
+  {
+    "job_title": "Recruiter",
+    "job_id": "JOB0031",
+    "institution": "Creative Labs",
+    "category": "Human Resources",
+    "location": "United States",
+    "salary_range": [
+      106157,
+      146163
+    ],
+    "description": "This is a Recruiter role in the Human Resources department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC020"
+  },
+  {
+    "job_title": "Systems Administrator",
+    "job_id": "JOB0032",
+    "institution": "TechNova Inc.",
+    "category": "IT",
+    "location": "Remote",
+    "salary_range": [
+      113958,
+      189234
+    ],
+    "description": "This is a Systems Administrator role in the IT department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC014"
+  },
+  {
+    "job_title": "Sales Representative",
+    "job_id": "JOB0033",
+    "institution": "Creative Labs",
+    "category": "Sales",
+    "location": "Remote",
+    "salary_range": [
+      84039,
+      113477
+    ],
+    "description": "This is a Sales Representative role in the Sales department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC016"
+  },
+  {
+    "job_title": "Marketing Specialist",
+    "job_id": "JOB0034",
+    "institution": "Creative Labs",
+    "category": "Marketing",
+    "location": "Remote",
+    "salary_range": [
+      107046,
+      170921
+    ],
+    "description": "This is a Marketing Specialist role in the Marketing department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC013"
+  },
+  {
+    "job_title": "IT Support Specialist",
+    "job_id": "JOB0035",
+    "institution": "GlobalSoft",
+    "category": "IT",
+    "location": "United Kingdom",
+    "salary_range": [
+      111546,
+      151647
+    ],
+    "description": "This is a IT Support Specialist role in the IT department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC006"
+  },
+  {
+    "job_title": "UX Designer",
+    "job_id": "JOB0036",
+    "institution": "NextGen Systems",
+    "category": "Design",
+    "location": "United States",
+    "salary_range": [
+      53764,
+      69931
+    ],
+    "description": "This is a UX Designer role in the Design department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC001"
+  },
+  {
+    "job_title": "Accountant",
+    "job_id": "JOB0037",
+    "institution": "GlobalSoft",
+    "category": "Finance",
+    "location": "Remote",
+    "salary_range": [
+      84638,
+      132686
+    ],
+    "description": "This is a Accountant role in the Finance department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC013"
+  },
+  {
+    "job_title": "Research Assistant",
+    "job_id": "JOB0038",
+    "institution": "TechNova Inc.",
+    "category": "Research",
+    "location": "Remote",
+    "salary_range": [
+      72791,
+      84104
+    ],
+    "description": "This is a Research Assistant role in the Research department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC011"
+  },
+  {
+    "job_title": "Machine Learning Engineer",
+    "job_id": "JOB0039",
+    "institution": "Alpha Solutions",
+    "category": "Data Science",
+    "location": "Canada",
+    "salary_range": [
+      68956,
+      145774
+    ],
+    "description": "This is a Machine Learning Engineer role in the Data Science department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC014"
+  },
+  {
+    "job_title": "IT Support Specialist",
+    "job_id": "JOB0040",
+    "institution": "NextGen Systems",
+    "category": "IT",
+    "location": "Remote",
+    "salary_range": [
+      50636,
+      107326
+    ],
+    "description": "This is a IT Support Specialist role in the IT department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC017"
+  },
+  {
+    "job_title": "Associate Product Manager",
+    "job_id": "JOB0041",
+    "institution": "BluePeak Labs",
+    "category": "Product Management",
+    "location": "United Kingdom",
+    "salary_range": [
+      61790,
+      129311
+    ],
+    "description": "This is a Associate Product Manager role in the Product Management department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC014"
+  },
+  {
+    "job_title": "IT Support Specialist",
+    "job_id": "JOB0042",
+    "institution": "GlobalSoft",
+    "category": "IT",
+    "location": "Canada",
+    "salary_range": [
+      113728,
+      153234
+    ],
+    "description": "This is a IT Support Specialist role in the IT department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC005"
+  },
+  {
+    "job_title": "Associate Product Manager",
+    "job_id": "JOB0043",
+    "institution": "UrbanTech",
+    "category": "Product Management",
+    "location": "Remote",
+    "salary_range": [
+      90229,
+      107220
+    ],
+    "description": "This is a Associate Product Manager role in the Product Management department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC013"
+  },
+  {
+    "job_title": "Frontend Engineer",
+    "job_id": "JOB0044",
+    "institution": "NextGen Systems",
+    "category": "Engineering",
+    "location": "Remote",
+    "salary_range": [
+      117957,
+      189369
+    ],
+    "description": "This is a Frontend Engineer role in the Engineering department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC019"
+  },
+  {
+    "job_title": "Recruiter",
+    "job_id": "JOB0045",
+    "institution": "FutureWorks",
+    "category": "Human Resources",
+    "location": "Canada",
+    "salary_range": [
+      114616,
+      168414
+    ],
+    "description": "This is a Recruiter role in the Human Resources department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC018"
+  },
+  {
+    "job_title": "Teacher",
+    "job_id": "JOB0046",
+    "institution": "FutureWorks",
+    "category": "Education",
+    "location": "Remote",
+    "salary_range": [
+      91387,
+      124377
+    ],
+    "description": "This is a Teacher role in the Education department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC008"
+  },
+  {
+    "job_title": "Front Desk Associate",
+    "job_id": "JOB0047",
+    "institution": "GlobalSoft",
+    "category": "Hospitality",
+    "location": "United Kingdom",
+    "salary_range": [
+      81843,
+      119097
+    ],
+    "description": "This is a Front Desk Associate role in the Hospitality department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC020"
+  },
+  {
+    "job_title": "Research Assistant",
+    "job_id": "JOB0048",
+    "institution": "TechNova Inc.",
+    "category": "Research",
+    "location": "United States",
+    "salary_range": [
+      112661,
+      136755
+    ],
+    "description": "This is a Research Assistant role in the Research department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC020"
+  },
+  {
+    "job_title": "SEO Manager",
+    "job_id": "JOB0049",
+    "institution": "UrbanTech",
+    "category": "Marketing",
+    "location": "Canada",
+    "salary_range": [
+      68328,
+      84772
+    ],
+    "description": "This is a SEO Manager role in the Marketing department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC003"
+  },
+  {
+    "job_title": "Associate Product Manager",
+    "job_id": "JOB0050",
+    "institution": "FutureWorks",
+    "category": "Product Management",
+    "location": "United States",
+    "salary_range": [
+      108021,
+      177840
+    ],
+    "description": "This is a Associate Product Manager role in the Product Management department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC009"
+  },
+  {
+    "job_title": "Customer Success Manager",
+    "job_id": "JOB0051",
+    "institution": "Alpha Solutions",
+    "category": "Customer Support",
+    "location": "Canada",
+    "salary_range": [
+      88775,
+      106833
+    ],
+    "description": "This is a Customer Success Manager role in the Customer Support department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC009"
+  },
+  {
+    "job_title": "Cybersecurity Analyst",
+    "job_id": "JOB0052",
+    "institution": "GlobalSoft",
+    "category": "Security",
+    "location": "Remote",
+    "salary_range": [
+      56043,
+      131582
+    ],
+    "description": "This is a Cybersecurity Analyst role in the Security department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC014"
+  },
+  {
+    "job_title": "Customer Success Manager",
+    "job_id": "JOB0053",
+    "institution": "FutureWorks",
+    "category": "Customer Support",
+    "location": "Remote",
+    "salary_range": [
+      61946,
+      105907
+    ],
+    "description": "This is a Customer Success Manager role in the Customer Support department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC006"
+  },
+  {
+    "job_title": "Curriculum Developer",
+    "job_id": "JOB0054",
+    "institution": "FutureWorks",
+    "category": "Education",
+    "location": "Canada",
+    "salary_range": [
+      90974,
+      128461
+    ],
+    "description": "This is a Curriculum Developer role in the Education department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC008"
+  },
+  {
+    "job_title": "Software Engineer",
+    "job_id": "JOB0055",
+    "institution": "GlobalSoft",
+    "category": "Engineering",
+    "location": "United Kingdom",
+    "salary_range": [
+      110043,
+      144809
+    ],
+    "description": "This is a Software Engineer role in the Engineering department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC005"
+  },
+  {
+    "job_title": "Accountant",
+    "job_id": "JOB0056",
+    "institution": "TechNova Inc.",
+    "category": "Finance",
+    "location": "United States",
+    "salary_range": [
+      100504,
+      152132
+    ],
+    "description": "This is a Accountant role in the Finance department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC001"
+  },
+  {
+    "job_title": "Hotel Manager",
+    "job_id": "JOB0057",
+    "institution": "BluePeak Labs",
+    "category": "Hospitality",
+    "location": "United Kingdom",
+    "salary_range": [
+      111057,
+      184119
+    ],
+    "description": "This is a Hotel Manager role in the Hospitality department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC007"
+  },
+  {
+    "job_title": "DevOps Engineer",
+    "job_id": "JOB0058",
+    "institution": "FutureWorks",
+    "category": "Engineering",
+    "location": "United Kingdom",
+    "salary_range": [
+      58358,
+      95228
+    ],
+    "description": "This is a DevOps Engineer role in the Engineering department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC017"
+  },
+  {
+    "job_title": "SEO Manager",
+    "job_id": "JOB0059",
+    "institution": "BluePeak Labs",
+    "category": "Marketing",
+    "location": "United States",
+    "salary_range": [
+      115743,
+      172236
+    ],
+    "description": "This is a SEO Manager role in the Marketing department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC006"
+  },
+  {
+    "job_title": "Operations Manager",
+    "job_id": "JOB0060",
+    "institution": "BluePeak Labs",
+    "category": "Operations",
+    "location": "United States",
+    "salary_range": [
+      57373,
+      88952
+    ],
+    "description": "This is a Operations Manager role in the Operations department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC010"
+  },
+  {
+    "job_title": "Customer Success Manager",
+    "job_id": "JOB0061",
+    "institution": "Insight Analytics",
+    "category": "Customer Support",
+    "location": "United Kingdom",
+    "salary_range": [
+      85390,
+      118951
+    ],
+    "description": "This is a Customer Success Manager role in the Customer Support department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC010"
+  },
+  {
+    "job_title": "Backend Engineer",
+    "job_id": "JOB0062",
+    "institution": "Alpha Solutions",
+    "category": "Engineering",
+    "location": "United States",
+    "salary_range": [
+      71627,
+      98317
+    ],
+    "description": "This is a Backend Engineer role in the Engineering department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC017"
+  },
+  {
+    "job_title": "Systems Administrator",
+    "job_id": "JOB0063",
+    "institution": "Insight Analytics",
+    "category": "IT",
+    "location": "United States",
+    "salary_range": [
+      76781,
+      89657
+    ],
+    "description": "This is a Systems Administrator role in the IT department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC001"
+  },
+  {
+    "job_title": "Associate Product Manager",
+    "job_id": "JOB0064",
+    "institution": "BrightMind Corp",
+    "category": "Product Management",
+    "location": "United Kingdom",
+    "salary_range": [
+      87531,
+      132377
+    ],
+    "description": "This is a Associate Product Manager role in the Product Management department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC003"
+  },
+  {
+    "job_title": "Project Coordinator",
+    "job_id": "JOB0065",
+    "institution": "Insight Analytics",
+    "category": "Operations",
+    "location": "United Kingdom",
+    "salary_range": [
+      57203,
+      103495
+    ],
+    "description": "This is a Project Coordinator role in the Operations department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC012"
+  },
+  {
+    "job_title": "Curriculum Developer",
+    "job_id": "JOB0066",
+    "institution": "UrbanTech",
+    "category": "Education",
+    "location": "United Kingdom",
+    "salary_range": [
+      60334,
+      83690
+    ],
+    "description": "This is a Curriculum Developer role in the Education department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC006"
+  },
+  {
+    "job_title": "Systems Administrator",
+    "job_id": "JOB0067",
+    "institution": "Insight Analytics",
+    "category": "IT",
+    "location": "Remote",
+    "salary_range": [
+      85736,
+      97147
+    ],
+    "description": "This is a Systems Administrator role in the IT department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC005"
+  },
+  {
+    "job_title": "Research Assistant",
+    "job_id": "JOB0068",
+    "institution": "UrbanTech",
+    "category": "Research",
+    "location": "United States",
+    "salary_range": [
+      75897,
+      109622
+    ],
+    "description": "This is a Research Assistant role in the Research department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC002"
+  },
+  {
+    "job_title": "Frontend Engineer",
+    "job_id": "JOB0069",
+    "institution": "UrbanTech",
+    "category": "Engineering",
+    "location": "United States",
+    "salary_range": [
+      58346,
+      101354
+    ],
+    "description": "This is a Frontend Engineer role in the Engineering department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC005"
+  },
+  {
+    "job_title": "Research Assistant",
+    "job_id": "JOB0070",
+    "institution": "UrbanTech",
+    "category": "Research",
+    "location": "Remote",
+    "salary_range": [
+      86266,
+      142503
+    ],
+    "description": "This is a Research Assistant role in the Research department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC017"
+  },
+  {
+    "job_title": "Paralegal",
+    "job_id": "JOB0071",
+    "institution": "FutureWorks",
+    "category": "Legal",
+    "location": "United Kingdom",
+    "salary_range": [
+      90387,
+      165444
+    ],
+    "description": "This is a Paralegal role in the Legal department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC014"
+  },
+  {
+    "job_title": "Systems Administrator",
+    "job_id": "JOB0072",
+    "institution": "BluePeak Labs",
+    "category": "IT",
+    "location": "United States",
+    "salary_range": [
+      62255,
+      89624
+    ],
+    "description": "This is a Systems Administrator role in the IT department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC020"
+  },
+  {
+    "job_title": "Recruiter",
+    "job_id": "JOB0073",
+    "institution": "BrightMind Corp",
+    "category": "Human Resources",
+    "location": "United Kingdom",
+    "salary_range": [
+      66407,
+      122945
+    ],
+    "description": "This is a Recruiter role in the Human Resources department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC002"
+  },
+  {
+    "job_title": "Customer Success Manager",
+    "job_id": "JOB0074",
+    "institution": "FutureWorks",
+    "category": "Customer Support",
+    "location": "Canada",
+    "salary_range": [
+      103656,
+      157321
+    ],
+    "description": "This is a Customer Success Manager role in the Customer Support department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC011"
+  },
+  {
+    "job_title": "Machine Learning Engineer",
+    "job_id": "JOB0075",
+    "institution": "NextGen Systems",
+    "category": "Data Science",
+    "location": "United Kingdom",
+    "salary_range": [
+      80415,
+      141873
+    ],
+    "description": "This is a Machine Learning Engineer role in the Data Science department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC001"
+  },
+  {
+    "job_title": "Hotel Manager",
+    "job_id": "JOB0076",
+    "institution": "BluePeak Labs",
+    "category": "Hospitality",
+    "location": "United States",
+    "salary_range": [
+      116356,
+      135000
+    ],
+    "description": "This is a Hotel Manager role in the Hospitality department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC011"
+  },
+  {
+    "job_title": "Research Assistant",
+    "job_id": "JOB0077",
+    "institution": "TechNova Inc.",
+    "category": "Research",
+    "location": "Remote",
+    "salary_range": [
+      118155,
+      148723
+    ],
+    "description": "This is a Research Assistant role in the Research department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC019"
+  },
+  {
+    "job_title": "Account Executive",
+    "job_id": "JOB0078",
+    "institution": "Insight Analytics",
+    "category": "Sales",
+    "location": "Remote",
+    "salary_range": [
+      58592,
+      120172
+    ],
+    "description": "This is a Account Executive role in the Sales department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC011"
+  },
+  {
+    "job_title": "Video Editor",
+    "job_id": "JOB0079",
+    "institution": "BrightMind Corp",
+    "category": "Media",
+    "location": "Remote",
+    "salary_range": [
+      78844,
+      95932
+    ],
+    "description": "This is a Video Editor role in the Media department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC012"
+  },
+  {
+    "job_title": "Cybersecurity Analyst",
+    "job_id": "JOB0080",
+    "institution": "GlobalSoft",
+    "category": "Security",
+    "location": "United States",
+    "salary_range": [
+      113811,
+      129084
+    ],
+    "description": "This is a Cybersecurity Analyst role in the Security department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC006"
+  },
+  {
+    "job_title": "Frontend Engineer",
+    "job_id": "JOB0081",
+    "institution": "NextGen Systems",
+    "category": "Engineering",
+    "location": "United Kingdom",
+    "salary_range": [
+      111611,
+      134479
+    ],
+    "description": "This is a Frontend Engineer role in the Engineering department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC006"
+  },
+  {
+    "job_title": "UX Designer",
+    "job_id": "JOB0082",
+    "institution": "Alpha Solutions",
+    "category": "Design",
+    "location": "Remote",
+    "salary_range": [
+      68044,
+      138888
+    ],
+    "description": "This is a UX Designer role in the Design department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC013"
+  },
+  {
+    "job_title": "Front Desk Associate",
+    "job_id": "JOB0083",
+    "institution": "Insight Analytics",
+    "category": "Hospitality",
+    "location": "Remote",
+    "salary_range": [
+      83295,
+      162663
+    ],
+    "description": "This is a Front Desk Associate role in the Hospitality department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC001"
+  },
+  {
+    "job_title": "Data Scientist",
+    "job_id": "JOB0084",
+    "institution": "Alpha Solutions",
+    "category": "Data Science",
+    "location": "United States",
+    "salary_range": [
+      85737,
+      127187
+    ],
+    "description": "This is a Data Scientist role in the Data Science department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC001"
+  },
+  {
+    "job_title": "Systems Administrator",
+    "job_id": "JOB0085",
+    "institution": "Creative Labs",
+    "category": "IT",
+    "location": "Canada",
+    "salary_range": [
+      58921,
+      81261
+    ],
+    "description": "This is a Systems Administrator role in the IT department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC019"
+  },
+  {
+    "job_title": "Systems Administrator",
+    "job_id": "JOB0086",
+    "institution": "Alpha Solutions",
+    "category": "IT",
+    "location": "Remote",
+    "salary_range": [
+      115362,
+      128585
+    ],
+    "description": "This is a Systems Administrator role in the IT department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC012"
+  },
+  {
+    "job_title": "Customer Success Manager",
+    "job_id": "JOB0087",
+    "institution": "UrbanTech",
+    "category": "Customer Support",
+    "location": "Remote",
+    "salary_range": [
+      87164,
+      166531
+    ],
+    "description": "This is a Customer Success Manager role in the Customer Support department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC003"
+  },
+  {
+    "job_title": "Data Analyst",
+    "job_id": "JOB0088",
+    "institution": "BrightMind Corp",
+    "category": "Data Science",
+    "location": "United Kingdom",
+    "salary_range": [
+      76394,
+      113988
+    ],
+    "description": "This is a Data Analyst role in the Data Science department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC001"
+  },
+  {
+    "job_title": "Product Designer",
+    "job_id": "JOB0089",
+    "institution": "TechNova Inc.",
+    "category": "Design",
+    "location": "United States",
+    "salary_range": [
+      66469,
+      134059
+    ],
+    "description": "This is a Product Designer role in the Design department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC007"
+  },
+  {
+    "job_title": "Video Editor",
+    "job_id": "JOB0090",
+    "institution": "BluePeak Labs",
+    "category": "Media",
+    "location": "United Kingdom",
+    "salary_range": [
+      52852,
+      82315
+    ],
+    "description": "This is a Video Editor role in the Media department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC009"
+  },
+  {
+    "job_title": "Research Assistant",
+    "job_id": "JOB0091",
+    "institution": "BluePeak Labs",
+    "category": "Research",
+    "location": "Canada",
+    "salary_range": [
+      79027,
+      153759
+    ],
+    "description": "This is a Research Assistant role in the Research department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC014"
+  },
+  {
+    "job_title": "Logistics Coordinator",
+    "job_id": "JOB0092",
+    "institution": "BrightMind Corp",
+    "category": "Logistics",
+    "location": "United Kingdom",
+    "salary_range": [
+      93826,
+      152971
+    ],
+    "description": "This is a Logistics Coordinator role in the Logistics department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC015"
+  },
+  {
+    "job_title": "Data Analyst",
+    "job_id": "JOB0093",
+    "institution": "NextGen Systems",
+    "category": "Data Science",
+    "location": "United States",
+    "salary_range": [
+      115974,
+      154067
+    ],
+    "description": "This is a Data Analyst role in the Data Science department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC011"
+  },
+  {
+    "job_title": "Healthcare Analyst",
+    "job_id": "JOB0094",
+    "institution": "GlobalSoft",
+    "category": "Healthcare",
+    "location": "Canada",
+    "salary_range": [
+      100972,
+      168681
+    ],
+    "description": "This is a Healthcare Analyst role in the Healthcare department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC002"
+  },
+  {
+    "job_title": "Curriculum Developer",
+    "job_id": "JOB0095",
+    "institution": "Insight Analytics",
+    "category": "Education",
+    "location": "United Kingdom",
+    "salary_range": [
+      54067,
+      66112
+    ],
+    "description": "This is a Curriculum Developer role in the Education department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC017"
+  },
+  {
+    "job_title": "Backend Engineer",
+    "job_id": "JOB0096",
+    "institution": "BrightMind Corp",
+    "category": "Engineering",
+    "location": "Canada",
+    "salary_range": [
+      77625,
+      98866
+    ],
+    "description": "This is a Backend Engineer role in the Engineering department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC016"
+  },
+  {
+    "job_title": "Operations Manager",
+    "job_id": "JOB0097",
+    "institution": "BrightMind Corp",
+    "category": "Operations",
+    "location": "United Kingdom",
+    "salary_range": [
+      106617,
+      126198
+    ],
+    "description": "This is a Operations Manager role in the Operations department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC006"
+  },
+  {
+    "job_title": "Legal Assistant",
+    "job_id": "JOB0098",
+    "institution": "Alpha Solutions",
+    "category": "Legal",
+    "location": "Remote",
+    "salary_range": [
+      113585,
+      161354
+    ],
+    "description": "This is a Legal Assistant role in the Legal department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC006"
+  },
+  {
+    "job_title": "Site Engineer",
+    "job_id": "JOB0099",
+    "institution": "UrbanTech",
+    "category": "Construction",
+    "location": "United States",
+    "salary_range": [
+      58153,
+      134647
+    ],
+    "description": "This is a Site Engineer role in the Construction department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC006"
+  },
+  {
+    "job_title": "Accountant",
+    "job_id": "JOB0100",
+    "institution": "FutureWorks",
+    "category": "Finance",
+    "location": "Canada",
+    "salary_range": [
+      68933,
+      97814
+    ],
+    "description": "This is a Accountant role in the Finance department.",
+    "req_qualifications": [
+      "Relevant degree or experience",
+      "Strong communication skills",
+      "Problem-solving ability"
+    ],
+    "deadline": "2026-06-30",
+    "start_date": "2026-08-01",
+    "recruiter_id": "REC005"
+  }
+]

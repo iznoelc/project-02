@@ -18,7 +18,7 @@ const jobPostingSchema = new mongoose.Schema({
 
 	location: {type: String, required: true,}, //United States,
 
-	salary_range: {type: Int16Array, required: true,}, //[low, high],
+	salary_range: {type: [Number], required: true,}, //[low, high],
 
 	description: {type: String, required: true,}, //Work with us to go to space…,
 
@@ -29,9 +29,6 @@ const jobPostingSchema = new mongoose.Schema({
 	start_date: {type: String, required: true,}, //YYYY-MM-DD,
 
 	recruiter_id: {type: String, required: true,}, //recruiter_id,
-
-
-
 
 }, { 
     timestamps: true
