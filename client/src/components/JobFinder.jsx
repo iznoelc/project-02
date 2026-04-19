@@ -3,10 +3,12 @@ import DataSorter from "../utils/DataSorter";
 import Search from "../utils/Search";
 import useFavoriteJob from "../hooks/useFavoriteJobs"
 import { AiFillLike } from "react-icons/ai";
+import useAuth from "../hooks/useAuth";
 
 
+export default function JobFinder(){
 
-export default function JobFinder({ currentUser }){
+    const { user } = useAuth(); 
 
     const { favorites, addToFav, removeFromFav } = useFavoriteJob(); // use custom hook to get the favorites list and functions to add/remove movies from favorites
 
@@ -51,16 +53,16 @@ export default function JobFinder({ currentUser }){
 
         /* use useEffect here to get the data once its loaded from the loader, since it will take some time. */
     useEffect(() => {
-        console.log("currentUser:", currentUser);
-        if (!currentUser) return;
-        fetchData(setData,currentUser)
-    }, [currentUser]);
+        console.log("currentUser:", user);
+        if (!user) return;
+        fetchData(setData,user)
+    }, [user]);
 
 
 
-    async function fetchData(setData, currentUser) {
+    async function fetchData(setData, user) {
     try {
-        const token = await currentUser.getIdToken();
+        const token = await user.getIdToken();
 
         const res = await fetch("http://localhost:3000/job_postings", {
             headers: {

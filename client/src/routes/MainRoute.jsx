@@ -10,7 +10,7 @@ import RecruiterSignUpPage from "../components/authentication/RecruiterSignUpPag
 import LoginPage from "../components/authentication/LoginPage";
 import ForgotPasswordPage from "../components/authentication/ForgotPasswordPage";
 
-import JobFinderPage from "../components/JobFinderPage";
+import JobFinder from "../components/JobFinder";
 import RecuiterDashboard from "../components/RecruiterDashboard";
 import JSDashboard from "../components/JSDashboard";
 
@@ -35,7 +35,7 @@ const MainRouter = [
         { path: "search",
           element: (
             <PrivateRoute allowedRoles={["job_seeker", "admin"]}>
-              <JobFinderPage />
+              <JobFinder />
             </PrivateRoute>
           )
         },

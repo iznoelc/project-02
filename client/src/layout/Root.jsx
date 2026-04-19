@@ -4,11 +4,13 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { ToastContainer, Slide } from "react-toastify";
 
+import FavoriteJobProvider from "../contexts/FavoriteJobProvider";
+
 const Root = () => {
   return (
     <>
       <div className="flex flex-col min-h-screen">
-
+        <FavoriteJobProvider>
         <NavBar />
         
         <main className="flex-1 flex flex-col pt-16 overflow-auto">
@@ -29,6 +31,7 @@ const Root = () => {
         </main>
 
         <Footer/>
+        </FavoriteJobProvider>
       </div>
     </>
   );
