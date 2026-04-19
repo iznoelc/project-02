@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
     uid: {
         type: String, required: true, unique: true
     },
-        display_name: {
+    display_name: {
         type: String, required: true, unique: true
     },
     role: {
@@ -32,8 +32,8 @@ const userSchema = new mongoose.Schema({
     },
     approved: {
         type: Boolean, 
-        default: false,
-        required: function() { return this.role === "recruiter" ? false: undefined; } // default for recruiters is false, but doesn't apply to other users
+        default: function() { return this.role === "recruiter" ? false : undefined; }, // default for recruiters is false, but doesn't apply to other users
+        required: function() { return this.role === "recruiter" } // default for recruiters is false, but doesn't apply to other users
     }
 }, { 
     timestamps: true

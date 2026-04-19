@@ -9,6 +9,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import { errorNotify, successNotify } from "../../utils/ToastifyNotifications";
+import { createJobSeekerInDatabase } from "../../utils/CreateUserInDatabase.js";
 
 import {
   GoogleAuthProvider,
@@ -66,29 +67,7 @@ export default function JobSeekerSignUpPage(){
             });
 
             // create the user in the database
-            try {
-                const response = await fetch("http://localhost:3000/users", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        Authorization: `Bearer ${await user.getIdToken()}`, // include the Firebase ID token in the Authorization header
-                    },
-                    body: JSON.stringify({
-                        uid: user.uid,
-                        display_name: formData.display_name,
-                        email: formData.email,
-                        role: formData.role,
-                    }),
-            });
-
-                // const text = await response.text();
-                // console.log("RAW RESPONSE: ", text);
-                const data = await response.json();
-                console.log("User successfully created in database:", data); 
-            } catch (error) {
-                console.error("Error creating user in database:", error);
-                errorNotify("There was an error creating your account. Please try again.");
-            };
+            createJobSeekerInDatabase(user, setSignUpLoading, formData.display_name, formData.role);
             
 
             setSignUpLoading(false);
@@ -108,40 +87,24 @@ export default function JobSeekerSignUpPage(){
         
     };
 
-    const handleGoogleSignUp = () => {
+    const handleGoogleSignUp = async () => {
         setSignUpLoading(true);
 
-        signInWithGoogle()
-        .then((result) => {
-            // successful sign in
+        try {
+            const result = await signInWithGoogle();
             const user = result.user;
-            console.log(user.displayName);
-            setSignUpLoading(false);
+
+            await createJobSeekerInDatabase(user, setSignUpLoading, user.displayName, "job_seeker");
+
             successNotify("Account created successfully! You are now logged in.");
-
             navigate("/", { replace: true });
-        })
-        .catch((error) => {
-            // unsuccessful sign in, handle errors
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            setMsg("Error signing in with Google: " + errorMessage);
-            errorNotify(msg);
-
-            // The email of the user's account used.
-            const email = error.customData.email;
-
-            // The AuthCredential type that was used.
-            const credential = GoogleAuthProvider.credentialFromError(error);
-            
-            console.log("error code: ", errorCode);
-            console.log("error message: ", errorMessage);
-            console.log("email: ", email);
-            console.log("credential: ", credential);
-
+        } catch (error) {
+            console.error("Error signing in with Google: ", error);
+            errorNotify("Error signing in with Google, please try again.");
+        } finally {
             setSignUpLoading(false);
-      });
-    };
+        }
+    }
 
     return (
         <>

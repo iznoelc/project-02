@@ -9,6 +9,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import FallbackElement from "../FallbackElement";
+import { createJobSeekerInDatabase } from "../../utils/CreateUserInDatabase.js";
 
 import { errorNotify, successNotify } from "../../utils/ToastifyNotifications";
 import {
@@ -78,39 +79,23 @@ export default function LoginPage(){
         });
     };
 
-    // this is whats called when the user signs in with google, using firebase authentication to sign the user in with google.
-    const handleGoogleSignIn = () => {
+    const handleGoogleSignIn = async () => {
         setLoginLoading(true);
 
-        signInWithGoogle()
-        .then((result) => {
-            // successful sign in
+        try {
+            const result = await signInWithGoogle();
             const user = result.user;
-            console.log(user.displayName);
-            setLoginLoading(false)
+
+            await createJobSeekerInDatabase(user, setLoginLoading, user.displayName, "job_seeker");
+
+            successNotify("Login Successful!");
             navigate("/", { replace: true });
-        })
-        .catch((error) => {
-            // unsuccessful sign in, handle errors
-            setMsg("Error signing in with Google. Please try again!");
-            errorNotify(msg);
-
-            const errorCode = error.code;
-            const errorMessage = error.message;
-
-            // The email of the user's account used.
-            const email = error.customData.email;
-
-            // The AuthCredential type that was used.
-            const credential = GoogleAuthProvider.credentialFromError(error);
-            
-            console.log("error code: ", errorCode);
-            console.log("error message: ", errorMessage);
-            console.log("email: ", email);
-            console.log("credential: ", credential);
-
+        } catch (error) {
+            console.error("Error signing in with Google: ", error);
+            errorNotify("Error signing in with Google, please try again.");
+        } finally {
             setLoginLoading(false);
-      });
+        }
     }
 
     

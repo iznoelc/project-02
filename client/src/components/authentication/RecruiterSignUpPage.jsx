@@ -5,6 +5,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import useAuth from "../../hooks/useAuth";
 import FallbackElement from "../FallbackElement";
 import fields from "../../utils/RecruiterSignUpFields.js";
+import { createRecruiterInDatabase } from "../../utils/CreateUserInDatabase.js";
 
 import {
   updateProfile,
@@ -40,57 +41,11 @@ export default function RecruiterSignUpPage(){
             const userCredential = await createUser(formData.email, formData.password);
             const user = userCredential.user;
             // create the user in the database
-            try {
-                const response = await fetch("http://localhost:3000/users", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        Authorization: `Bearer ${await user.getIdToken()}`, // include the Firebase ID token in the Authorization header
-                    },
-                    body: JSON.stringify({
-                        uid: user.uid,
-                        display_name: formData.display_name,
-                        email: formData.email,
-                        role: formData.role,
-                        organization: formData.org_name,
-                        website: formData.org_website,
-                        location: formData.org_location,
-                        approved: false,
-                    }),
-            });
-
-                // console.log("FINAL PAYLOAD:", {
-                //     uid: user.uid,
-                //     display_name: formData.display_name,
-                //     email: formData.email,
-                //     role: formData.role,
-                //     organization: formData.org_name,
-                //     website: formData.org_website,
-                //     location: formData.org_location,
-                //     approved: false,});
-
-                // const text = await response.text();
-                // console.log("RAW RESPONSE: ", text);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                // const data = await response.json();
-                // console.log("User successfully created in database:", data); 
-            } catch (error) {
-                setSignUpLoading(false);
-                console.error("Error creating user in database:", error);
-                if (user) {
-                    try {
-                        await user.delete();
-                    } catch (deleteError) {
-                        console.error("Error deleting user after failed database creation:", deleteError);   
-                    }
-                }
-            };
-
+            
+            createRecruiterInDatabase(user, formData, setSignUpLoading);
             
             // successful sign up
-            
+
             console.log(user);
             console.log("loggedIn: " + loggedIn);
 

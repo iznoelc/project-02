@@ -32,7 +32,7 @@ const MainRouter = [
 
         { path: "search",
           element: (
-            <PrivateRoute allowedRoles={["job-seeker", "admin"]}>
+            <PrivateRoute allowedRoles={["job_seeker", "admin"]}>
               <JobFinderPage />
             </PrivateRoute>
           )
@@ -48,7 +48,7 @@ const MainRouter = [
 
         { path: "job-seeker-dashboard",
           element: (
-          <PrivateRoute allowedRoles={["job-seeker", "admin"]}>
+          <PrivateRoute allowedRoles={["job_seeker", "admin"]}>
             <JSDashboard />
           </PrivateRoute>
           )
@@ -56,7 +56,7 @@ const MainRouter = [
 
         { path: "admin-dashboard",
           element: (
-            <PrivateRoute allowedRoles={["job-seeker", "admin"]}> {/*// job seeker allowed for now for testing */}
+            <PrivateRoute allowedRoles={["job_seeker", "admin"]}> {/*// job seeker allowed for now for testing */}
               <AdminDashboard />
             </PrivateRoute>
           )

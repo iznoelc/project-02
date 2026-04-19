@@ -8,23 +8,33 @@ async function createUser(req, res) {
         // make sure fields are properly validated before creating the user
         if (error) {
             return res.status(400).send(error.message);
-        } else {
-            // create a new user with the provided fields and then save it to the database
-            // then, return a success response with the created user
-            const user = new User({
-                uid: value.uid,
-                email: value.email,
-                display_name: value.display_name,
-                role: value.role,
-                organization: value.organization,
-                website: value.website,
-                location: value.location,
-                approved: value.approved,
-            });
-            await user.save();
-
-            res.status(201).json({ message: "User created successfully", user });
         }
+
+        const existingUser = await User.findOne({uid: value.uid});
+
+        if (existingUser){
+            return res.status(200).json({
+                message: "User already exists in the database",
+                user: existingUser
+            });
+        }
+
+
+        // create a new user with the provided fields and then save it to the database
+        // then, return a success response with the created user
+        const user = new User({
+            uid: value.uid,
+            email: value.email,
+            display_name: value.display_name,
+            role: value.role,
+            organization: value.organization,
+            website: value.website,
+            location: value.location,
+            approved: value.approved,
+        });
+        await user.save();
+
+        res.status(201).json({ message: "User created successfully", user });
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: "Server error" });
@@ -37,7 +47,7 @@ async function getUserByUID(req, res) {
 
         // if the user couldnt be found, send a bad request response with an error msg
         if (!user) {
-            return res.status(400).json({ error: "User not found" });
+            return res.status(404).json({ error: "User not found" });
         }
 
         res.status(200).json({ user }); // if the user was found, send a success response with the user

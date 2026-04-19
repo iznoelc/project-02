@@ -2,8 +2,7 @@ const Joi = require("joi");
 
 const userSchema = Joi.object({
     uid: Joi.string().required(), //firebase uid,
-    display_name: Joi.string().min(3).max(30).required(), //user's display name,
-    email: Joi.string().email().required(), //user's email,
+    display_name: Joi.string().min(1).max(30).required(), //user's display name,
     role: Joi.string().valid("job_seeker", "recruiter", "admin").required(), //user's role,
 
     // conditional fields for recruiters but not regular job-seekers
