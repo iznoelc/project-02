@@ -14,6 +14,7 @@ app.use(cors());
 // routes
 const userRoutes = require("./src/routes/user.routes");
 const applicationRoutes = require("./src/routes/application.routes");
+const jobPostingRoutes = require("./src/routes/jobPosting.routes")
 
 
 // validations
@@ -29,6 +30,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/applications", applicationRoutes); //use the application route
+
+app.use("/job_postings", jobPostingRoutes); // use the job posting route
 
 // async function run() {
 //   try {

@@ -6,7 +6,7 @@ import { AiFillLike } from "react-icons/ai";
 
 
 
-export default function JobFinder(){
+export default function JobFinder({ currentUser }){
 
     const { favorites, addToFav, removeFromFav } = useFavoriteJob(); // use custom hook to get the favorites list and functions to add/remove movies from favorites
 
@@ -51,15 +51,25 @@ export default function JobFinder(){
 
         /* use useEffect here to get the data once its loaded from the loader, since it will take some time. */
     useEffect(() => {
-        fetchData(setData)
-    }, []);
+        console.log("currentUser:", currentUser);
+        if (!currentUser) return;
+        fetchData(setData,currentUser)
+    }, [currentUser]);
 
 
 
-    async function fetchData(setData) {
+    async function fetchData(setData, currentUser) {
     try {
-        const res = await fetch("/job_posting");
+        const token = await currentUser.getIdToken();
+
+        const res = await fetch("http://localhost:3000/job_postings", {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
+
         const data = await res.json();
+        console.log("FETCHED Job Postings:", data);
 
         setData(data);
     } catch (err) {

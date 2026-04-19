@@ -52,6 +52,16 @@ async function getJobPostingByID(req, res) {
     }
 }
 
+async function getAllJobPostings(req, res) {
+    try {
+        const job_posting = await jobPosting.find();
+        res.json(job_posting);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "Server error" });
+    }
+}
+
 async function deleteJobPosting(req, res) {
     try {
         const deleted = await jobPosting.findByIdAndDelete(req.params.id);
@@ -67,4 +77,4 @@ async function deleteJobPosting(req, res) {
     }
 }
 
-module.exports = { createJobPosting, getJobPostingByID, deleteJobPosting };
+module.exports = { createJobPosting, getJobPostingByID, getAllJobPostings, deleteJobPosting };
