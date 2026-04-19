@@ -1,4 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import DataSorter from "../utils/DataSorter";
 import Search from "../utils/SearchAppsFromJobId";
 
@@ -6,6 +8,7 @@ import useAuth from "../hooks/useAuth";
 
 export default function JSDashboard(){
     const { user } = useAuth();
+    const navigate = useNavigate();
 
     // const jobsAppliedTo = jobPostings;//useLoaderData(); // get the data from the dashboard loader in MainRouter using useLoaderData
     const [userApps, setUserApps] = useState([]);
@@ -57,7 +60,13 @@ export default function JSDashboard(){
             })
             // const response = await res.text();
             // console.log("RAW RESPONSE APPLICATIONS: " + response);
-
+            if (!res.ok){
+              if (res.status === 403){
+                navigate("/error", { state: { code: 403 } })
+                return;
+              }
+              throw new Error(`HTTP error! status: ${res.status}`)
+            }
             const data = await res.json();
 
             const flattenedData = data.applications.map(app => ({
@@ -78,7 +87,6 @@ export default function JSDashboard(){
 
     return(
         <>
-
         <div className="flex items-center justify-center gap-5">
             {/* search bar */}
             <select onChange={(e) => setSearchType(e.target.value)} className="secondary-font">

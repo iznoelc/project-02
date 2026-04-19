@@ -35,7 +35,10 @@ const verifyFireBaseToken = async (req, res, next) => {
   // verify token
   try {
     const userInfo = await admin.auth().verifyIdToken(token);
-    req.token_email = userInfo.email;
+    req.user = {
+      uid: userInfo.uid,
+      email: userInfo.email,
+    }
     console.log("after token validation", userInfo);
     next();
   } catch {
