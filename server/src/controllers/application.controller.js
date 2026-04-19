@@ -33,4 +33,29 @@ async function createApplication(req, res) {
     }
 }
 
-module.exports = { createApplication };
+/**
+ * Get all applications for a certian user
+ * @param {} req 
+ * @param {*} res 
+ * @returns 
+ */
+async function getApplicationsByUserUID(req, res){
+    try {
+        const applications = await Application.find({
+            applicant_id: req.params.applicant_id
+        })
+        .populate("job_id");
+
+        if (!applications){
+            return res.status(404).json({
+                error: "Applications could not be found",
+            });
+        }
+
+        res.status(200).json({applications});
+    } catch (error){
+        return res.status(500).json({message: "Server Error"});
+    }
+}
+
+module.exports = { createApplication, getApplicationsByUserUID };

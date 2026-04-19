@@ -18,6 +18,8 @@ import AdminDashboard from "../components/AdminDashboard";
 import ErrorPage, { ErrorBoundary } from "../components/ErrorPage";
 import DetailsPage from "../components/DetailsPage";
 
+import UserProfile from "../components/UserProfile";
+
 const MainRouter = [
   {
     path: "/",
@@ -95,6 +97,14 @@ const MainRouter = [
         },
 
         { path: "job-details", Component: DetailsPage },
+
+        { path: "profile/:uid",
+          element: (
+            <PrivateRoute allowedRoles={["job_seeker", "admin"]}>
+              <UserProfile />
+            </PrivateRoute>
+          )
+        }
     ],
   },
   { path: "*", Component: ErrorPage }, {path: "/error", Component: ErrorPage}

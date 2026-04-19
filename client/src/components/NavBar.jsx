@@ -3,7 +3,7 @@ import { IoPersonCircle } from "react-icons/io5";
 import useAuth from "../hooks/useAuth";
 
 export default function NavBar(){
-    const { loggedIn, signOutUser } = useAuth();
+    const { loggedIn, signOutUser, role, user } = useAuth();
     const navigate = useNavigate();
 
     return (
@@ -62,13 +62,18 @@ export default function NavBar(){
                 <ul
                     tabIndex="-1"
                     className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li>
-                    <a className="justify-between">
+                    <li><a className="justify-between" onClick={() => navigate(`/profile/${user.uid}`, { replace : true })}>
                         Profile
-                        <span className="badge">New</span>
-                    </a>
-                    </li>
-                    <li><a>Settings</a></li>
+                    </a></li>
+                    <li><a onClick={() => navigate(
+                        role === "admin" ? "/admin-dashboard" :
+                        role === "job_seeker" ? "job-seeker-dashboard" :
+                        role === "recruiter" ? "recruiter-dashboard" :
+                        "/",
+                        { replace: true }
+                        )}>
+                            Dashboard
+                    </a></li>
                     <li><a onClick={signOutUser}>Logout</a></li>
                 </ul>
                 </div>

@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
         type: String, required: true, unique: true
     },
     display_name: {
-        type: String, required: true, unique: true
+        type: String, required: true
     },
     role: {
         type: String, enum: ["job_seeker", "recruiter", "admin"], default: "job_seeker"
