@@ -5,14 +5,21 @@ export default function AdminDashboard() {
 
     const [seekersList, setSeekersList] = useState([]);
     const [recruitersList, setRecruitersList] = useState([]);
-    const [userQuery, setUserQuery] = useState("");
+
+    const [userQuery, setUserQuery] = useState("");      // All Users search
+    const [actionQuery, setActionQuery] = useState("");  // Action Needed search
 
     useEffect(() => {
         fetchUsers(setSeekersList, setRecruitersList);
     }, []);
 
     const users = [...seekersList, ...recruitersList];
+
     const filteredUsers = Search(users, userQuery);
+
+    // Only recruiters who need approval
+    const actionNeeded = recruitersList.filter(r => r.approve === false);
+    const filteredActionUsers = Search(actionNeeded, actionQuery);
 
     const [randomNum] = useState(() => Math.floor(Math.random() * 1000));
 
@@ -39,39 +46,75 @@ export default function AdminDashboard() {
                 </div>
             </div>
 
-            <div className="flex flex-col items-center bg-base-200 p-4 rounded">
-                <h3 className="text-4xl font-bold">Users</h3>
+            {/* TWO COLUMN LAYOUT */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full p-6">
 
-                <input
-                    type="text"
-                    placeholder="Search"
-                    className="input input-bordered w-full max-w-xs my-4"
-                    value={userQuery}
-                    onChange={(e) => setUserQuery(e.target.value)}
-                />
+                {/* LEFT — ALL USERS */}
+                <div className="flex flex-col items-start bg-base-200 p-4 rounded h-full">
+                    <h3 className="text-4xl font-bold">All Users</h3>
 
-                {filteredUsers.map((user) => (
-                    <div
-                        key={user._id}
-                        className="card bg-base-100 shadow-xl p-6 w-full max-w-3xl mx-auto my-3"
-                    >
-                        <h3>{user.display_name}</h3>
-                        <p className="text-sm mt-2">{user.role}</p>
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        className="input input-bordered w-full max-w-xs my-4"
+                        value={userQuery}
+                        onChange={(e) => setUserQuery(e.target.value)}
+                    />
 
-                        <button
-                            className="btn btn-error btn-sm mt-4"
-                            onClick={() => {
-                                if (seekersList.some(s => s._id === user._id)) {
-                                    Delete(user._id, setSeekersList);
-                                } else {
-                                    Delete(user._id, setRecruitersList);
-                                }
-                            }}
+                    {filteredUsers.map((user) => (
+                        <div
+                            key={user._id}
+                            className="card bg-base-100 shadow-xl p-6 w-full max-w-3xl mx-auto my-3"
                         >
-                            Delete
-                        </button>
-                    </div>
-                ))}
+                            <h3>{user.display_name}</h3>
+                            <p className="text-sm mt-2">{user.role}</p>
+
+                            <button
+                                className="btn btn-error btn-sm mt-4"
+                                onClick={() => {
+                                    if (seekersList.some(s => s._id === user._id)) {
+                                        Delete(user._id, setSeekersList);
+                                    } else {
+                                        Delete(user._id, setRecruitersList);
+                                    }
+                                }}
+                            >
+                                Delete
+                            </button>
+                        </div>
+                    ))}
+                </div>
+
+                {/* RIGHT — ACTION NEEDED */}
+                <div className="flex flex-col items-start bg-base-200 p-4 rounded h-full">
+                    <h3 className="text-4xl font-bold">Action Needed</h3>
+
+                    <input
+                        type="text"
+                        placeholder="Search recruiters"
+                        className="input input-bordered w-full max-w-xs my-4"
+                        value={actionQuery}
+                        onChange={(e) => setActionQuery(e.target.value)}
+                    />
+
+                    {filteredActionUsers.map((user) => (
+                        <div
+                            key={user._id}
+                            className="card bg-base-100 shadow-xl p-6 w-full max-w-3xl mx-auto my-3"
+                        >
+                            <h3>{user.display_name}</h3>
+                            <p className="text-sm mt-2">{user.role}</p>
+
+                            <button
+                                className="btn btn-success btn-sm mt-4"
+                                onClick={() => Approve(user._id, setRecruitersList)}
+                            >
+                                Approve Recruiter
+                            </button>
+                        </div>
+                    ))}
+                </div>
+
             </div>
 
             <ToastContainer />
@@ -97,6 +140,24 @@ async function fetchUsers(setSeekersList, setRecruitersList) {
         setRecruitersList(data.filter(u => u.role === "recruiter"));
     } catch (err) {
         console.error("Failed to fetch users:", err);
+    }
+}
+
+async function Approve(userId, setRecruitersList) {
+    const res = await fetch(`http://localhost:3000/users/${userId}/approve`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" }
+    });
+
+    if (res.ok) {
+        setRecruitersList(prev =>
+            prev.map(u =>
+                u._id === userId ? { ...u, approve: true } : u
+            )
+        );
+        toast.success("Recruiter approved");
+    } else {
+        toast.error("Failed to approve recruiter");
     }
 }
 
