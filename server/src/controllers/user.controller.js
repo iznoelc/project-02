@@ -44,12 +44,11 @@ async function createUser(req, res) {
 async function getUserByUID(req, res) {
     try {
 
-        console.log("request uid: ", req.user.uid);
-            console.log("params uid: ", req.params.uid);
-        if (req.params.uid !== req.user.uid){
-            
-            return res.status(403).json({error: "Access"})
-        }
+        // console.log("request uid: ", req.user.uid);
+        //     console.log("params uid: ", req.params.uid);
+        // if (req.params.uid !== req.user.uid){
+        //     return res.status(403).json({error: "Access"})
+        // }
 
         const user = await User.findOne({ uid: req.params.uid }); // try to find the user by the request param
 
