@@ -1,4 +1,5 @@
 import UserProfilePicPlaceholder from "../assets/UserProfilePicPlaceholder.png"
+import { MdLabelImportant } from "react-icons/md";
 
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -53,32 +54,36 @@ export default function UserProfile(){
     }, [uid, user, navigate]);
 
     if (loading) return <FallbackElement />
-
     if (!profile) return <><h1>No profile found.</h1></>
 
     return (
         <>
             {profile && 
             <>
-            <div className="min-h-screen m-w-lg flex flex-col items-center justify-center">
+            <div className="min-h-screen flex flex-col max-w-xl w-full mx-auto items-center">
                 <div>
-                    <div className="flex p-2">
-                        <img src={UserProfilePicPlaceholder} className="image-full max-w-xs"/>
-                        <div className="flex flex-col">
+                    <div className="flex sm:flex-row flex-col items-center sm:items-start gap-6 p-4">
+                        <img src={UserProfilePicPlaceholder} className="h-32 w-32 sm:w-40 sm:h-40 object-cover rounded-full"/>
+                        <div className="flex flex-col text-center sm:text-left p-2 gap-2">
                         {isOwnProfile ?  (
-                            <input 
-                                type="text"
-                                value={profile.user.display_name}
-                            />
+                            <>
+                            <div className="flex"><MdLabelImportant /><p className="text-xs"><i>This is your profile.</i></p></div>
+                            
+                            <h1 className="text-4xl">{profile.user.display_name}</h1>
+                            <h2>{profile.user.role} </h2>
+                            
+                            
+                            <h2 className="wrap-break">{profile.user.bio ? "Bio" : "No bio yet."}</h2>
+                            </>
                         ) : (
                             <h1 className="text-2xl">{profile.user.display_name}</h1>
                         )}
-                        <p>test</p>
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col">
-                    <p>Test</p>
+                <div className="flex flex-col items-center sm:items-start gap-6 p-4">
+
+                    <h1></h1>
                 </div>
             </div>
             </>}

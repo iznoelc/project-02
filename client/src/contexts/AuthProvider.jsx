@@ -17,8 +17,6 @@ import {
 import { auth } from "../firebase/firebase.config";
 import { AuthContext } from "./AuthContext";
 import FallbackElement from "../components/FallbackElement";
-import { useNavigate } from "react-router-dom";
-
 
 const googleProvider = new GoogleAuthProvider();
 
