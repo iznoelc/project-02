@@ -18,7 +18,7 @@ export default function AdminDashboard() {
     const filteredUsers = Search(users, userQuery);
 
     // Only recruiters who need approval
-    const actionNeeded = recruitersList.filter(r => r.approve === false);
+    const actionNeeded = recruitersList.filter(r => r.approved === false);
     const filteredActionUsers = Search(actionNeeded, actionQuery);
 
     const [randomNum] = useState(() => Math.floor(Math.random() * 1000));
@@ -152,7 +152,7 @@ async function Approve(userId, setRecruitersList) {
     if (res.ok) {
         setRecruitersList(prev =>
             prev.map(u =>
-                u._id === userId ? { ...u, approve: true } : u
+                u._id === userId ? { ...u, approved: true } : u
             )
         );
         toast.success("Recruiter approved");
