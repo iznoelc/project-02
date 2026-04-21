@@ -34,7 +34,7 @@ export async function createPosting(user, fetchData, formData) {
         req_qualifications,
         deadline,
         start_date,
-        recuiter_id,
+        recruiter_id,
         } = formData;    
 
         try {
@@ -55,7 +55,7 @@ export async function createPosting(user, fetchData, formData) {
             req_qualifications,
             deadline,
             start_date,
-            recuiter_id
+            recruiter_id
             }),
     });
 

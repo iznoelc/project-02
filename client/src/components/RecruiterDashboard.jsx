@@ -11,7 +11,7 @@ export default function RecuiterDashboard(){
 
     const { user } = useAuth(); 
     const userCompany = "Nasa"
-    const userID = user._id;
+    const userID = user.uid;
 
     const [data, setData] = useState(null); // the job data
     const [sortType, setSortType] = useState("Date"); // default sort type
@@ -289,7 +289,7 @@ export default function RecuiterDashboard(){
                         <h2 className="card-title primary-font text-1xl" key={index}>{d.job_title}</h2>
                         <h2 className="card-title primary-font text-1xl"> Salary: {d.salary_range[0]}$-{d.salary_range[1]}$</h2>
                         <h2 className="card-title primary-font text-1xl">{d.location}</h2>
-                        <p className="secondary-font text-base">{d.deadline}</p>
+                        <p className="secondary-font text-base">Deadline: {d.deadline}</p>
                         
 
                         <div className="justify-end card-actions">

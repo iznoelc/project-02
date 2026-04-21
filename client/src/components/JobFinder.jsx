@@ -5,7 +5,8 @@ import useFavoriteJob from "../hooks/useFavoriteJobs"
 import { AiFillLike } from "react-icons/ai";
 import useAuth from "../hooks/useAuth";
 import { toast, ToastContainer } from "react-toastify";
-
+import {deletePosting} from "../utils/DeleteCreateJobInDataBase.js";
+import { Link } from "react-router-dom";
 
 
 export default function JobFinder(){
@@ -87,36 +88,16 @@ export default function JobFinder(){
         return favorites.some(fav => fav.job_id === jobPosting.job_id);
     }
 
-    async function deletePosting(job_id) {
-        const confirmed = await confirmToast("Delete this Job Posting?");
-        if (!confirmed) return;
-
-        const token = await user.getIdToken();
-
-        const res = await fetch(`http://localhost:3000/job_postings/${job_id}`, {
-            method: "DELETE",
-            headers: {
-                Authorization: `Bearer ${token}`,
-            },
-        });
-
-        if (res.ok) {
-            fetchData(user)
-            toast.success("Job Posting deleted");
-        } else {
-            toast.error("uh oh, failed to delete job posting");
-        }
-    }
 
     const handleButtonClick = (job_id) =>{
         switch(userType){
             case "job_seeker":
                 break;
             case "recruiter":
-                deletePosting(job_id);
+                deletePosting(job_id, user, fetchData, confirmToast);
                 break;
             case "admin":
-                deletePosting(job_id);
+                deletePosting(job_id, user, fetchData, confirmToast);
                 break;
         }
         return;
@@ -237,7 +218,11 @@ export default function JobFinder(){
                         <div className="grid grid-cols-2  gap-200 mx-auto p-8 grid-col-grow">
                             <div>
                                 {/* put the title and description of the movie in the cards */}
-                                <h2 className="card-title primary-font text-1xl" key={index}>{d.job_title}</h2>
+                                <Link to={`/job-details/${d._id}`} className="no-underline">
+                                <h2 className="card-title primary-font text-1xl hover:underline">
+                                    {d.job_title}
+                                </h2>
+                                </Link>
                                 <h2 className="card-title primary-font text-1xl"> Salary: {d.salary_range[0]}$-{d.salary_range[1]}$</h2>
                                 <h2 className="card-title primary-font text-1xl">{d.location}</h2>
                                 <p className="secondary-font text-base">{d.institution}</p>

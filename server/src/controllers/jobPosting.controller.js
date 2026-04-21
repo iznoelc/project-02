@@ -39,7 +39,7 @@ async function createJobPosting(req, res) {
 
 async function getJobPostingByID(req, res) {
     try {
-        const job_posting = await jobPosting.findById(req.params.id);
+        const job_posting = await jobPosting.findById(req.params._id);
 
         if (!job_posting) {
             return res.status(404).json({ error: "Job posting not found" });
@@ -64,7 +64,7 @@ async function getAllJobPostings(req, res) {
 
 async function deleteJobPosting(req, res) {
     try {
-        const deleted = await jobPosting.findByIdAndDelete(req.params.id);
+        const deleted = await jobPosting.findByIdAndDelete(req.params._id);
 
         if (!deleted) {
             return res.status(404).json({ message: "Job Posting not found" });
