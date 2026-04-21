@@ -1,5 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @plugin "daisyui" {
   themes: corporate --default, dark --prefersdark;
 }
+
+.work-sans-regular {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Gugi", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+

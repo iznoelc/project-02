@@ -68,13 +68,20 @@ export default function JSDashboard(){
               throw new Error(`HTTP error! status: ${res.status}`)
             }
             const data = await res.json();
+            
 
             const flattenedData = data.applications.map(app => ({
               ...app,
               job_title: app.job_id.job_title,
               location: app.job_id.location,
               category: app.job_id.category,
-              salary_range: app.job_id.salary_range
+              salary_range: app.job_id.salary_range,
+              institution: app.job_id.institution,
+              date: new Date(app.createdAt).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+            })
             }));
 
             setUserApps(flattenedData);
@@ -128,30 +135,23 @@ export default function JSDashboard(){
 
         {/* To be displayed if data is not loading and the current data length is bigger than zero */}
         {sortedData.length > 0 && (
-            <ul list bg-base-100 rounded-box shadow-md> 
-
+            
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-auto p-8 justify-center items-center">
             {sortedData.map((d, index) => (
-                <div key={index} className="card w-full bg-base-100 card-xs shadow-sm">
-                    <div className="card-body">
-                        {/* put the title and description of the movie in the cards */}
-                        <h2 className="card-title primary-font text-1xl" key={index}>{d.job_title}</h2>
-                        <h2 className="card-title primary-font text-1xl"> Salary: ${d.salary_range[0]} to ${d.salary_range[1]}</h2>
-                        <h2 className="card-title primary-font text-1xl">{d.location}</h2>
-                        <p className="secondary-font text-base">{d.category}</p>
-                        <p className="secondary-font text-base">{d.institution}</p>
-                        
 
-                        <div className="justify-end card-actions">
-                        <button className={`text-xl transform transition-transform duration-75 hover:scale-125 hover:cursor-pointer
-                        `}
-                            >
-                            
-                        </button>
-                        </div>
+                <div class="card w-96 bg-base-200 card-md shadow-sm" key={index}>
+                <div class="card-body">
+                    <h1 class="card-title">{d.job_title}</h1>
+                    <div class="badge badge-outline badge-primary">{d.category}</div>
+                    <p><b>{d.institution}</b>, {d.location}</p>
+                    <p>You applied on {d.date}</p>
+                    <div class="justify-end card-actions">
+                    <button class="btn btn-primary">More...</button>
                     </div>
                 </div>
+                </div>
             ))}
-            </ul>
+            </div>
         )}
         {/* To be displayed if data is not loading and the current data length is zero (i.e. no search results) */}
         {sortedData.length === 0 && (
