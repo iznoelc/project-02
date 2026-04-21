@@ -1,17 +1,15 @@
 import { useState, useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
-export default function AdminDashboard({ currentUser }) {
-    const admin_name = currentUser?.name || "Admin";
+export default function AdminDashboard() {
 
     const [seekersList, setSeekersList] = useState([]);
     const [recruitersList, setRecruitersList] = useState([]);
     const [userQuery, setUserQuery] = useState("");
 
     useEffect(() => {
-        if (!currentUser) return;
-        fetchUsers(setSeekersList, setRecruitersList, currentUser);
-    }, [currentUser]);
+        fetchUsers(setSeekersList, setRecruitersList);
+    }, []);
 
     const users = [...seekersList, ...recruitersList];
     const filteredUsers = Search(users, userQuery);
@@ -25,7 +23,7 @@ export default function AdminDashboard({ currentUser }) {
                     <div className="max-w-md">
                         <h3>ADMIN DASHBOARD</h3>
                         <p>
-                            Dear {admin_name}, welcome to the admin dashboard. Here you can view site
+                            Dear Admin, welcome to the admin dashboard. Here you can view site
                             statistics, search users, and delete them as needed.
                         </p>
 
@@ -64,9 +62,9 @@ export default function AdminDashboard({ currentUser }) {
                             className="btn btn-error btn-sm mt-4"
                             onClick={() => {
                                 if (seekersList.some(s => s._id === user._id)) {
-                                    Delete(user._id, setSeekersList, currentUser);
+                                    Delete(user._id, setSeekersList);
                                 } else {
-                                    Delete(user._id, setRecruitersList, currentUser);
+                                    Delete(user._id, setRecruitersList);
                                 }
                             }}
                         >
@@ -90,18 +88,10 @@ function StatCard({ number, label }) {
     );
 }
 
-async function fetchUsers(setSeekersList, setRecruitersList, currentUser) {
+async function fetchUsers(setSeekersList, setRecruitersList) {
     try {
-        const token = await currentUser.getIdToken();
-
-        const res = await fetch("http://localhost:3000/users", {
-            headers: {
-                Authorization: `Bearer ${token}`,
-            },
-        });
-
+        const res = await fetch("http://localhost:3000/users");
         const data = await res.json();
-        console.log("FETCHED USERS:", data);
 
         setSeekersList(data.filter(u => u.role === "job_seeker"));
         setRecruitersList(data.filter(u => u.role === "recruiter"));
@@ -110,17 +100,12 @@ async function fetchUsers(setSeekersList, setRecruitersList, currentUser) {
     }
 }
 
-async function Delete(userId, setList, currentUser) {
+async function Delete(userId, setList) {
     const confirmed = await confirmToast("Delete this user?");
     if (!confirmed) return;
 
-    const token = await currentUser.getIdToken();
-
     const res = await fetch(`http://localhost:3000/users/${userId}`, {
         method: "DELETE",
-        headers: {
-            Authorization: `Bearer ${token}`,
-        },
     });
 
     if (res.ok) {
