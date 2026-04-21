@@ -4,15 +4,15 @@ const { verifyFirebaseToken } = require("../middleware/verifyFirebaseToken");
 const { createJobPosting, getJobPostingByID, deleteJobPosting, getAllJobPostings } = require("../controllers/jobPosting.controller");
 
 // CREATE job
-router.post("/:uid", verifyFirebaseToken, createJobPosting);
+router.post("/", verifyFirebaseToken, createJobPosting);
 
 // GET job by MongoDB _id
-router.get("/:uid", verifyFirebaseToken, getJobPostingByID);
+router.get("/:_id", verifyFirebaseToken, getJobPostingByID);
 
 // GET all job postings
 router.get("/", getAllJobPostings);
 
 // DELETE job by MongoDB _id
-router.delete("/:uid", verifyFirebaseToken, deleteJobPosting);
+router.delete("/:_id", verifyFirebaseToken, deleteJobPosting);
 
 module.exports = router;

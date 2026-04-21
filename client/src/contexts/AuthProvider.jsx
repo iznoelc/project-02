@@ -17,15 +17,19 @@ import {
 import { auth } from "../firebase/firebase.config";
 import { AuthContext } from "./AuthContext";
 import FallbackElement from "../components/FallbackElement";
+import { useNavigate } from "react-router-dom";
+
 
 const googleProvider = new GoogleAuthProvider();
 
 // passing a children prop -->
 const AuthProvider = ({ children }) => {
+  // const navigate = useNavigate();
     
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [role, setRole] = useState(null);
+  const [roleLoading, setRoleLoading] = useState(true);
 
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -55,9 +59,12 @@ const AuthProvider = ({ children }) => {
       if (!currentUser) {
         setRole(null);
         setLoading(false);
+
+        setRoleLoading(false);
         return;
       }
 
+      setRoleLoading(true);
       try {
         const res = await fetch(`http://localhost:3000/users/${currentUser.uid}`, {
           headers: {
@@ -65,6 +72,10 @@ const AuthProvider = ({ children }) => {
           },
         });
         const data = await res.json();
+        if (!res.ok){
+          // navigate("/error",  { state: { code: res.status } });
+          throw new Error(`HTTP error! Status: ${res.status}`)
+        }
 
         console.log("ROLE RESPONSE: ", data);
 
@@ -75,6 +86,7 @@ const AuthProvider = ({ children }) => {
       }
 
       setLoading(false);
+      setRoleLoading(false);
     });
 
     return () => {
@@ -88,7 +100,7 @@ const AuthProvider = ({ children }) => {
 
   // prevents error if auth is still loading and the user is trying to access a protected route
   // i.e. if user is trying to access dashboard and refreshes, prevents an error from showing if they are already logged in 
-  if (loading) {
+  if (loading || roleLoading) {
     return <div className="pt-64"><FallbackElement /></div>;
   }
 

@@ -4,6 +4,8 @@ import Search from "../utils/Search";
 import useFavoriteJob from "../hooks/useFavoriteJobs"
 import { AiFillLike } from "react-icons/ai";
 import useAuth from "../hooks/useAuth";
+import { toast, ToastContainer } from "react-toastify";
+
 
 
 export default function JobFinder(){
@@ -13,7 +15,7 @@ export default function JobFinder(){
     const { favorites, addToFav, removeFromFav } = useFavoriteJob(); // use custom hook to get the favorites list and functions to add/remove movies from favorites
 
     // determains what buttons will be present on your device
-    let userType = "job_seeker";
+    let userType = "admin";
 
     // Number of entries being shown to the user
     const [numShow, setNumShow] = useState(10);
@@ -55,29 +57,29 @@ export default function JobFinder(){
     useEffect(() => {
         console.log("currentUser:", user);
         if (!user) return;
-        fetchData(setData,user)
+        fetchData(user)
     }, [user]);
 
 
 
-    async function fetchData(setData, user) {
-    try {
-        const token = await user.getIdToken();
+    async function fetchData( user) {
+        try {
+            const token = await user.getIdToken();
 
-        const res = await fetch("http://localhost:3000/job_postings", {
-            headers: {
-                Authorization: `Bearer ${token}`,
-            },
-        });
+            const res = await fetch("http://localhost:3000/job_postings", {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
 
-        const data = await res.json();
-        console.log("FETCHED Job Postings:", data);
+            const data = await res.json();
+            console.log("FETCHED Job Postings:", data);
 
-        setData(data);
-    } catch (err) {
-        console.error("Failed to fetch Job Postings:", err);
+            setData(data);
+        } catch (err) {
+            console.error("Failed to fetch Job Postings:", err);
+        }
     }
-}
 
 
     // check if movie is in favorites list by checking if the title of the movie is in the favorites list. return true if it is, false if it isnt.
@@ -85,20 +87,81 @@ export default function JobFinder(){
         return favorites.some(fav => fav.job_id === jobPosting.job_id);
     }
 
-    const deletePosting = (jobId) => {
+    async function deletePosting(job_id) {
+        const confirmed = await confirmToast("Delete this Job Posting?");
+        if (!confirmed) return;
 
-    } 
-    /*const handleButtonClick(){
+        const token = await user.getIdToken();
+
+        const res = await fetch(`http://localhost:3000/job_postings/${job_id}`, {
+            method: "DELETE",
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
+
+        if (res.ok) {
+            fetchData(user)
+            toast.success("Job Posting deleted");
+        } else {
+            toast.error("uh oh, failed to delete job posting");
+        }
+    }
+
+    const handleButtonClick = (job_id) =>{
         switch(userType){
             case "job_seeker":
                 break;
             case "recruiter":
+                deletePosting(job_id);
                 break;
             case "admin":
+                deletePosting(job_id);
                 break;
         }
         return;
-    };*/
+    };
+
+    function confirmToast(message = "Are you sure?") {
+        return new Promise((resolve) => {
+            toast(
+                ({ closeToast }) => (
+                    <div>
+                        <p className="font-bold mb-2">{message}</p>
+    
+                        <div className="flex gap-2">
+                            <button
+                                className="btn btn-error btn-sm"
+                                onClick={() => {
+                                    resolve(true);
+                                    closeToast();
+                                }}
+                            >
+                                Yes
+                            </button>
+    
+                            <button
+                                className="btn btn-sm"
+                                onClick={() => {
+                                    resolve(false);
+                                    closeToast();
+                                }}
+                            >
+                                No
+                            </button>
+                        </div>
+                    </div>
+                ),
+                {
+                    position: "top-center",
+                    autoClose: false,
+                    closeOnClick: false,
+                    draggable: false,
+                    hideProgressBar: true,
+                }
+            );
+        });
+    }
 
     return(
         <>
@@ -166,48 +229,57 @@ export default function JobFinder(){
 
             {sortedData.slice(currentPage * numShow, numShow + (currentPage * numShow) ).map((d, index) => (
                 <div key={index} className="relative card w-full bg-base-100 card-xs shadow-sm">
-                  <a href="#" className="hover-3d my-12 mx-2 cursor-pointer z-10 relative">
+ 
   
                     {/* content */}
-                    <div className="card w-96 secondary-color primary-color bg-[radial-gradient(circle_at_bottom_left,#ffffff04_35%,transparent_36%),radial-gradient(circle_at_top_right,#ffffff04_35%,transparent_36%)] bg-size-[4.95em_4.95em]">
-                        <div className="card-body">
-                        {/* put the title and description of the movie in the cards */}
-                        <h2 className="card-title primary-font text-1xl" key={index}>{d.job_title}</h2>
-                        <h2 className="card-title primary-font text-1xl"> Salary: {d.salary_range[0]}$-{d.salary_range[1]}$</h2>
-                        <h2 className="card-title primary-font text-1xl">{d.location}</h2>
-                        <p className="secondary-font text-base">{d.institution}</p>
-                        
-                        
-                        <div className="justify-end card-actions">
-                        {userType === "job_seeker" &&(
-                        <button className={`text-xl transform transition-transform duration-75 hover:scale-125 hover:cursor-pointer z-30
-                        `}
-                            >
-                            Apply
-                        </button>
-                        )}
-                        <div className="justify-end card-actions">
-                          
-                        <button className={`text-xl transform transition-transform duration-75 hover:scale-125 hover:cursor-pointer
-                        ${isFavorite(d) ? "text-primary hover:text-error" : "hover:text-success"} z-30`}
-                            onClick={isFavorite(d) ? () => removeFromFav(d) : () => addToFav(d)}>
-                            <AiFillLike />
-                        </button>
-                        </div>
+
+                    <div className="card-body">
+                        <div className="grid grid-cols-2  gap-200 mx-auto p-8 grid-col-grow">
+                            <div>
+                                {/* put the title and description of the movie in the cards */}
+                                <h2 className="card-title primary-font text-1xl" key={index}>{d.job_title}</h2>
+                                <h2 className="card-title primary-font text-1xl"> Salary: {d.salary_range[0]}$-{d.salary_range[1]}$</h2>
+                                <h2 className="card-title primary-font text-1xl">{d.location}</h2>
+                                <p className="secondary-font text-base">{d.institution}</p>
+                                
+                            </div>
+                            <div className="justify-end card-actions">
+                                <ul list>
+                                    <h2 className="card-title primary-font text-1xl justify-end">{d.category}</h2> 
+                                    <h2 className="card-title primary-font text-1xl"> Posting Ends On: {d.deadline}</h2>  
+                                    <div>                                              
+                                        {userType === "job_seeker" &&(
+                                            <button className={`text-xl transform transition-transform duration-75 hover:scale-125 hover:cursor-pointer z-30
+                                            `}
+                                                >
+                                                Apply
+                                            </button>
+                                        )}
+
+                                        {userType === "admin" && (
+                                            <button
+                                                className="text-xl transform transition-transform hover:scale-125"
+                                                onClick={() => handleButtonClick(d._id)}
+                                            >
+                                                Remove Posting
+                                            </button>
+                                        )}
+                                    
+
+                                        <div className="justify-end card-actions">
+                                        
+                                            <button className={`text-xl transform transition-transform duration-75 hover:scale-125 hover:cursor-pointer
+                                            ${isFavorite(d) ? "text-primary hover:text-error" : "hover:text-success"} z-30`}
+                                                onClick={isFavorite(d) ? () => removeFromFav(d) : () => addToFav(d)}>
+                                                <AiFillLike />
+                                            </button>
+                                        </div>
+                                    </div>   
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                    
-                    {/* 8 empty divs needed for the 3D effect */}
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </a>
+                                            
 
                 </div>
             ))}
