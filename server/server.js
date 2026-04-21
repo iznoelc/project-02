@@ -1,6 +1,11 @@
 // this is the same as "index.js" from mini-project-7
 // src: https://github.com/FahmidaHamid/backend-with-dbms-authorization
+
+
 require("dotenv").config();
+if (process.env.LOCAL_DNS_FIX === "true") {
+  require("./localFix.js");
+}
 const express = require("express");
 const cors = require("cors"); 
 const { connectDB } = require("./src/config/db");
