@@ -49,17 +49,27 @@ async function getApplicationsByUserUID(req, res){
         }
 
         const applications = await Application.find({
-            applicant_id: req.params.applicant_id
+            applicant_id: req.params.applicant_id,
+            
         })
-        .populate("job_id");
+        .populate({
+            path: "job_id",
+            match: {}
+        });
 
-        if (!applications){
+        
+
+        // ensure null job_ids arent retrieved
+        const filteredApplications = applications.filter(app => app.job_id !== null);
+        console.log(filteredApplications)
+
+        if (!applications || !filteredApplications){
             return res.status(404).json({
                 error: "Applications could not be found",
             });
         }
 
-        res.status(200).json({applications});
+        res.status(200).json({filteredApplications});
     } catch (error){
         return res.status(500).json({message: "Server Error"});
     }

@@ -25,11 +25,11 @@ export default function JSDashboard(){
      */ 
     const filteredData = useMemo(() => {
         if (!userApps) return []; // if there is no data, return null for filteredData
-        console.log("SEARCH:", searchType, searchQuery);
-        console.log("FIRST ITEM:", userApps[0]);
-        console.log("userApps:", userApps);
-            console.log("searchQuery:", searchQuery);
-            console.log("searchType:", searchType);
+        // console.log("SEARCH:", searchType, searchQuery);
+        // console.log("FIRST ITEM:", userApps[0]);
+        // console.log("userApps:", userApps);
+        //     console.log("searchQuery:", searchQuery);
+        //     console.log("searchType:", searchType);
         const result = Search(userApps, searchQuery, searchType);
         return Array.isArray(result) ? result : [];
     }, [searchQuery, searchType, userApps]);
@@ -68,21 +68,27 @@ export default function JSDashboard(){
               throw new Error(`HTTP error! status: ${res.status}`)
             }
             const data = await res.json();
-            
+            console.log("RAW APPLICATION:", data.filteredApplications);
+            console.log("applications[0] id:", data.filteredApplications[0].job_id);
 
-            const flattenedData = data.applications.map(app => ({
+            const flattenedData = data.filteredApplications.map(app => (
+                
+            {
               ...app,
-              job_title: app.job_id.job_title,
-              location: app.job_id.location,
-              category: app.job_id.category,
-              salary_range: app.job_id.salary_range,
-              institution: app.job_id.institution,
+              job_title: app.job_id?.job_title ?? "Deleted Job",
+              location: app.job_id?.location ?? "N/A",
+              category: app.job_id?.category ?? "N/A",
+              salary_range: app.job_id?.salary_rang ?? "N/A",
+              institution: app.job_id?.institution ?? "N/A",
               date: new Date(app.createdAt).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
             })
             }));
+
+            console.log("FLATTENED:", flattenedData[0].job_title);
+            console.log("FLATTENED JOB:", flattenedData[0].job_id);
 
             setUserApps(flattenedData);
         } catch (error) {
