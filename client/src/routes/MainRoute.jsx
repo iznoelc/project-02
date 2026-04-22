@@ -18,6 +18,7 @@ import JSDashboard from "../components/JSDashboard";
 import AdminDashboard from "../components/AdminDashboard";
 import ErrorPage, { ErrorBoundary } from "../components/ErrorPage";
 import JobDetailsPage from "../components/JobDetailsPage";
+import JobApplicationsPage from "../components/JobApplicationPage";
 
 import UserProfile from "../components/profile/UserProfile";
 import ApprovalPendingPage from "../components/ApprovalPendingPage";
@@ -105,6 +106,15 @@ const MainRouter = [
           element: (
             <PrivateRoute allowedRoles={["job_seeker", "admin"]}>
               <JobDetailsPage />
+            </PrivateRoute>
+          )
+        },
+
+        {
+          path: "job_postings/:_id/applications",
+          element: (
+            <PrivateRoute allowedRoles={["job_recruiter", "admin"]}>
+              <JobApplicationsPage />
             </PrivateRoute>
           )
         },
