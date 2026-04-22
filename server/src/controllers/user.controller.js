@@ -132,12 +132,14 @@ async function updateUser(req, res){
         
         const updatedData = req.body;
         const { approved, fav_jobs } = req.body;
+        const updateFields = {};
 
         // if trying to approve a user but current user is not an admin
         if (approved === true){
             if (currentUser.role !== "admin"){
                 return res.status(403).json({error: "Access denied"});
             }
+            if (approved !== undefined) updateFields.approved = approved;
         }
 
         // can't find the user to patch
@@ -155,20 +157,10 @@ async function updateUser(req, res){
             }
             console.log("Fav jobs incoming ", fav_jobs)
             // updatedData.fav_jobs = fav_jobs.map(id => new mongoose.Types.ObjectId(id))
+            if (fav_jobs !== undefined) {
+            updateFields.fav_jobs = fav_jobs; // mongo db auto converts back to ObjectId type because of the mongoose schema
+            }
         }
-
-        const updateFields = {};
-
-        if (approved !== undefined) updateFields.approved = approved;
-
-        if (fav_jobs !== undefined) {
-            // updateFields.fav_jobs = fav_jobs.map(id =>
-            //     new mongoose.Types.ObjectId(id)
-            // );
-            updateFields.fav_jobs = fav_jobs;
-        }
-
-        console.log("update fields")
 
         const patched = await User.findOneAndUpdate(
             { uid: user.uid },

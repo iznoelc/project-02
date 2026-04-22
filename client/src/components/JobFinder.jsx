@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 import DataSorter from "../utils/DataSorter";
 import Search from "../utils/Search";
 import useFavoriteJob from "../hooks/useFavoriteJobs"
-import { AiFillLike } from "react-icons/ai";
+import { FaRegStar, FaStar } from "react-icons/fa";
 import useAuth from "../hooks/useAuth";
 import { toast, ToastContainer } from "react-toastify";
 import {deletePosting} from "../utils/DeleteCreateJobInDataBase.js";
@@ -258,9 +258,8 @@ export default function JobFinder(){
                                         
                                             <button className={`text-xl transform transition-transform duration-75 hover:scale-125 hover:cursor-pointer
                                             ${isFavorite(d._id) ? "text-primary hover:text-error" : "hover:text-success"} z-30`}
-                                                onClick={isFavorite(d._id) ? () => removeFromFav(d._id) : () => addToFav(d._id)}>
-                                                <AiFillLike />
-                                                {d._id}
+                                                onClick={isFavorite(d._id) ? () => removeFromFav(d.job_title, d._id) : () => addToFav(d.job_title, d._id)}>
+                                                {isFavorite(d._id) ? <FaStar /> : <FaRegStar />}
                                             </button>
                                         </div>
                                     </div>   
