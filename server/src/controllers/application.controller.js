@@ -75,4 +75,14 @@ async function getApplicationsByUserUID(req, res){
     }
 }
 
-module.exports = { createApplication, getApplicationsByUserUID };
+async function getAllJobApplications(req, res) {
+    try {
+        const job_applications = await Application.find();
+        res.json(job_applications);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "Server error" });
+    }
+}
+
+module.exports = { createApplication, getApplicationsByUserUID, getAllJobApplications };
