@@ -6,7 +6,7 @@ import { useAuth } from "../context/AuthContext"; // or wherever your user comes
 export default function JobDetailsPage() {
   const { id } = useParams();
   const [job, setJob] = useState(null);
-  const { currentUser } = useAuth(); // you already have this somewhere
+  const { currentUser } = useAuth();
 
   useEffect(() => {
     fetch(`http://localhost:3000/job-postings/${id}`)
