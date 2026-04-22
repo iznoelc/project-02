@@ -22,7 +22,7 @@ const PrivateRoute = ({ children }) => {
   }
 
   // user is a recruiter AND they are approved
-  if (role === "recruiter" && approved) {
+  if ((role === "recruiter" && approved) || role !== "recruiter") {
     return children;
   }
 };
