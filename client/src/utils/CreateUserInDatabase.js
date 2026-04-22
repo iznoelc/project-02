@@ -9,7 +9,6 @@ export const createRecruiterInDatabase = async (user, formData, setSignUpLoading
             body: JSON.stringify({
                 uid: user.uid,
                 display_name: formData.display_name,
-                email: formData.email,
                 role: formData.role,
                 organization: formData.org_name,
                 website: formData.org_website,

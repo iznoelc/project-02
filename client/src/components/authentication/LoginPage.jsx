@@ -74,8 +74,7 @@ export default function LoginPage(){
             console.log("error code: ", errorCode);
             console.log("error message: ", errorMessage);
 
-            setMsg("Error signing in: " + errorMessage + " Please try again.");
-            errorNotify(msg);
+            errorNotify("Error signing in: " + errorMessage + " Please try again.");
         });
     };
 
@@ -102,7 +101,7 @@ export default function LoginPage(){
     return(
         <>
         {loginLoading && (<FallbackElement />)}
-        {!loginLoading && (<div className="flex flex-col items-center justify-center gap-5 p-10">
+        {!loginLoading && (<div className="flex flex-col items-center justify-center gap-5 p-10 sm:max-w-2xl mx-auto text-center">
             <div className="flex flex-col items-center justify-center">
                 <h1 className="primary-font text-primary text-4xl">Welcome Back!</h1>
                 <h2 className="secondary-font text-lg">Please enter your credentials to access your account.<br />If you're a recruiter, <b>please use your company's email.</b></h2>

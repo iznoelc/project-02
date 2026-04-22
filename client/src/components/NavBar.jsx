@@ -40,7 +40,10 @@ export default function NavBar(){
             <div className="flex navbar-center">
                 <ul className="menu menu-horizontal px-1">
                 <button className="btn" onClick={() => navigate("/")}> <GoHomeFill /> </button>
+                {role === "recruiter" ? <span></span> 
+                :
                 <button className="btn" onClick={() => navigate("/search")}> <FaSearch /> Search Jobs </button>
+                }
                 </ul>
             </div>
             <div className="navbar-end">

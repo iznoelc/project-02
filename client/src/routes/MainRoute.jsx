@@ -3,6 +3,7 @@ import Home from "../components/Home";
 import Root from "../layout/Root";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
+import ApprovalPendingRoute from "./ApprovalPendingRoute"
 import FallbackElement from "../components/FallbackElement";
 
 import JobSeekerSignUpPage from "../components/authentication/JobSeekerSignUpPage";
@@ -19,6 +20,7 @@ import ErrorPage, { ErrorBoundary } from "../components/ErrorPage";
 import DetailsPage from "../components/DetailsPage";
 
 import UserProfile from "../components/UserProfile";
+import ApprovalPendingPage from "../components/ApprovalPendingPage";
 
 const MainRouter = [
   {
@@ -42,9 +44,11 @@ const MainRouter = [
 
         { path: "recruiter-dashboard",
           element: (
-            <PrivateRoute allowedRoles={["recruiter", "admin"]}>
-              <RecuiterDashboard />
-            </PrivateRoute>
+              <PrivateRoute allowedRoles={["recruiter", "admin"]}>
+                <ApprovalPendingRoute>
+                  <RecuiterDashboard />
+                </ApprovalPendingRoute>
+              </PrivateRoute>
           )
         },
 
@@ -58,7 +62,7 @@ const MainRouter = [
 
         { path: "admin-dashboard",
           element: (
-            <PrivateRoute allowedRoles={["job_seeker", "admin"]}> {/*// job seeker allowed for now for testing */}
+            <PrivateRoute allowedRoles={["admin"]}> {/*// job seeker allowed for now for testing */}
               <AdminDashboard />
             </PrivateRoute>
           )
@@ -100,9 +104,18 @@ const MainRouter = [
 
         { path: "profile/:uid",
           element: (
-            <PrivateRoute allowedRoles={["job_seeker", "admin"]}>
-              <UserProfile />
-            </PrivateRoute>
+            
+              <PrivateRoute allowedRoles={["job_seeker", "recruiter", "admin"]}>
+                <ApprovalPendingRoute>
+                <UserProfile />
+                </ApprovalPendingRoute>
+              </PrivateRoute>
+          )
+        },
+
+        { path: "approval-pending",
+          element: (
+            <ApprovalPendingPage />
           )
         }
     ],

@@ -27,6 +27,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [role, setRole] = useState(null);
+  const [approved, setApproved] = useState(false);
   const [roleLoading, setRoleLoading] = useState(true);
 
   const createUser = (email, password) => {
@@ -57,7 +58,7 @@ const AuthProvider = ({ children }) => {
       if (!currentUser) {
         setRole(null);
         setLoading(false);
-
+        setApproved(false);
         setRoleLoading(false);
         return;
       }
@@ -78,8 +79,12 @@ const AuthProvider = ({ children }) => {
         console.log("ROLE RESPONSE: ", data);
 
         setRole(data.user?.role || data.role);
+        if (data.user?.role === "recruiter" || data.role === "recruiter"){
+          setApproved(data.user?.approved || data.approved);
+        }
+        
       } catch (err) {
-        console.error("Error fetching user role:", err);
+        console.error("Error fetching user role or approval:", err);
         setRole(null);
       }
 
@@ -113,6 +118,7 @@ const AuthProvider = ({ children }) => {
     loading,
     loggedIn: !!user,
     role,
+    approved,
   };
   return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;
 };
