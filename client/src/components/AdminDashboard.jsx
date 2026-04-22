@@ -195,23 +195,13 @@ async function Delete(user, userId, setList) {
         }
 
         setList(prev =>
-            prev.map(u =>
-                u.uid === userId ? { ...u, approved: true } : u
-            )
+            prev.filter(u => u.uid !== userId)
         );
         toast.success("User deleted successfully!");
 
     } catch (err){
         console.log("Error deleting user", err);
     }
-    
-
-    // if (res.ok) {
-    //     setList(prev => prev.filter(u => u._id !== userId));
-    //     toast.success("User deleted");
-    // } else {
-    //     toast.error("uh oh, failed to delete user");
-    // }
 }
 
 function confirmToast(message = "Are you sure?") {
