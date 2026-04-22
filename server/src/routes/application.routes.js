@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { verifyFirebaseToken } = require("../middleware/verifyFirebaseToken");
-const { createApplication, getApplicationsByUserUID } = require("../controllers/application.controller");
+const { createApplication, getApplicationsByUserUID, getAllJobApplications } = require("../controllers/application.controller");
 
 router.post("/:uid", verifyFirebaseToken, createApplication);
 
@@ -10,5 +10,7 @@ router.post("/:uid", verifyFirebaseToken, createApplication);
 // });
 
 router.get("/:applicant_id", verifyFirebaseToken, getApplicationsByUserUID);
+
+router.get("/", verifyFirebaseToken, getAllJobApplications);
 
 module.exports = router;

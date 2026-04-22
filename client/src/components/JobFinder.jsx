@@ -11,6 +11,7 @@ import { normalizeId } from "../utils/NormalizeJobId";
 
 
 
+
 export default function JobFinder(){
 
     const { user, favJobs } = useAuth(); 
@@ -25,7 +26,7 @@ export default function JobFinder(){
     const [currentPage, setCurrentPage] = useState(0);
 
 
-    const [data, setData] = useState(null); // the movie data
+    const [data, setData] = useState(null); // the job data
     const [sortType, setSortType] = useState("Date"); // default sort type
     const [ascending, setAscending] = useState(true); // default sort direction 
 
@@ -220,12 +221,12 @@ export default function JobFinder(){
                         <div className="grid grid-cols-2  gap-200 mx-auto p-8 grid-col-grow">
                             <div>
                                 {/* put the title and description of the movie in the cards */}
-                                <Link to={`/job-details/${d._id}`} className="no-underline">
+                                <Link to={`/job_postings/${d._id}`} className="no-underline">
                                 <h2 className="card-title primary-font text-1xl hover:underline">
                                     {d.job_title}
                                 </h2>
                                 </Link>
-                                <h2 className="card-title primary-font text-1xl"> Salary: {d.salary_range[0]}$-{d.salary_range[1]}$</h2>
+                                <h2 className="card-title primary-font text-1xl"> Salary: ${d.salary_range[0]}- ${d.salary_range[1]}</h2>
                                 <h2 className="card-title primary-font text-1xl">{d.location}</h2>
                                 <p className="secondary-font text-base">{d.institution}</p>
                                 
