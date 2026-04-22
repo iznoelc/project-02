@@ -100,7 +100,14 @@ const MainRouter = [
           )
         },
 
-        { path: "job-details", Component: DetailsPage },
+        {
+          path: "job-details/:id",
+          element: (
+            <PrivateRoute allowedRoles={["job_seeker", "admin"]}>
+              <JobDetailsPage />
+            </PrivateRoute>
+          )
+        },
 
         { path: "profile/:uid",
           element: (

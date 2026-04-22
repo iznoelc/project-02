@@ -39,7 +39,7 @@ async function createJobPosting(req, res) {
 
 async function getJobPostingByID(req, res) {
     try {
-        const job_posting = await jobPosting.findById(req.params._id);
+        const job_posting = await jobPosting.findById(req.params.id);
 
         if (!job_posting) {
             return res.status(404).json({ error: "Job posting not found" });

@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 
+//make route, make it so that the route to each page is unique just by having the name added on said route
+//text landon so he can link my route from the links
+//change schema so that the application link takes an actual link not a string like it is at the moment
+//add file upload for resume as well so they can do either
+//finally test everything make sure you can upload either and that the pop-up works properly
+
 export default function DetailsPage({ job, currentUser }) {
   const [showPopup, setShowPopup] = useState(false);
   const [resumeLink, setResumeLink] = useState("");
