@@ -14,7 +14,7 @@ import { normalizeId } from "../utils/NormalizeJobId";
 
 export default function JobFinder(){
 
-    const { user, favJobs } = useAuth(); 
+    const { user, favJobs, role } = useAuth(); 
 
     const { addToFav, removeFromFav } = useFavoriteJob(); // use custom hook to get the favorites list and functions to add/remove movies from favorites
 
@@ -148,8 +148,17 @@ export default function JobFinder(){
 
     return(
         <>
-
-        <div className="flex items-center justify-center gap-5">
+        <div className="hero bg-base-200 gap-2">
+            <div className="hero-content text-center">
+                <div className="max-w-2xl">
+                    <h1 className="text-5xl">SEARCH FOR JOBS</h1>
+                    <p>
+                        Explore jobs here by choosing a filter category and then typing in the search bar. You can also sort by location, category, or salary.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div className="flex items-center justify-center gap-5 w-screen">
             {/* search bar */}
             <select onChange={(e) => setSearchType(e.target.value)} className="secondary-font">
                 <option value="location">Location</option>
@@ -212,31 +221,34 @@ export default function JobFinder(){
 
             {sortedData.slice(currentPage * numShow, numShow + (currentPage * numShow) ).map((d, index) => (
                 
-                <div key={index} className="relative card w-full bg-base-100 card-xs shadow-sm">
+                <div key={index} className="relative card w-screen bg-base-100 card-xs shadow-sm">
  
   
                     {/* content */}
 
                     <div className="card-body">
-                        <div className="grid grid-cols-2  gap-200 mx-auto p-8 grid-col-grow">
-                            <div>
+                        <div className="grid grid-cols-2 gap-2 max-w-screen p-8 grid-col-grow">
+                            <div className="flex flex-col gap-2">
                                 {/* put the title and description of the movie in the cards */}
                                 <Link to={`/jobs/${d._id}`} className="no-underline">
-                                <h2 className="card-title primary-font text-1xl hover:underline">
+                                <h2 className="card-title primary-font text-2xl hover:underline">
                                     {d.job_title}
                                 </h2>
+                                <h3 className="text-lg">{d.location}</h3>
                                 </Link>
-                                <h2 className="card-title primary-font text-1xl"> Salary: ${d.salary_range[0]}- ${d.salary_range[1]}</h2>
-                                <h2 className="card-title primary-font text-1xl">{d.location}</h2>
-                                <p className="secondary-font text-base">{d.institution}</p>
+                                <h2 className="card-title primary-font text-1xl"> Salary: ${d.salary_range[0]} - ${d.salary_range[1]}</h2>
+                                <div className="flex flex-row gap-2">
+                                <div class="badge badge-primary">{d.category}</div>
+                                <div class="badge badge-outline badge-primary">{d.institution}</div>
+                                </div>
                                 
                             </div>
                             <div className="justify-end card-actions">
                                 <ul list>
-                                    <h2 className="card-title primary-font text-1xl justify-end">{d.category}</h2> 
-                                    <h2 className="card-title primary-font text-1xl"> Posting Ends On: {d.deadline}</h2>  
+                                    
+                                    <h2 className="card-title primary-font text-1xl">APPLICATION DEADLINE: {d.deadline}</h2>  
                                     <div>                                              
-                                        {userType === "job_seeker" &&(
+                                        {role === "job_seeker" &&(
                                             <button className={`text-xl transform transition-transform duration-75 hover:scale-125 hover:cursor-pointer z-30
                                             `}
                                                 >
@@ -244,7 +256,7 @@ export default function JobFinder(){
                                             </button>
                                         )}
 
-                                        {userType === "admin" && (
+                                        {role === "admin" && (
                                             <button
                                                 className="text-xl transform transition-transform hover:scale-125"
                                                 onClick={() => handleButtonClick(d._id)}
@@ -273,7 +285,7 @@ export default function JobFinder(){
             ))}
             </ul>
         )}
-        <div className="flex justify-center gap-4 mt-6">
+        <div className="flex justify-center gap-4 p-8">
           <button
             className="btn"
             disabled={currentPage === 0}

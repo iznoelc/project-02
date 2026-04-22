@@ -35,14 +35,16 @@ export default function NavBar(){
         {loggedIn && (<>
         <div className="navbar bg-base-200 shadow-sm">
             <div className="navbar-start">
-                <h1 className="btn btn-ghost hover:cursor-pointer text-2xl" onClick={() => navigate("/", { replace: true})}>UNIVERSAL CAREERS</h1>
+                <h1 className="btn btn-ghost sm:text-wrap lg:text-nowrap hover:cursor-pointer text-2xl" onClick={() => navigate("/", { replace: true})}>
+                    {window.innerWidth > 640 ? "UNIVERSAL CAREERS" : "pic"}
+                    </h1>
             </div>
             <div className="flex navbar-center">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu sm:menu-vertical lg:menu-horizontal px-1">
                 <button className="btn" onClick={() => navigate("/")}> <GoHomeFill /> </button>
                 {role === "recruiter" ? <span></span> 
                 :
-                <button className="btn" onClick={() => navigate("/search")}> <FaSearch /> Search Jobs </button>
+                <button className="btn" onClick={() => navigate("/search")}> <FaSearch /> {window.innerWidth > 640 ? "Search Jobs" : "" }</button>
                 }
                 </ul>
             </div>

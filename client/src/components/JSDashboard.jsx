@@ -103,6 +103,17 @@ export default function JSDashboard(){
 
     return(
         <>
+        <div className="hero bg-base-200 gap-2">
+            <div className="hero-content text-center">
+                <div className="max-w-2xl">
+                    <h1 className="text-5xl">JOB SEEKER DASHBOARD</h1>
+                    <p>
+                        Dear {user.displayName ? user.displayName : "job seeker"}, welcome to the job seeker dashboard. Here, you can view the jobs you
+                        have applied to.
+                    </p>
+                </div>
+            </div>
+        </div>
         <div className="flex items-center justify-center gap-5">
             {/* search bar */}
             <select onChange={(e) => setSearchType(e.target.value)} className="secondary-font">
