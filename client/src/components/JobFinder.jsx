@@ -221,7 +221,7 @@ export default function JobFinder(){
                         <div className="grid grid-cols-2  gap-200 mx-auto p-8 grid-col-grow">
                             <div>
                                 {/* put the title and description of the movie in the cards */}
-                                <Link to={`/job_postings/${d._id}`} className="no-underline">
+                                <Link to={`/jobs/${d._id}`} className="no-underline">
                                 <h2 className="card-title primary-font text-1xl hover:underline">
                                     {d.job_title}
                                 </h2>

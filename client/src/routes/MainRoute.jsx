@@ -17,7 +17,7 @@ import JSDashboard from "../components/JSDashboard";
 
 import AdminDashboard from "../components/AdminDashboard";
 import ErrorPage, { ErrorBoundary } from "../components/ErrorPage";
-import DetailsPage from "../components/DetailsPage";
+import JobDetailsPage from "../components/JobDetailsPage";
 
 import UserProfile from "../components/UserProfile";
 import ApprovalPendingPage from "../components/ApprovalPendingPage";
