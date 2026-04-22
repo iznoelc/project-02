@@ -13,7 +13,6 @@ dist-ssr
 *.local
 .env
 universal-careers-auth-firebase-admin.json
-localFix.js
 
 # Editor directories and files
 .vscode/*
