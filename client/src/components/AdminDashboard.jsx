@@ -194,7 +194,11 @@ async function Delete(user, userId, setList) {
             throw new Error(`HTTP error! status: ${res.status}`);
         }
 
-        setList(prev => prev.filter(u => u._id !== userId));
+        setList(prev =>
+            prev.map(u =>
+                u.uid === userId ? { ...u, approved: true } : u
+            )
+        );
         toast.success("User deleted successfully!");
 
     } catch (err){
