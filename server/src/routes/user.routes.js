@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { verifyFirebaseToken } = require("../middleware/verifyFirebaseToken");
-const { createUser, getUserByUID, deleteUser, getAllUsers, approveRecruiter } = require("../controllers/user.controller");
+const { createUser, getUserByUID, deleteUser, getAllUsers, approveRecruiter, getFavoriteJobs } = require("../controllers/user.controller");
 
 router.post("/", createUser);
 

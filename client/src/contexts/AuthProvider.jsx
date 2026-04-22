@@ -28,6 +28,7 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [role, setRole] = useState(null);
   const [approved, setApproved] = useState(false);
+  const [favJobs, setFavJobs] = useState([]);
   const [roleLoading, setRoleLoading] = useState(true);
 
   const createUser = (email, password) => {
@@ -82,6 +83,7 @@ const AuthProvider = ({ children }) => {
         if (data.user?.role === "recruiter" || data.role === "recruiter"){
           setApproved(data.user?.approved || data.approved);
         }
+        setFavJobs(data.user?.fav_jobs || data.fav_jobs);
         
       } catch (err) {
         console.error("Error fetching user role or approval:", err);
@@ -118,6 +120,8 @@ const AuthProvider = ({ children }) => {
     loading,
     loggedIn: !!user,
     role,
+    favJobs,
+    setFavJobs,
     approved,
   };
   return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;

@@ -14,7 +14,14 @@ const userSchema = new mongoose.Schema({
         type: String, required: true
     },
     role: {
-        type: String, enum: ["job_seeker", "recruiter", "admin"], default: "job_seeker"
+        type: String, enum: ["job_seeker", "recruiter", "admin"], default: "job_seeker", required: true
+    },
+    bio: {
+        type: String, default: "No bio yet.", required: false
+    },
+    
+    fav_jobs: {
+        type: [mongoose.Schema.Types.ObjectId], ref: "Job_Posting", required: false, default: []
     },
 
     // CONDITIONAL FIELDS FOR RECRUITERS

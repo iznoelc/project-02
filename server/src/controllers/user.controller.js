@@ -54,7 +54,12 @@ async function getUserByUID(req, res) {
             return res.status(403).json({error: "Access"})
         }
 
-        const user = await User.findOne({ uid: req.params.uid }); // try to find the user by the request param
+        const user = await User.findOne({ uid: req.params.uid })
+        .populate({
+            path: "fav_jobs",
+            match: {}
+        });
+         // try to find the user by the request param
 
         // if the user couldnt be found, send a bad request response with an error msg
         if (!user) {
