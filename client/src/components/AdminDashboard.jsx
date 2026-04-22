@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
+import useAuth from "../hooks/useAuth";
 
 export default function AdminDashboard() {
+    const { user } = useAuth();
 
     const [seekersList, setSeekersList] = useState([]);
     const [recruitersList, setRecruitersList] = useState([]);
@@ -61,21 +63,21 @@ export default function AdminDashboard() {
                         onChange={(e) => setUserQuery(e.target.value)}
                     />
 
-                    {filteredUsers.map((user) => (
+                    {filteredUsers.map((userToDelete) => (
                         <div
-                            key={user._id}
+                            key={userToDelete.uid}
                             className="card bg-base-100 shadow-xl p-6 w-full max-w-3xl mx-auto my-3"
                         >
-                            <h3>{user.display_name}</h3>
-                            <p className="text-sm mt-2">{user.role}</p>
+                            <h3>{userToDelete.display_name}</h3>
+                            <p className="text-sm mt-2">{userToDelete.role}</p>
 
                             <button
                                 className="btn btn-error btn-sm mt-4"
                                 onClick={() => {
-                                    if (seekersList.some(s => s._id === user._id)) {
-                                        Delete(user._id, setSeekersList);
+                                    if (seekersList.some(s => s.uid === userToDelete.uid)) {
+                                        Delete(user, userToDelete.uid, setSeekersList);
                                     } else {
-                                        Delete(user._id, setRecruitersList);
+                                        Delete(user, userToDelete.uid, setRecruitersList);
                                     }
                                 }}
                             >
@@ -97,17 +99,17 @@ export default function AdminDashboard() {
                         onChange={(e) => setActionQuery(e.target.value)}
                     />
 
-                    {filteredActionUsers.map((user) => (
+                    {filteredActionUsers.map((userToApprove) => (
                         <div
-                            key={user._id}
+                            key={userToApprove.uid}
                             className="card bg-base-100 shadow-xl p-6 w-full max-w-3xl mx-auto my-3"
                         >
-                            <h3>{user.display_name}</h3>
-                            <p className="text-sm mt-2">{user.role}</p>
+                            <h3>{userToApprove.display_name}</h3>
+                            <p className="text-sm mt-2">{userToApprove.role}</p>
 
                             <button
                                 className="btn btn-success btn-sm mt-4"
-                                onClick={() => Approve(user._id, setRecruitersList)}
+                                onClick={() => Approve(user, userToApprove.uid, setRecruitersList)}
                             >
                                 Approve Recruiter
                             </button>
@@ -143,38 +145,69 @@ async function fetchUsers(setSeekersList, setRecruitersList) {
     }
 }
 
-async function Approve(userId, setRecruitersList) {
-    const res = await fetch(`http://localhost:3000/users/${userId}/approve`, {
+async function Approve(user, userId, setRecruitersList) {
+
+    try {
+        const res = await fetch(`http://localhost:3000/users/${userId}`, {
         method: "PATCH",
-        headers: { "Content-Type": "application/json" }
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${await user.getIdToken()}`,
+        },
+        body: JSON.stringify({
+            approved: true,
+        }),
     });
 
-    if (res.ok) {
+        if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+        }
+
         setRecruitersList(prev =>
             prev.map(u =>
-                u._id === userId ? { ...u, approved: true } : u
+                u.uid === userId ? { ...u, approved: true } : u
             )
         );
-        toast.success("Recruiter approved");
-    } else {
-        toast.error("Failed to approve recruiter");
+        toast.success("Recruiter approved successfully!");
+    } catch (err) {
+        console.log("Failed to approve recruiter: ", err);
+        toast.error("Failed to approve recruiter, please try again.");
     }
+
+    
 }
 
-async function Delete(userId, setList) {
+async function Delete(user, userId, setList) {
+    
     const confirmed = await confirmToast("Delete this user?");
     if (!confirmed) return;
 
-    const res = await fetch(`http://localhost:3000/users/${userId}`, {
+    try {
+        const res = await fetch(`http://localhost:3000/users/${userId}`, {
         method: "DELETE",
-    });
+            headers: {
+            Authorization: `Bearer ${await user.getIdToken()}`,
+            },
+        });
 
-    if (res.ok) {
+        if (!res.ok){
+            throw new Error(`HTTP error! status: ${res.status}`);
+        }
+
         setList(prev => prev.filter(u => u._id !== userId));
-        toast.success("User deleted");
-    } else {
-        toast.error("uh oh, failed to delete user");
+        toast.success("User deleted successfully!");
+
+    } catch (err){
+        console.log("Error deleting user", err);
     }
+    
+
+    // if (res.ok) {
+    //     setList(prev => prev.filter(u => u._id !== userId));
+    //     toast.success("User deleted");
+    // } else {
+    //     toast.error("uh oh, failed to delete user");
+    // }
 }
 
 function confirmToast(message = "Are you sure?") {

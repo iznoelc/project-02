@@ -1,5 +1,7 @@
 const User = require("../models/user.model");
 const validator = require("../validators/user.validator");
+const admin = require("firebase-admin");
+
 
 async function createUser(req, res) {
     try {
@@ -42,13 +44,15 @@ async function createUser(req, res) {
 };
 
 async function getUserByUID(req, res) {
+    
+
     try {
 
-        // console.log("request uid: ", req.user.uid);
-        //     console.log("params uid: ", req.params.uid);
-        // if (req.params.uid !== req.user.uid){
-        //     return res.status(403).json({error: "Access"})
-        // }
+        console.log("request uid: ", req.user.uid);
+            console.log("params uid: ", req.params.uid);
+        if (req.params.uid !== req.user.uid){
+            return res.status(403).json({error: "Access"})
+        }
 
         const user = await User.findOne({ uid: req.params.uid }); // try to find the user by the request param
 
@@ -76,19 +80,69 @@ async function getAllUsers(req, res) {
 
 async function deleteUser(req, res) {
     try {
-        const userId = req.params.id;
-
-        const deleted = await User.findByIdAndDelete(userId);
-
-        if (!deleted) {
-            return res.status(404).json({ message: "User not found" });
+        const currentUser = await User.findOne({uid: req.user.uid});
+        console.log("Current user role: ", currentUser.role);
+        if (currentUser.role !== "admin"){
+            return res.status(403).json({error: "Access denied"})
         }
 
-        res.json({ message: "User deleted successfully" });
+        const user = await User.findOne({uid: req.params.uid});
+
+        if (!user){
+            console.log("uid: ", req.params.uid);
+            console.log("Cannot find user to delete in database");
+            return res.status(404).json({error: "Error: User was not found"});
+        }
+
+        const deleted = await User.findOneAndDelete({ uid: user.uid });
+
+        if (!deleted) {
+            console.log("error deleting user from database", );
+            return res.status(404).json({ error: "Error deleting user from database" });
+        }
+
+        try {
+            console.log("Attempting to delete user with uid ", user.uid);
+            admin.auth().deleteUser(user.uid);
+        } catch (error) {
+            return res.status(500).json({message: "Error deleting user in firebase."});
+        }
+
+        res.status(200).json({ message: "User deleted successfully from firebase and database!" });
     } catch (err) {
         console.error("Delete error:", err);
         res.status(500).json({ message: "Server error" });
     }
 }
 
-module.exports = { createUser, getUserByUID, getAllUsers, deleteUser };
+async function approveRecruiter(req, res){
+    try {
+        // verify that current user is an admin
+        const currentUser = await User.findOne({uid: req.user.uid});
+        console.log("Current user role: ", currentUser.role);
+        if (currentUser.role !== "admin"){
+            return res.status(403).json({error: "Access denied"});
+        }
+
+        const user = await User.findOne({uid: req.params.uid});
+        if (!user){
+            return res.status(404).json({error: "Could not find user to patch"});
+        } else if (user.role !== "recruiter"){
+            return res.status(400).json({error: "The user you are trying to approve is not a recruiter"});
+        }
+
+        const updatedData = req.body;
+
+        const patched = await User.findOneAndUpdate(
+            { uid: user.uid },
+            { $set: updatedData, },
+            { returnDocument: 'after'},
+        )
+
+        return res.status(200).json({ user: patched });
+    } catch {
+        res.status(500).json({error: "Server error"});
+    }
+}
+
+module.exports = { createUser, getUserByUID, getAllUsers, deleteUser, approveRecruiter };
