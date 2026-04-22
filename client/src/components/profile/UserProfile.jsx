@@ -1,12 +1,13 @@
-import UserProfilePicPlaceholder from "../assets/UserProfilePicPlaceholder.png"
+import UserProfilePicPlaceholder from "../../assets/UserProfilePicPlaceholder.png"
 import { MdLabelImportant } from "react-icons/md";
 
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import FallbackElement from "../components/FallbackElement"
+import FallbackElement from "../FallbackElement"
+import FavoriteJobsDisplay from "./FavoriteJobsDisplay"
 
-import useAuth from "../hooks/useAuth";
+import useAuth from "../../hooks/useAuth";
 
 export default function UserProfile(){
     const { uid } = useParams();
@@ -85,24 +86,11 @@ export default function UserProfile(){
                         )}
                         </div>
                     </div>
-                    <div>
-                        {profile.user.fav_jobs.length > 0 && (
-                            <>
-                            {profile.user.fav_jobs.map((j, index) => (
-                                <p key={index}>
-                                    Job: {j.job_title}
-                                </p>
-                            ))}
-                            </>
-                        )}
-                        {profile.user.fav_jobs.length === 0 && (
-                            <p>No favorite jobs yet.</p>
-                        )}
-                    </div>
+                    <FavoriteJobsDisplay profile={profile} isOwnProfile={isOwnProfile} />
                 </div>
                 <div className="flex flex-col items-center sm:items-start gap-6 p-4">
-
-                    <h1></h1>
+                    
+                <h1></h1>
                 </div>
             
             </>}
