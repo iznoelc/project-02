@@ -7,13 +7,15 @@ import useAuth from "../hooks/useAuth";
 import { toast, ToastContainer } from "react-toastify";
 import {deletePosting} from "../utils/DeleteCreateJobInDataBase.js";
 import { Link } from "react-router-dom";
+import { normalizeId } from "../utils/NormalizeJobId";
+
 
 
 export default function JobFinder(){
 
-    const { user } = useAuth(); 
+    const { user, favJobs } = useAuth(); 
 
-    const { favorites, addToFav, removeFromFav } = useFavoriteJob(); // use custom hook to get the favorites list and functions to add/remove movies from favorites
+    const { addToFav, removeFromFav } = useFavoriteJob(); // use custom hook to get the favorites list and functions to add/remove movies from favorites
 
     // determains what buttons will be present on your device
     let userType = "admin";
@@ -82,10 +84,9 @@ export default function JobFinder(){
         }
     }
 
-
     // check if movie is in favorites list by checking if the title of the movie is in the favorites list. return true if it is, false if it isnt.
-    const isFavorite = (jobPosting) => {
-        return favorites.some(fav => fav.job_id === jobPosting.job_id);
+    const isFavorite = (jobId) => {
+        return favJobs.some(fav => normalizeId(fav) === jobId.toString());
     }
 
 
@@ -209,6 +210,7 @@ export default function JobFinder(){
             <ul list bg-base-100 rounded-box shadow-md> 
 
             {sortedData.slice(currentPage * numShow, numShow + (currentPage * numShow) ).map((d, index) => (
+                
                 <div key={index} className="relative card w-full bg-base-100 card-xs shadow-sm">
  
   
@@ -254,9 +256,10 @@ export default function JobFinder(){
                                         <div className="justify-end card-actions">
                                         
                                             <button className={`text-xl transform transition-transform duration-75 hover:scale-125 hover:cursor-pointer
-                                            ${isFavorite(d) ? "text-primary hover:text-error" : "hover:text-success"} z-30`}
-                                                onClick={isFavorite(d) ? () => removeFromFav(d) : () => addToFav(d)}>
+                                            ${isFavorite(d._id) ? "text-primary hover:text-error" : "hover:text-success"} z-30`}
+                                                onClick={isFavorite(d._id) ? () => removeFromFav(d._id) : () => addToFav(d._id)}>
                                                 <AiFillLike />
+                                                {d._id}
                                             </button>
                                         </div>
                                     </div>   
