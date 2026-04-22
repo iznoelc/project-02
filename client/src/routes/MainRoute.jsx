@@ -114,7 +114,7 @@ const MainRouter = [
             
               <PrivateRoute allowedRoles={["job_seeker", "recruiter", "admin"]}>
                 <ApprovalPendingRoute>
-                <UserProfile />
+                  <UserProfile />
                 </ApprovalPendingRoute>
               </PrivateRoute>
           )
@@ -124,7 +124,7 @@ const MainRouter = [
           element: (
             <ApprovalPendingPage />
           )
-        }
+        },
     ],
   },
   { path: "*", Component: ErrorPage }, {path: "/error", Component: ErrorPage}

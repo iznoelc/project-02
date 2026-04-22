@@ -13,6 +13,8 @@ const jobPostingData = require("../data/jobs_100_seed.json");
 const Application = require("../models/application.model");
 const applicationData = require("../data/applications_5_seed.json");
 
+const User = require("../models/user.model");
+
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 // const client = new MongoClient(uri, {
 //   serverApi: {
@@ -30,9 +32,6 @@ const applicationData = require("../data/applications_5_seed.json");
 async function connectDB() {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    // // await Application.collection.dropIndex("job_id_1");
-    // await Application.insertMany(applicationData); // insert job posting data
-
 
     
     console.log("MongoDB connected with Mongoose");

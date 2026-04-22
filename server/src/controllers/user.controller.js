@@ -54,7 +54,12 @@ async function getUserByUID(req, res) {
             return res.status(403).json({error: "Access"})
         }
 
-        const user = await User.findOne({ uid: req.params.uid }); // try to find the user by the request param
+        const user = await User.findOne({ uid: req.params.uid }) // try to find the user by the request param
+        .populate({
+            path: "fav_jobs",
+            match: {}
+        });
+         
 
         // if the user couldnt be found, send a bad request response with an error msg
         if (!user) {
@@ -115,34 +120,59 @@ async function deleteUser(req, res) {
     }
 }
 
-async function approveRecruiter(req, res){
+async function updateUser(req, res){
     try {
+
+        console.log("request: ", req.body);
         // verify that current user is an admin
         const currentUser = await User.findOne({uid: req.user.uid});
         console.log("Current user role: ", currentUser.role);
-        if (currentUser.role !== "admin"){
-            return res.status(403).json({error: "Access denied"});
+        
+        const user = await User.findOne({uid: req.params.uid});
+        
+        const updatedData = req.body;
+        const { approved, fav_jobs } = req.body;
+        const updateFields = {};
+
+        // if trying to approve a user but current user is not an admin
+        if (approved === true){
+            if (currentUser.role !== "admin"){
+                return res.status(403).json({error: "Access denied"});
+            }
+            if (approved !== undefined) updateFields.approved = approved;
         }
 
-        const user = await User.findOne({uid: req.params.uid});
+        // can't find the user to patch
         if (!user){
             return res.status(404).json({error: "Could not find user to patch"});
-        } else if (user.role !== "recruiter"){
+        } else if (user.role !== "recruiter" && approved && approved === "true"){
             return res.status(400).json({error: "The user you are trying to approve is not a recruiter"});
         }
 
-        const updatedData = req.body;
+        // if trying to update a user's fav_jobs, but the current user does not match the request
+        if (fav_jobs !== undefined){
+            console.log("Trying to update favorite jobs");
+            if (currentUser.uid != req.params.uid){
+                return res.status(403).json({error: "Access denied: you cannot modify this user's favorited jobs!"})
+            }
+            console.log("Fav jobs incoming ", fav_jobs)
+            // updatedData.fav_jobs = fav_jobs.map(id => new mongoose.Types.ObjectId(id))
+            if (fav_jobs !== undefined) {
+            updateFields.fav_jobs = fav_jobs; // mongo db auto converts back to ObjectId type because of the mongoose schema
+            }
+        }
 
         const patched = await User.findOneAndUpdate(
             { uid: user.uid },
-            { $set: updatedData, },
+            { $set: updateFields, },
+            // { new : true },
             { returnDocument: 'after'},
         )
 
         return res.status(200).json({ user: patched });
-    } catch {
-        res.status(500).json({error: "Server error"});
+    } catch (err) {
+        res.status(500).json({error: err.message});
     }
 }
 
-module.exports = { createUser, getUserByUID, getAllUsers, deleteUser, approveRecruiter };
+module.exports = { createUser, getUserByUID, getAllUsers, deleteUser, updateUser };

@@ -6,6 +6,7 @@ import Search from "../utils/SearchAppsFromJobId";
 
 import useAuth from "../hooks/useAuth";
 
+
 export default function JSDashboard(){
     const { user } = useAuth();
     const navigate = useNavigate();
