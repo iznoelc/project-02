@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { IoPersonCircle } from "react-icons/io5";
 import { GoHomeFill } from "react-icons/go";
 import { FaSearch } from "react-icons/fa";
+import { IoMdPlanet } from "react-icons/io";
 import useAuth from "../hooks/useAuth";
 
 export default function NavBar(){
@@ -19,7 +20,7 @@ export default function NavBar(){
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                 </div>
                 </div>
-                <h1 className="btn btn-ghost hover:cursor-pointer text-2xl" onClick={() => navigate("/", { replace: true})}>UNIVERSAL CAREERS</h1>
+                <h1 className="btn btn-ghost hover:cursor-pointer text-2xl" onClick={() => navigate("/", { replace: true})}><IoMdPlanet /> UNIVERSAL CAREERS</h1>
             </div>
             <div className="navbar-center hidden lg:flex">
             </div>
@@ -36,7 +37,7 @@ export default function NavBar(){
         <div className="navbar bg-base-200 shadow-sm">
             <div className="navbar-start">
                 <h1 className="btn btn-ghost sm:text-wrap lg:text-nowrap hover:cursor-pointer text-2xl" onClick={() => navigate("/", { replace: true})}>
-                    {window.innerWidth > 640 ? "UNIVERSAL CAREERS" : "pic"}
+                    <IoMdPlanet /> {window.innerWidth > 640 ? "UNIVERSAL CAREERS" : "UNIVERSAL CAREERS"}
                     </h1>
             </div>
             <div className="flex navbar-center">

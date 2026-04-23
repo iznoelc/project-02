@@ -89,6 +89,7 @@ const AuthProvider = ({ children }) => {
           setApproved(data.user?.approved || data.approved);
         }
         setFavJobs(data.user?.fav_jobs || data.fav_jobs);
+        console.log("favJobs set in auth:", data.user?.fav_jobs);
         
       } catch (err) {
         console.error("Error fetching user role or approval:", err);

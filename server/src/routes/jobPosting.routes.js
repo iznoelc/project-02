@@ -10,7 +10,7 @@ router.post("/", verifyFirebaseToken, createJobPosting);
 router.get("/:id", verifyFirebaseToken, getJobPostingByID);
 
 // get all job postings
-router.get("/", getAllJobPostings);
+router.get("/", verifyFirebaseToken, getAllJobPostings);
 
 // delete job by MongoDB _id
 router.delete("/:_id", verifyFirebaseToken, deleteJobPosting);

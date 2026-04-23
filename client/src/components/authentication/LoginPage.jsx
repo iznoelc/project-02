@@ -23,6 +23,8 @@ export default function LoginPage(){
     const [loginLoading, setLoginLoading] = useState(false); // separate loading to determine if the user is currently being logged in. (this is separate from the loading in useAuth)
     const [passwordVisibility, setPasswordVisibility] = useState(false);
 
+    const [accountType, setAccountType] = useState("job_seeker"); // the type of account the user wants to sign in with
+
     const [msg, setMsg] = useState("");
 
     // this is the form data that is updated when the user updates one of the fields
@@ -85,7 +87,7 @@ export default function LoginPage(){
             const result = await signInWithGoogle();
             const user = result.user;
 
-            await createJobSeekerInDatabase(user, setLoginLoading, user.displayName, "job_seeker");
+            //await createJobSeekerInDatabase(user, setLoginLoading, user.displayName, "job_seeker");
 
             successNotify("Login Successful!");
             navigate("/", { replace: true });
@@ -101,15 +103,32 @@ export default function LoginPage(){
     return(
         <>
         {loginLoading && (<FallbackElement />)}
-        {!loginLoading && (<div className="flex flex-col items-center justify-center gap-5 p-25 sm:max-w-2xl mx-auto text-center">
+        {!loginLoading && (<div className="flex flex-col items-center justify-center gap-5 p-25 sm:max-w-md lg:max-w-3xl mx-auto text-center">
             <div className="flex flex-col items-center justify-center">
-                <h1 className="primary-font text-primary text-4xl">Welcome Back!</h1>
+                <h1 className="primary-font text-primary text-4xl">WELCOME BACK</h1>
                 <h2 className="secondary-font text-lg">Please enter your credentials to access your account.<br />If you're a recruiter, <b>please use your company's email.</b></h2>
             </div>
             <form onSubmit={handleSubmit}>
-            <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xl border p-4">
+            <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4 w-full">
                 <legend className="fieldset-legend">Login</legend>
-
+                <h2>What type of account do you want to login as?</h2>
+                <div className="flex flex-row gap-2 items-center w-full justify-center">
+                    <label className="flex items-center gap-2">
+                    <input
+                    type="radio" name="radio-12" value="job_seeker" checked={accountType === "job_seeker"} onChange={(e) => setAccountType(e.target.value)} defaultChecked
+                    className="radio bg-green-100 border-green-300 checked:bg-green-200 checked:text-green-600 checked:border-green-600" /> Job Seeker
+                    </label >
+                    <label className="flex items-center gap-2">
+                    <input
+                    type="radio" name="radio-12" value="recruiter" checked={accountType === "recruiter"} onChange={(e) => setAccountType(e.target.value)}
+                    className="radio bg-blue-100 border-blue-300 checked:bg-blue-200 checked:text-blue-600 checked:border-blue-600" /> Recruiter
+                    </label>
+                    <label className="flex items-center gap-2">
+                    <input
+                    type="radio" name="radio-12" value="admin" checked={accountType === "admin"} onChange={(e) => setAccountType(e.target.value)}
+                    className="radio bg-red-100 border-red-300 checked:bg-red-200 checked:text-red-600 checked:border-red-600" /> Admin
+                    </label>
+                </div>
                 {/* email address input */}
                 <label className="label">Enter Email Address</label>
                 <label className="input validator w-xl">
@@ -171,8 +190,10 @@ export default function LoginPage(){
                 <p className="text-right hover:cursor-pointer hover:text-primary" onClick={() => navigate("/forgot-password")}>Forgot Password?</p>
                 {/* buttons to sign in with email and password or with google */}
                 <button type="submit" className="btn btn-primary mt-4">Login</button>
-                <p className="secondary-font mt-4 text-center"><i>OR</i></p>
-                <button type="button" className="btn bg-base-100x mt-4" onClick={handleGoogleSignIn}><FcGoogle /> Sign in with Google</button>
+                {accountType === "recruiter" ? <span /> : <>
+                    <p className="secondary-font mt-4 text-center"><i>OR</i></p>
+                    <button type="button" className="btn bg-base-100x mt-4" onClick={handleGoogleSignIn}><FcGoogle /> Sign in with Google</button>
+                </>}
             </fieldset>
         </form>
         {/* link to sign up page if the user doesnt have an account yet */}

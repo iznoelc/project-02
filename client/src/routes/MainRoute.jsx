@@ -137,6 +137,12 @@ const MainRouter = [
             </PrivateRoute>
           )
         },
+
+        {path:"/fallback",
+          element: (
+            <FallbackElement />
+          )
+        }
     ],
   },
   { path: "*", Component: ErrorPage }, {path: "/error", Component: ErrorPage}

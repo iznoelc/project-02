@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
     },
     
     fav_jobs: {
-        type: [mongoose.Schema.Types.ObjectId], ref: "Job_Posting", required: false, default: []
+        type: [{type: mongoose.Schema.Types.ObjectId, ref: "Job_Posting"}], required: false, default: []
     },
 
     // CONDITIONAL FIELDS FOR RECRUITERS

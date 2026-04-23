@@ -9,9 +9,6 @@ import {deletePosting} from "../utils/DeleteCreateJobInDataBase.js";
 import { Link } from "react-router-dom";
 import { normalizeId } from "../utils/NormalizeJobId";
 
-
-
-
 export default function JobFinder(){
 
     const { user, favJobs, role } = useAuth(); 
@@ -269,7 +266,7 @@ export default function JobFinder(){
                                         
                                             <button className={`text-xl transform transition-transform duration-75 hover:scale-125 hover:cursor-pointer
                                             ${isFavorite(d._id) ? "text-primary hover:text-error" : "hover:text-success"} z-30`}
-                                                onClick={isFavorite(d._id) ? () => removeFromFav(d.job_title, d._id) : () => addToFav(d.job_title, d._id)}>
+                                                onClick={isFavorite(d._id) ? () => removeFromFav(d.job_title, d._id) : () => addToFav(d.job_title, d)}>
                                                 {isFavorite(d._id) ? <FaStar /> : <FaRegStar />}
                                             </button>
                                         </div>

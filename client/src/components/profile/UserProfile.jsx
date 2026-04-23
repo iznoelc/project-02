@@ -54,7 +54,7 @@ export default function UserProfile(){
 
         fetchUser();
 
-    }, [uid, user, navigate]);
+    }, [uid, user]);
 
     if (loading) return <FallbackElement />
     if (!profile) return <><h1>No profile found.</h1></>
@@ -125,9 +125,21 @@ export default function UserProfile(){
                         )}
                         </div>
                     
-                </div>
+                </div>  
                 <div className="flex flex-col w-full items-center p-16">
-                    <FavoriteJobsDisplay profile={profile} isOwnProfile={isOwnProfile} />
+                    {profile.user.role === "job_seeker" &&
+                        <FavoriteJobsDisplay profile={profile} isOwnProfile={isOwnProfile} />
+                    }
+                    {profile.user.role === "recruiter" &&
+                    <>
+                        <h1 className="text-2xl">ADDITIONAL RECRUITER ACCOUNT INFORMATION</h1>
+                        {isEditing ? 
+                            <p>Editing profile</p>
+                            :
+                            <h2>{profile.user.organization} | {profile.user.location} | {profile.user.website}</h2>
+                        }
+                    </>
+                    }
                 </div>
             
             </>}
