@@ -22,7 +22,7 @@ import FallbackElement from "../FallbackElement";
 export default function JobSeekerSignUpPage(){
     const navigate = useNavigate();
 
-    const { signInWithGoogle, createUser, loggedIn } = useAuth();
+    const { signInWithGoogle, createUser, loggedIn, fetchUser } = useAuth();
     const [msg, setMsg] = useState("Error signing up. Please try again.");
 
     const [signUpLoading, setSignUpLoading] = useState(false);
@@ -57,18 +57,32 @@ export default function JobSeekerSignUpPage(){
         try {
             const userCredential = await createUser(formData.email, formData.password);
 
-            // successful sign up
+            // successful sign up (userCredential from firebase)
             const user = userCredential.user;
             console.log(user);
             console.log("loggedIn: " + loggedIn);
 
+            // ensures display name is updated in firebase right away
             await updateProfile(user, {
                 displayName: formData.display_name,
             });
 
-            // create the user in the database
-            createJobSeekerInDatabase(user, setSignUpLoading, formData.display_name, formData.role);
-            
+            // POST to create the user in DB first 
+            const token = await user.getIdToken();
+            await fetch(`${import.meta.env.VITE_API_URL}/users`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify({
+                uid: user.uid,
+                display_name: formData.display_name,
+                role: "job_seeker",
+            }),
+            });
+
+            await fetchUser(user.uid, token); // update user in auth provider ASAP
 
             setSignUpLoading(false);
             successNotify("Account created successfully! You are now logged in.");
@@ -94,8 +108,23 @@ export default function JobSeekerSignUpPage(){
             const result = await signInWithGoogle();
             const user = result.user;
 
-            await createJobSeekerInDatabase(user, setSignUpLoading, user.displayName, "job_seeker");
-
+            // await createJobSeekerInDatabase(user, setSignUpLoading, user.displayName, "job_seeker");
+            //create the user in the database
+            const token = await user.getIdToken();
+            await fetch(`${import.meta.env.VITE_API_URL}/users`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify({
+                uid: user.uid,
+                display_name: user.displayName,
+                role: "job_seeker",
+            }),
+            });
+            
+            await fetchUser(user.uid, token); // update user in auth provider ASAP
             successNotify("Account created successfully! You are now logged in.");
             navigate("/", { replace: true });
         } catch (error) {
@@ -105,6 +134,8 @@ export default function JobSeekerSignUpPage(){
             setSignUpLoading(false);
         }
     }
+
+    
 
     return (
         <>

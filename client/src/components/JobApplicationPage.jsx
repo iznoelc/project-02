@@ -20,7 +20,7 @@ export default function JobApplicationPage() {
         try {
             const token = await user.getIdToken();
 
-            const res = await fetch("http://localhost:3000/applications", {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/applications`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -89,6 +89,12 @@ export default function JobApplicationPage() {
             ))}
             </ul>            
 
+        )}
+                {/* To be displayed if data is not loading and the current data length is zero (i.e. no search results) */}
+        {data.length === 0 && (
+            <div className="flex flex-col items-center justify-center gap-5 p-16">
+                <h1 className="secondary-font text-2xl">No applications found.</h1>
+            </div>
         )}
 
         </div>

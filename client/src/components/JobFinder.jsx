@@ -69,7 +69,7 @@ export default function JobFinder(){
         try {
             const token = await user.getIdToken();
 
-            const res = await fetch("http://localhost:3000/job_postings", {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/job_postings`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

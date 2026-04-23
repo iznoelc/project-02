@@ -14,7 +14,7 @@ import {
 import { errorNotify, successNotify } from "../../utils/ToastifyNotifications.js";
 
 export default function RecruiterSignUpPage(){
-    const { createUser, loggedIn } = useAuth(); // get the createUser function from the useAuth hook
+    const { createUser, loggedIn, fetchUser } = useAuth(); // get the createUser function from the useAuth hook
     const navigate = useNavigate(); // used to navigate to a new page after successful login
     const [loginLoading, setSignUpLoading] = useState(false); // separate loading to determine if the user is currently being logged in. (this is separate from the loading in useAuth)
     const [passwordVisibility, setPasswordVisibility] = useState(false);
@@ -41,19 +41,39 @@ export default function RecruiterSignUpPage(){
             const userCredential = await createUser(formData.email, formData.password);
             const user = userCredential.user;
             // create the user in the database
-            
-            createRecruiterInDatabase(user, formData, setSignUpLoading);
-            
-            // successful sign up
-
-            console.log(user);
-            console.log("loggedIn: " + loggedIn);
 
             await updateProfile(user, {
                 displayName: formData.display_name,
             });
             
+            //createRecruiterInDatabase(user, formData, setSignUpLoading);
 
+            // create the recruiter in the database
+            const token = await user.getIdToken();
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/users`, {
+            method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`,
+                },
+                body: JSON.stringify({
+                    uid: user.uid,
+                    display_name: formData.display_name,
+                    organization: formData.org_name,
+                    location: formData.org_location,
+                    website: formData.org_website,
+                    role: formData.role,
+                }),
+            });
+
+            if (!res.ok){ throw new Error({error: "Error posting user to the database."})}
+            
+            await fetchUser(user.uid, token); // update user in auth provider ASAP
+            
+            // successful sign up
+            console.log(user);
+            console.log("loggedIn: " + loggedIn);
+            
             setSignUpLoading(false);
             successNotify("Account created successfully! You are now logged in.");
             navigate("/", { replace: true });

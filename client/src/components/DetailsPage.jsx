@@ -157,7 +157,7 @@ async function submitApplication(
     const auth = getAuth();
     const token = await auth.currentUser.getIdToken();
 
-    const response = await fetch("http://localhost:3000/applications", {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/applications`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

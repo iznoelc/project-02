@@ -7,7 +7,7 @@ export async function deletePosting(job_id, user, fetchData, confirmToast ) {
 
     const token = await user.getIdToken();
 
-    const res = await fetch(`http://localhost:3000/job_postings/${job_id}`, {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/job_postings/${job_id}`, {
         method: "DELETE",
         headers: {
             Authorization: `Bearer ${token}`,
@@ -38,7 +38,7 @@ export async function createPosting(user, fetchData, formData) {
         } = formData;    
 
         try {
-        const response = await fetch("http://localhost:3000/job_postings", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/job_postings`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

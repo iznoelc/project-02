@@ -5,7 +5,7 @@ export default function ApprovalPendingPage(){
 
     return (
         <>
-            <div className="min-h-screen flex flex-col max-w-2xl w-full mx-auto items-center text-center">
+            <div className="min-h-screen flex flex-col max-w-2xl w-full mx-auto items-center text-center pt-16">
                 <div className="flex flex-col rounded-box bg-base-200 p-16">
                 <h1 className="text-4xl sm:pb-10">Hi there, Recruiter {user.displayName}!</h1>
                 <p>We are <b>currently </b>processing your account.<br />

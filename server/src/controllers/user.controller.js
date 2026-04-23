@@ -26,7 +26,6 @@ async function createUser(req, res) {
         // then, return a success response with the created user
         const user = new User({
             uid: value.uid,
-            email: value.email,
             display_name: value.display_name,
             role: value.role,
             organization: value.organization,
@@ -44,8 +43,6 @@ async function createUser(req, res) {
 };
 
 async function getUserByUID(req, res) {
-    
-
     try {
 
         // console.log("request uid: ", req.user.uid);
@@ -63,6 +60,14 @@ async function getUserByUID(req, res) {
 
         // if the user couldnt be found, send a bad request response with an error msg
         if (!user) {
+            //   const newUser = await User.create({
+            //     uid: req.params.uid,
+            //     display_name: "placeholder",
+            //     role: "job_seeker",
+            //     fav_jobs: []
+            // });
+
+            // return res.status(200).json({ user: newUser })
             return res.status(404).json({ error: "User not found" });
         }
 
@@ -84,6 +89,8 @@ async function getAllUsers(req, res) {
 }
 
 async function deleteUser(req, res) {
+    console.log("REQ USER:", req.user);
+    console.log("REQ BODY:", req.body);
     try {
         const currentUser = await User.findOne({uid: req.user.uid});
         console.log("Current user role: ", currentUser.role);
@@ -108,7 +115,7 @@ async function deleteUser(req, res) {
 
         try {
             console.log("Attempting to delete user with uid ", user.uid);
-            admin.auth().deleteUser(user.uid);
+            await admin.auth().deleteUser(user.uid);
         } catch (error) {
             return res.status(500).json({message: "Error deleting user in firebase."});
         }
@@ -122,7 +129,8 @@ async function deleteUser(req, res) {
 
 async function updateUser(req, res){
     try {
-
+        console.log("REQ USER:", req.user);
+        console.log("REQ BODY:", req.body);
         console.log("request: ", req.body);
         // verify that current user is an admin
         const currentUser = await User.findOne({uid: req.user.uid});
@@ -130,44 +138,32 @@ async function updateUser(req, res){
         
         const user = await User.findOne({uid: req.params.uid});
         
-        const updatedData = req.body;
-        const { approved, fav_jobs } = req.body;
+        // const updatedData = req.body;
+        // const { approved, fav_jobs } = req.body;
+        // const updateFields = {};
+
         const updateFields = {};
 
-        // if trying to approve a user but current user is not an admin
-        if (approved === true){
-            if (currentUser.role !== "admin"){
-                return res.status(403).json({error: "Access denied"});
+        const allowedFields = ["display_name", "role", "location", "fav_jobs", "website", "organization", ];
+
+        for (const key of allowedFields) {
+            if (req.body[key] !== undefined) {
+                updateFields[key] = req.body[key];
             }
-            if (approved !== undefined) updateFields.approved = approved;
         }
 
-        // can't find the user to patch
-        if (!user){
-            return res.status(404).json({error: "Could not find user to patch"});
-        } else if (user.role !== "recruiter" && approved && approved === "true"){
-            return res.status(400).json({error: "The user you are trying to approve is not a recruiter"});
-        }
-
-        // if trying to update a user's fav_jobs, but the current user does not match the request
-        if (fav_jobs !== undefined){
-            console.log("Trying to update favorite jobs");
-            if (currentUser.uid != req.params.uid){
-                return res.status(403).json({error: "Access denied: you cannot modify this user's favorited jobs!"})
-            }
-            console.log("Fav jobs incoming ", fav_jobs)
-            // updatedData.fav_jobs = fav_jobs.map(id => new mongoose.Types.ObjectId(id))
-            if (fav_jobs !== undefined) {
-            updateFields.fav_jobs = fav_jobs; // mongo db auto converts back to ObjectId type because of the mongoose schema
-            }
+        if (req.body.approved !== undefined){
+            if (!currentUser) { return res.status(401).json({ error: "Invalid user." })}
+            if (currentUser.role !== "admin" && req.body.approved === true) // trying to approve a user and not an admin
+                { return res.status(403).json({ error: "Access denied. The user trying to make this change is not an admin."})}
+            updateFields.approved = req.body.approved;
         }
 
         const patched = await User.findOneAndUpdate(
-            { uid: user.uid },
-            { $set: updateFields, },
-            // { new : true },
-            { returnDocument: 'after'},
-        )
+            { uid: req.params.uid },
+            { $set: updateFields },
+            { returnDocument: "after" }
+        );
 
         return res.status(200).json({ user: patched });
     } catch (err) {

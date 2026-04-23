@@ -54,7 +54,7 @@ export default function JSDashboard(){
     useEffect(() => {
         async function fetchApplications() {
           try {
-            const res = await fetch (`http://localhost:3000/applications/${user.uid}`, {
+            const res = await fetch (`${import.meta.env.VITE_API_URL}/applications/${user.uid}`, {
                 headers: {
                 Authorization: `Bearer ${await user.getIdToken()}`,
               },

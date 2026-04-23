@@ -19,7 +19,7 @@ export default function FavoriteJobProvider({children}) {
               const cleanFavJobs = favJobs.map(normalizeId);
               const updatedFavJobs = [...cleanFavJobs, jobId];
 
-              const res = await fetch(`http://localhost:3000/users/${user.uid}`, {
+              const res = await fetch(`${import.meta.env.VITE_API_URL}/users/${user.uid}`, {
               method: "PATCH",
                   headers: {
                     "Content-Type": "application/json",
@@ -49,7 +49,7 @@ export default function FavoriteJobProvider({children}) {
             job => job !== jobId
         );
 
-        const res = await fetch(`http://localhost:3000/users/${user.uid}`, {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/users/${user.uid}`, {
         method: "PATCH",
             headers: {
               "Content-Type": "application/json",
