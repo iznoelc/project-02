@@ -14,7 +14,7 @@ export default function JobDetailsPage() {
       .then(data => setJob(data));
   }, [id]);
 
-  if (!job) return <p>Loading...</p>;
+  if (!job || !currentUser) return <p>Loading...</p>;
 
   return <DetailsPage job={job} currentUser={currentUser} />;
 }
