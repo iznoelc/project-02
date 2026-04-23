@@ -16,10 +16,12 @@ Landon Chapin, Esperanza Paulino
 - Home Page
 - Formatting & Debugging
 - Authentication (Sign in, etc.)
+  
 **Esperanza Paulino**
 - Admin Dashboard
 - Job Details Page
 - Job Application Page/Creation
+  
 **Landon Chapin**
 - Job Search
 - Recruiter Dashboard
