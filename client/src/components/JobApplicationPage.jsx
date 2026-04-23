@@ -90,6 +90,12 @@ export default function JobApplicationPage() {
             </ul>            
 
         )}
+                {/* To be displayed if data is not loading and the current data length is zero (i.e. no search results) */}
+        {data.length === 0 && (
+            <div className="flex flex-col items-center justify-center gap-5 p-16">
+                <h1 className="secondary-font text-2xl">No applications found.</h1>
+            </div>
+        )}
 
         </div>
     )
