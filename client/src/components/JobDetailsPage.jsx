@@ -9,7 +9,7 @@ export default function JobDetailsPage() {
   const { currentUser } = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/job-postings/${id}`)
+    fetch(`http://localhost:3000/job-details/${id}`)
       .then(res => res.json())
       .then(data => setJob(data));
   }, [id]);
