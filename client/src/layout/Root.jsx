@@ -13,7 +13,7 @@ const Root = () => {
         <FavoriteJobProvider>
         <NavBar />
         
-        <main className="flex-1 flex flex-col pt-16 overflow-auto">
+        <main className="flex-1 flex flex-col overflow-auto">
             <ToastContainer
               position="top-center"
               autoClose={3000}

@@ -17,9 +17,10 @@ import JSDashboard from "../components/JSDashboard";
 
 import AdminDashboard from "../components/AdminDashboard";
 import ErrorPage, { ErrorBoundary } from "../components/ErrorPage";
-import DetailsPage from "../components/DetailsPage";
+import JobDetailsPage from "../components/JobDetailsPage";
+import JobApplicationsPage from "../components/JobApplicationPage";
 
-import UserProfile from "../components/UserProfile";
+import UserProfile from "../components/profile/UserProfile";
 import ApprovalPendingPage from "../components/ApprovalPendingPage";
 
 const MainRouter = [
@@ -101,10 +102,19 @@ const MainRouter = [
         },
 
         {
-          path: "job-details/:id",
+          path: "jobs/:_id",
           element: (
             <PrivateRoute allowedRoles={["job_seeker", "admin"]}>
               <JobDetailsPage />
+            </PrivateRoute>
+          )
+        },
+
+        {
+          path: "job_postings/:_id/applications",
+          element: (
+            <PrivateRoute allowedRoles={["job_recruiter", "admin"]}>
+              <JobApplicationsPage />
             </PrivateRoute>
           )
         },

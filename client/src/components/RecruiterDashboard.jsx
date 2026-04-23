@@ -5,6 +5,7 @@ import useAuth from "../hooks/useAuth";
 import { toast, ToastContainer } from "react-toastify";
 import { errorNotify, successNotify } from "../utils/ToastifyNotifications";
 import {deletePosting, createPosting } from "../utils/DeleteCreateJobInDataBase.js";
+import { Link } from "react-router-dom";
 
 
 export default function RecuiterDashboard(){
@@ -293,9 +294,11 @@ export default function RecuiterDashboard(){
                         
 
                         <div className="justify-end card-actions">
-                            <button className="btn btn-xs sm:btn-sm md:btn-sm lg:btn-sm xl:btn-xl">
-                                Review Applications
-                            </button>
+                                <Link to={`/job_postings/${d._id}/applications`} className="no-underline">
+                                <h2 className="card-title primary-font text-1xl hover:underline">
+                                    Review Applications
+                                </h2>
+                                </Link>
                             <button className="btn btn-xs sm:btn-sm md:btn-sm lg:btn-sm xl:btn-xl" 
                                 onClick={() => deletePosting(d._id, user, fetchData, confirmToast)}>
                                 Remove Posting

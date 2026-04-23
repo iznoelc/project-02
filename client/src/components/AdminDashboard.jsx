@@ -27,18 +27,18 @@ export default function AdminDashboard() {
 
     return (
         <div>
-            <div className="hero bg-base-200 min-h-screen">
+            <div className="hero bg-base-200 gap-2">
                 <div className="hero-content text-center">
-                    <div className="max-w-md">
-                        <h3>ADMIN DASHBOARD</h3>
+                    <div className="max-w-2xl">
+                        <h1 className="text-5xl">ADMIN DASHBOARD</h1>
                         <p>
-                            Dear Admin, welcome to the admin dashboard. Here you can view site
-                            statistics, search users, and delete them as needed.
+                            Dear {user.displayName ? user.displayName : "admin"}, welcome to the admin dashboard. Here you can view site
+                            statistics, search users, delete users, and approve recruiters as needed.
                         </p>
 
-                        <h1 className="text-5xl font-bold">Site Statistics</h1>
+                        <h1 className="text-3xl font-bold pt-8">Site Statistics</h1>
 
-                        <div className="grid grid-cols-3 gap-4 mt-4">
+                        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
                             <StatCard number={seekersList.length} label="Job Seekers" />
                             <StatCard number={recruitersList.length} label="Recruiters" />
                             <StatCard number={seekersList.length + recruitersList.length} label="Total Users" />

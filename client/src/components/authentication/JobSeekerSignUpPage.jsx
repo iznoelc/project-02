@@ -110,7 +110,7 @@ export default function JobSeekerSignUpPage(){
         <>
         {signUpLoading && (<FallbackElement />)}
         {!signUpLoading && (
-            <div className="flex flex-col items-center justify-center gap-5 p-10">
+            <div className="flex flex-col items-center justify-center gap-5 p-25">
             {/*imghere*/}
             <h1 className="primary-font text-primary text-4xl">Create Your Job Seeker Account</h1>
             <p className="secondary-font">Trying to create an recruiter account? <a href="/recruiter-signup" className="hover:text-primary text-center"><b>Sign up here instead.</b></a></p>

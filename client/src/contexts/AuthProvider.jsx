@@ -80,6 +80,7 @@ const AuthProvider = ({ children }) => {
         console.log("ROLE RESPONSE: ", data);
 
         setRole(data.user?.role || data.role);
+        
         if (data.user?.role === "recruiter" || data.role === "recruiter"){
           setApproved(data.user?.approved || data.approved);
         }

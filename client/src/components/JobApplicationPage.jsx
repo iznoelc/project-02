@@ -1,16 +1,20 @@
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import useAuth from "../hooks/useAuth";
+import { useParams } from "react-router-dom";
 
 
-export default function JobApplicationPage({job}){
 
+export default function JobApplicationPage() {
+    const { _id: job_id } = useParams();
+
+    
     const { user } = useAuth(); 
 
-    const [data, setData] = useState(null); // the job application data
+    const [data, setData] = useState([]); // the job application data
 
 
-    let job_id = job._id
+
 
     async function fetchData( user) {
         try {
@@ -42,7 +46,11 @@ export default function JobApplicationPage({job}){
 
 
     const filterData = (applications) => {
-    return applications.filter(app => app.job_id === job_id);
+
+    return  applications.filter(app =>
+        app.job_id.toString() === job_id
+        );
+
     };
 
 
@@ -50,7 +58,7 @@ export default function JobApplicationPage({job}){
 
     return(
         <div>
-            <h1> {job.job_title} Applications </h1>
+            <h1 className="card-title primary-font text-1xl justify-center"> {/*job.job_title*/} Applications </h1>
 
         {/* To be displayed if data is not loading and the current data length is bigger than zero */}
         {data.length > 0 && (

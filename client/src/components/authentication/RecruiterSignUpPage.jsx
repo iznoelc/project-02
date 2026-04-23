@@ -83,7 +83,7 @@ export default function RecruiterSignUpPage(){
     return(
         <>
         {loginLoading && (<FallbackElement />)}
-        {!loginLoading && (<div className="flex flex-col items-center justify-center gap-5 p-10">
+        {!loginLoading && (<div className="flex flex-col items-center justify-center gap-5 p-25">
             <div className="flex flex-col items-center justify-center">
                 <h1 className="primary-font text-primary text-4xl">Create a Recruiter Account</h1>
                 <p className="secondary-font">Trying to create a job seeker account? <a href="/job-seeker-signup" className="hover:text-primary text-center"><b>Sign up here instead.</b></a></p>
@@ -182,11 +182,8 @@ export default function RecruiterSignUpPage(){
         </form>
         {/* link to sign up page if the user doesnt have an account yet */}
         <div className="flex items-center justify-center gap-5">
-            <p className="secondary-font">New around here? Create a 
-                <a href="../job-seeker-signup" className="hover:text-primary text-center"><b> Job Seeker </b></a>
-                or 
-                <a href="../recruiter-signup" className="hover:text-primary text-center"><b> Recruiter </b></a>
-                account today!
+            <p className="secondary-font">Already have an account? Login
+                <a href="../login" className="hover:text-primary text-center"><b> here.</b></a>
             </p>
         </div>
         </div>)}
