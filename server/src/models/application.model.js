@@ -13,8 +13,7 @@ const applicationSchema = new mongoose.Schema({
         type: String, required: true,
     },
     resume_link: {
-        type: "string", //its validated locally in the application page
-        placeholder="https://example.com/resume.pdf",
+        type: String, //its validated locally in the application page
         required: true
     },
     cover_letter: {
