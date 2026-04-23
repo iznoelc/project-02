@@ -247,13 +247,13 @@ export default function JobFinder(){
                                     
                                     <h2 className="card-title primary-font text-1xl">APPLICATION DEADLINE: {d.deadline}</h2>  
                                     <div>                                              
-                                        {role === "job_seeker" &&(
+                                        {/*role === "job_seeker" &&(
                                             <button className={`text-xl transform transition-transform duration-75 hover:scale-125 hover:cursor-pointer z-30
                                             `}
                                                 >
                                                 Apply
                                             </button>
-                                        )}
+                                        )*/}
 
                                         {role === "admin" && (
                                             <button
