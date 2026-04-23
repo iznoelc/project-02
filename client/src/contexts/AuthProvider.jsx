@@ -69,7 +69,7 @@ const AuthProvider = ({ children }) => {
       try {
         const token = await currentUser.getIdToken();
 
-        let res = await fetch(`http://localhost:3000/users/${currentUser.uid}`, {
+        let res = await fetch(`${import.meta.env.VITE_API_URL}/users/${currentUser.uid}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -106,7 +106,7 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   const fetchUser = async (uid, token) => {
-      const res = await fetch(`http://localhost:3000/users/${uid}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/users/${uid}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

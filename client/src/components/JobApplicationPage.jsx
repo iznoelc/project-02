@@ -20,7 +20,7 @@ export default function JobApplicationPage() {
         try {
             const token = await user.getIdToken();
 
-            const res = await fetch("http://localhost:3000/applications", {
+            const res = await fetch("${import.meta.env.VITE_API_URL}/applications", {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

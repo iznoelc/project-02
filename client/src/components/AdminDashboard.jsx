@@ -135,7 +135,7 @@ function StatCard({ number, label }) {
 
 async function fetchUsers(setSeekersList, setRecruitersList) {
     try {
-        const res = await fetch("http://localhost:3000/users");
+        const res = await fetch("${import.meta.env.VITE_API_URL}/users");
         const data = await res.json();
 
         setSeekersList(data.filter(u => u.role === "job_seeker"));
@@ -148,7 +148,7 @@ async function fetchUsers(setSeekersList, setRecruitersList) {
 async function Approve(user, userId, setRecruitersList) {
 
     try {
-        const res = await fetch(`http://localhost:3000/users/${userId}`, {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/users/${userId}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
@@ -183,7 +183,7 @@ async function Delete(user, userId, setList) {
     if (!confirmed) return;
 
     try {
-        const res = await fetch(`http://localhost:3000/users/${userId}`, {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/users/${userId}`, {
         method: "DELETE",
             headers: {
             Authorization: `Bearer ${await user.getIdToken()}`,

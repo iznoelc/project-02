@@ -17,7 +17,7 @@ export default function JobDetailsPage() {
         const token = await user.getIdToken(); 
 
         const res = await fetch(
-          `http://localhost:3000/job_postings/${_id}`,
+          `${import.meta.env.VITE_API_URL}/job_postings/${_id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

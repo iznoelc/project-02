@@ -1,6 +1,6 @@
 export const createRecruiterInDatabase = async (user, formData, setSignUpLoading) => {
     try {
-        const response = await fetch("http://localhost:3000/users", {
+        const response = await fetch("${import.meta.env.VITE_API_URL}/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -37,7 +37,7 @@ export const createRecruiterInDatabase = async (user, formData, setSignUpLoading
 
 export const createJobSeekerInDatabase = async (user, setSignUpLoading, display_name, role) => {
         try {
-        const response = await fetch("http://localhost:3000/users", {
+        const response = await fetch("${import.meta.env.VITE_API_URL}/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

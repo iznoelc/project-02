@@ -27,7 +27,7 @@ export default function UserProfile(){
         async function fetchUser(){
             setLoading(true);
             try {
-            const res = await fetch(`http://localhost:3000/users/${uid}`, {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/users/${uid}`, {
             headers: {
                 Authorization: `Bearer ${await user.getIdToken()}`,
             },
