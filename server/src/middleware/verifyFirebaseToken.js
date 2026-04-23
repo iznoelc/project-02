@@ -8,7 +8,9 @@
  */
 
 const admin = require("firebase-admin");
-const serviceAccount = require("../../universal-careers-auth-firebase-admin.json");
+const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT 
+    ? JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT)
+    : require("../../universal-careers-auth-firebase-admin.json");
 
 // initialize firebase admin
 admin.initializeApp({
