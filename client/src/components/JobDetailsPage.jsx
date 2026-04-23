@@ -6,20 +6,24 @@ import useAuth from "../hooks/useAuth";
 export default function JobDetailsPage() {
   const { _id } = useParams();
   const [job, setJob] = useState(null);
-  const { currentUser } = useAuth();
+  const { user } = useAuth();                
+  console.log("useAuth returned:", useAuth());
 
   useEffect(() => {
-    if (!_id || !currentUser) return;
+    //if (!_id || !user) return;         
 
     async function fetchJob() {
       try {
-        const token = await currentUser.getIdToken();  
+        const token = await user.getIdToken(); 
 
-        const res = await fetch(`http://localhost:3000/job_postings/${_id}`, {
-          headers: {
-            Authorization: `Bearer ${token}`,         
-          },
-        });
+        const res = await fetch(
+          `http://localhost:3000/job_postings/${_id}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         if (!res.ok) {
           console.error("Fetch failed:", res.status);
@@ -34,9 +38,10 @@ export default function JobDetailsPage() {
     }
 
     fetchJob();
-  }, [_id, currentUser]); 
+  }, [_id, user]);
 
-  if (!job || !currentUser) return <p>Loading...</p>;
+  if (!job || !user) return <p>Loading...</p>;
+  
 
-  return <DetailsPage job={job} currentUser={currentUser} />;
+  return <DetailsPage job={job} user={user} />;
 }

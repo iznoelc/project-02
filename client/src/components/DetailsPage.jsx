@@ -1,45 +1,55 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
+import useAuth from "../hooks/useAuth";
+import { getAuth } from "firebase/auth";
 
-//make route, make it so that the route to each page is unique just by having the name added on said route
-//text landon so he can link my route from the links
-//change schema so that the application link takes an actual link not a string like it is at the moment
-//add file upload for resume as well so they can do either
-//finally test everything make sure you can upload either and that the pop-up works properly
-
-export default function DetailsPage({ job, currentUser }) {
+export default function DetailsPage({ job }) {
+  const { user } = useAuth(); // always fresh
   const [showPopup, setShowPopup] = useState(false);
   const [resumeLink, setResumeLink] = useState("");
 
   return (
     <div>
       <div className="card lg:card-side bg-base-100 shadow-sm">
-
         <div className="card-body">
-          <h2 className="card-title">{job.job_title}<br />{job.institution}</h2>
+          <h2 className="card-title">
+            {job.job_title}
+            <br />
+            {job.institution}
+          </h2>
 
           <p>
-            <strong>Details</strong><br />
-            Category: {job.category}<br />
-            Location: {job.location}<br />
-            Salary Range: {job.salary_range}<br />
-            Job Description: {job.description}<br />
+            <strong>Details</strong>
+            <br />
+            Category: {job.category}
+            <br />
+            Location: {job.location}
+            <br />
+            Salary Range: {job.salary_range}
+            <br />
+            Job Description: {job.description}
+            <br />
           </p>
 
           {job.req_qualifications?.length > 0 && (
             <>
-              <p><strong>Required Qualifications</strong></p>
+              <p>
+                <strong>Required Qualifications</strong>
+              </p>
               <ul className="list-disc ml-6">
-                {job.req_qualifications.map(req => (
+                {job.req_qualifications.map((req) => (
                   <li key={req}>{req}</li>
                 ))}
               </ul>
             </>
           )}
 
-
-          <p><strong>Application deadline: {job.deadline}</strong></p>
-          <p><strong>Expected start date: {job.start_date}</strong></p>
+          <p>
+            <strong>Application deadline: {job.deadline}</strong>
+          </p>
+          <p>
+            <strong>Expected start date: {job.start_date}</strong>
+          </p>
 
           <div className="card-actions justify-end">
             <button className="btn btn-primary" onClick={() => setShowPopup(true)}>
@@ -49,7 +59,7 @@ export default function DetailsPage({ job, currentUser }) {
         </div>
       </div>
 
-      {/* DaisyUI Modal */}
+      {/* Modal */}
       {showPopup && (
         <dialog className="modal modal-open">
           <div className="modal-box">
@@ -66,36 +76,44 @@ export default function DetailsPage({ job, currentUser }) {
             />
 
             <div className="modal-action">
-              <button 
-                className="btn"
-                onClick={() => setShowPopup(false)}
-              >
+              <button className="btn" onClick={() => setShowPopup(false)}>
                 Cancel
               </button>
 
-              <button 
+              <button
                 className="btn btn-primary"
-                onClick={() =>
+                onClick={() => {
+                  if (!user) {
+                    toast.error("You must be logged in to apply");
+                    return;
+                  }
+
                   submitApplication(
                     job._id,
-                    currentUser._id,
+                    user.uid,
                     resumeLink,
                     setResumeLink,
                     setShowPopup
-                  )
-                }
+                  );
+                }}
               >
                 Submit
               </button>
             </div>
           </div>
+
+          <form method="dialog" className="modal-backdrop">
+            <button onClick={() => setShowPopup(false)}>close</button>
+          </form>
         </dialog>
       )}
     </div>
   );
 }
 
-//helper functions
+/* -----------------------------
+   Helper Function
+------------------------------ */
 
 async function submitApplication(
   jobId,
@@ -104,28 +122,41 @@ async function submitApplication(
   setResumeLink,
   setShowPopup
 ) {
+  console.log("Submitting:", { jobId, applicantId, resumeLink });
+
   if (!resumeLink.trim()) {
     toast.error("Please enter a resume link");
     return;
   }
 
-  const response = await fetch("http://localhost:3000/applications", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      jobId,
-      applicantId,
-      resumeLink
-    })
-  });
+  try {
+    const auth = getAuth();
+    const token = await auth.currentUser.getIdToken(); // ⭐ REQUIRED FOR 401 FIX
 
-  const data = await response.json();
+    const response = await fetch("http://localhost:3000/applications", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}` // ⭐ FIXED
+      },
+      body: JSON.stringify({
+        jobId,
+        applicantId,
+        resumeLink
+      })
+    });
 
-  if (response.ok) {
-    toast.success("Application submitted!");
-    setShowPopup(false);
-    setResumeLink("");
-  } else {
-    toast.error(data.error || "Something went wrong");
+    const data = await response.json();
+
+    if (response.ok) {
+      toast.success("Application submitted!");
+      setShowPopup(false);
+      setResumeLink("");
+    } else {
+      toast.error(data.error || "Something went wrong");
+    }
+  } catch (err) {
+    console.error("Submit error:", err);
+    toast.error("Network error");
   }
 }

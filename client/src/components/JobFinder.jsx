@@ -59,7 +59,6 @@ export default function JobFinder(){
 
         /* use useEffect here to get the data once its loaded from the loader, since it will take some time. */
     useEffect(() => {
-        console.log("currentUser:", user);
         if (!user) return;
         fetchData(user)
     }, [user]);

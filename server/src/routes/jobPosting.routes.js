@@ -7,7 +7,7 @@ const { createJobPosting, getJobPostingByID, deleteJobPosting, getAllJobPostings
 router.post("/", verifyFirebaseToken, createJobPosting);
 
 // get job by MongoDB _id
-router.get("/:_id", verifyFirebaseToken, getJobPostingByID);
+router.get("/:id", verifyFirebaseToken, getJobPostingByID);
 
 // get all job postings
 router.get("/", getAllJobPostings);

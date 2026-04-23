@@ -14,10 +14,11 @@ async function createApplication(req, res) {
             return res.status(400).json({ error: "resumeLink is required" });
         }
 
+        // ⭐ Convert camelCase → snake_case for the schema
         const application = new Application({
-            jobId,
-            applicantId,
-            resumeLink
+            job_id: jobId,
+            applicant_id: applicantId,
+            resume_link: resumeLink
         });
 
         await application.save();
@@ -32,6 +33,7 @@ async function createApplication(req, res) {
         res.status(500).json({ message: "Server error" });
     }
 }
+
 
 /**
  * Get all applications for a certian user

@@ -3,7 +3,7 @@ const router = express.Router();
 const { verifyFirebaseToken } = require("../middleware/verifyFirebaseToken");
 const { createApplication, getApplicationsByUserUID, getAllJobApplications } = require("../controllers/application.controller");
 
-router.post("/:uid", verifyFirebaseToken, createApplication);
+router.post("/", verifyFirebaseToken, createApplication);
 
 // router.get("/:uid", verifyFirebaseToken, (req, res) => {
 //     res.send("Application route is working");
