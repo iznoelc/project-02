@@ -57,10 +57,15 @@ async function getApplicationsByUserUID(req, res){
     try {
         console.log("request uid: ", req.user.uid);
         console.log("params uid: ", req.params.applicant_id);
-        if (req.params.applicant_id !== req.user.uid){
-            
-            return res.status(403).json({error: "Access Forbidden"})
+        
+        // Allow admins to view everything
+        const isAdmin = req.user.admin || req.user.role === "admin" || req.user.isAdmin;
+
+        // Block only if NOT admin AND trying to access someone else's data
+        if (!isAdmin && req.params.applicant_id !== req.user.uid) {
+            return res.status(403).json({ error: "Access Forbidden" });
         }
+
 
         const applications = await Application.find({
             applicant_id: req.params.applicant_id,
