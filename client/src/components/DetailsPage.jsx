@@ -4,9 +4,10 @@ import useAuth from "../hooks/useAuth";
 import { getAuth } from "firebase/auth";
 
 export default function DetailsPage({ job }) {
-  const { user } = useAuth(); // always fresh
+  const { user } = useAuth();
   const [showPopup, setShowPopup] = useState(false);
   const [resumeLink, setResumeLink] = useState("");
+  const [cover_letter, setCoverLetter] = useState("");
 
   return (
     <div>
@@ -84,6 +85,14 @@ export default function DetailsPage({ job }) {
               onChange={(e) => setResumeLink(e.target.value)}
             />
 
+            <input
+              type="text"
+              placeholder="Cover Letter (optional)"
+              className="input input-bordered w-full mt-3"
+              value={cover_letter}
+              onChange={(e) => setCoverLetter(e.target.value)}
+            />
+
             <div className="modal-action">
               <button className="btn" onClick={() => setShowPopup(false)}>
                 Cancel
@@ -101,7 +110,9 @@ export default function DetailsPage({ job }) {
                     job._id,
                     user.uid,
                     resumeLink,
+                    cover_letter,
                     setResumeLink,
+                    setCoverLetter,
                     setShowPopup
                   );
                 }}
@@ -128,10 +139,12 @@ async function submitApplication(
   jobId,
   applicantId,
   resumeLink,
+  cover_letter,
   setResumeLink,
+  setCoverLetter,
   setShowPopup
 ) {
-  console.log("Submitting:", { jobId, applicantId, resumeLink });
+  console.log("Submitting:", { jobId, applicantId, resumeLink, cover_letter });
 
   const urlPattern = /^(https?:\/\/)[^\s$.?#].[^\s]*$/i;
 
@@ -142,18 +155,19 @@ async function submitApplication(
 
   try {
     const auth = getAuth();
-    const token = await auth.currentUser.getIdToken(); // ⭐ REQUIRED FOR 401 FIX
+    const token = await auth.currentUser.getIdToken();
 
     const response = await fetch("http://localhost:3000/applications", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}` // ⭐ FIXED
+        Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({
         jobId,
         applicantId,
-        resumeLink
+        resumeLink,
+        cover_letter
       })
     });
 
@@ -163,6 +177,7 @@ async function submitApplication(
       toast.success("Application submitted!");
       setShowPopup(false);
       setResumeLink("");
+      setCoverLetter("");
     } else {
       toast.error(data.error || "Something went wrong");
     }

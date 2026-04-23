@@ -2,7 +2,7 @@ const Application = require("../models/application.model");
 
 async function createApplication(req, res) {
     try {
-        const { jobId, applicantId, resumeLink } = req.body;
+        const { jobId, applicantId, resumeLink, cover_letter } = req.body;
 
         // Check if user already applied
         const existing = await Application.findOne({
@@ -29,7 +29,8 @@ async function createApplication(req, res) {
         const application = new Application({
             job_id: jobId,
             applicant_id: applicantId,
-            resume_link: resumeLink
+            resume_link: resumeLink,
+            cover_letter: cover_letter
         });
 
         await application.save();
