@@ -25,7 +25,16 @@ export default function DetailsPage({ job }) {
             <br />
             Location: {job.location}
             <br />
-            Salary Range: {job.salary_range}
+            Salary Range:{" "}
+            {job.salary_range[0].toLocaleString("en-US", {
+              style: "currency",
+              currency: "USD"
+            })}{" "}
+            –{" "}
+            {job.salary_range[1].toLocaleString("en-US", {
+              style: "currency",
+              currency: "USD"
+            })}
             <br />
             Job Description: {job.description}
             <br />
@@ -68,7 +77,7 @@ export default function DetailsPage({ job }) {
             <p className="py-2">Paste your resume link below:</p>
 
             <input
-              type="text"
+              type="url"
               placeholder="Resume link"
               className="input input-bordered w-full"
               value={resumeLink}
@@ -124,8 +133,10 @@ async function submitApplication(
 ) {
   console.log("Submitting:", { jobId, applicantId, resumeLink });
 
-  if (!resumeLink.trim()) {
-    toast.error("Please enter a resume link");
+  const urlPattern = /^(https?:\/\/)[^\s$.?#].[^\s]*$/i;
+
+  if (!urlPattern.test(resumeLink)) {
+    toast.error("Please enter a valid URL");
     return;
   }
 
