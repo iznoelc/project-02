@@ -60,23 +60,27 @@ const AuthProvider = ({ children }) => {
         setRole(null);
         setLoading(false);
         setApproved(false);
+        setFavJobs([]);
         setRoleLoading(false);
         return;
       }
 
       setRoleLoading(true);
       try {
-        const res = await fetch(`http://localhost:3000/users/${currentUser.uid}`, {
+        const token = await currentUser.getIdToken();
+
+        let res = await fetch(`http://localhost:3000/users/${currentUser.uid}`, {
           headers: {
-            Authorization: `Bearer ${await currentUser.getIdToken()}`,
+            Authorization: `Bearer ${token}`,
           },
         });
-        const data = await res.json();
-        if (!res.ok){
-          // navigate("/error",  { state: { code: res.status } });
-          throw new Error(`HTTP error! Status: ${res.status}`)
-        }
 
+        let data = await res.json();
+        console.log("USER FETCH: ", data);
+      
+        if (!res.ok && res.status === 404){
+          throw new Error(data?.message || "Failed to fetch user");
+        }
         console.log("ROLE RESPONSE: ", data);
 
         setRole(data.user?.role || data.role);
@@ -91,6 +95,7 @@ const AuthProvider = ({ children }) => {
         setRole(null);
       }
 
+      
       setLoading(false);
       setRoleLoading(false);
     });
@@ -99,6 +104,22 @@ const AuthProvider = ({ children }) => {
       unsubscribe();
     };
   }, []);
+
+  const fetchUser = async (uid, token) => {
+      const res = await fetch(`http://localhost:3000/users/${uid}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!res.ok) throw new Error("Failed user fetch");
+
+      const data = await res.json();
+
+      setRole(data.user?.role || data.role);
+      setApproved(data.user?.approved || data.approved);
+      setFavJobs(data.user?.fav_jobs || data.fav_jobs);
+  };
 
   // useEffect(() => {
 
@@ -124,6 +145,7 @@ const AuthProvider = ({ children }) => {
     favJobs,
     setFavJobs,
     approved,
+    fetchUser,
   };
   return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;
 };

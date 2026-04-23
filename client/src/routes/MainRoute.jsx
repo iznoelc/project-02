@@ -132,7 +132,9 @@ const MainRouter = [
 
         { path: "approval-pending",
           element: (
-            <ApprovalPendingPage />
+            <PrivateRoute allowedRoles={["recruiter"]}>
+              <ApprovalPendingPage />
+            </PrivateRoute>
           )
         },
     ],

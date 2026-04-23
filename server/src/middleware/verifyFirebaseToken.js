@@ -23,12 +23,12 @@ admin.initializeApp({
  * @returns 
  */
 const verifyFireBaseToken = async (req, res, next) => {
-  console.log("Header: ", req.headers.authorization);
+  // console.log("Header: ", req.headers.authorization);
   if (!req.headers.authorization) {
     return res.status(401).send({ message: "unauthorized access" });
   }
   const token = req.headers.authorization.split(" ")[1];
-  console.log(token);
+  // console.log(token);
   if (!token) {
     return res.status(401).send({ message: "unauthorized access" });
   }
@@ -39,7 +39,7 @@ const verifyFireBaseToken = async (req, res, next) => {
       uid: userInfo.uid,
       email: userInfo.email,
     }
-    console.log("after token validation", userInfo);
+    // console.log("after token validation", userInfo);
     next();
   } catch {
     console.log("invalid token");
