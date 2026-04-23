@@ -1,6 +1,9 @@
 /**
- * user.model.js
- * use mongoose to enforce user schema at an application level 
+ * jobPosting.model.js
+ * 
+ * Defines required variables and types needed for the jobPosting processes.
+ * 
+ * @author Esperanza Paulino
  */
 
 const mongoose = require("mongoose");

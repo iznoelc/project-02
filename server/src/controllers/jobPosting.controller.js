@@ -1,5 +1,13 @@
 const jobPosting = require("../models/jobPosting.model");
 
+/**
+ * jobPosting.controller.js
+ * 
+ * Handles job posting processes like creating, deleting, and fetching.
+ * 
+ * @author Esperanza Paulino
+ */
+
 async function createJobPosting(req, res) {
     try {
         const { job_title, institution, category, location, salary_range, description, req_qualifications, deadline, start_date, recruiter_id } = req.body;

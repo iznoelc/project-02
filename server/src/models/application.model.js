@@ -1,5 +1,9 @@
 /**
  * application.model.js
+ * 
+ * Defines required variables and types needed for the appliction processes.
+ * 
+ * @author Esperanza Paulino
  */
 
 const mongoose = require("mongoose");

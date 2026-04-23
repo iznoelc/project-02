@@ -3,6 +3,14 @@ import { toast } from "react-toastify";
 import useAuth from "../hooks/useAuth";
 import { getAuth } from "firebase/auth";
 
+/**
+ * DetailsPage.jsx
+ * 
+ * Job details fetched for the users to view in a nicer format. Also contains the application form for them to fill out and apply to jobs.
+ * 
+ * @author Esperanza Paulino
+ */
+
 export default function DetailsPage({ job }) {
   const { user } = useAuth();
   const [showPopup, setShowPopup] = useState(false);
