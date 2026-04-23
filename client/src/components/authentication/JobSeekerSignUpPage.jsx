@@ -69,7 +69,7 @@ export default function JobSeekerSignUpPage(){
 
             // POST to create the user in DB first 
             const token = await user.getIdToken();
-            await fetch(`http://localhost:3000/users`, {
+            await fetch(`${import.meta.env.VITE_API_URL}/users`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -111,7 +111,7 @@ export default function JobSeekerSignUpPage(){
             // await createJobSeekerInDatabase(user, setSignUpLoading, user.displayName, "job_seeker");
             //create the user in the database
             const token = await user.getIdToken();
-            await fetch(`http://localhost:3000/users`, {
+            await fetch(`${import.meta.env.VITE_API_URL}/users`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
