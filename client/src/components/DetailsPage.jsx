@@ -144,7 +144,7 @@ async function submitApplication(
     const auth = getAuth();
     const token = await auth.currentUser.getIdToken(); // ⭐ REQUIRED FOR 401 FIX
 
-    const response = await fetch("${import.meta.env.VITE_API_URL}/applications", {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/applications`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

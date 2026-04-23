@@ -38,7 +38,7 @@ export async function createPosting(user, fetchData, formData) {
         } = formData;    
 
         try {
-        const response = await fetch("${import.meta.env.VITE_API_URL}/job_postings", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/job_postings`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
