@@ -13,7 +13,9 @@ const applicationSchema = new mongoose.Schema({
         type: String, required: true,
     },
     resume_link: {
-        type: String, required: true
+        type: "url",
+        placeholder="https://example.com/resume.pdf",
+        required: true
     },
     cover_letter: {
         type: String,
