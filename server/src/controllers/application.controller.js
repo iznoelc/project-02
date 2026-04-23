@@ -4,6 +4,18 @@ async function createApplication(req, res) {
     try {
         const { jobId, applicantId, resumeLink } = req.body;
 
+        // Check if user already applied
+        const existing = await Application.findOne({
+        job_id: jobId,
+        applicant_id: applicantId
+        });
+
+        if (existing) {
+        return res.status(409).json({
+            error: "You have already applied to this job"
+        });
+        }
+
         if (!jobId) {
             return res.status(400).json({ error: "jobId is required" });
         }
@@ -14,7 +26,6 @@ async function createApplication(req, res) {
             return res.status(400).json({ error: "resumeLink is required" });
         }
 
-        // ⭐ Convert camelCase → snake_case for the schema
         const application = new Application({
             job_id: jobId,
             applicant_id: applicantId,
