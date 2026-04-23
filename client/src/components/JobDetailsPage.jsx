@@ -4,18 +4,37 @@ import DetailsPage from "../components/DetailsPage";
 import useAuth from "../hooks/useAuth";
 
 export default function JobDetailsPage() {
-  const { _id } = useParams();          // ✅ correct param
+  const { _id } = useParams();
   const [job, setJob] = useState(null);
   const { currentUser } = useAuth();
 
   useEffect(() => {
-    if (!_id) return;                   // ✅ wait for param
+    if (!_id || !currentUser) return;
 
-    fetch(`http://localhost:3000/job_postings/${_id}`)   // ✅ correct backend route
-      .then(res => res.json())
-      .then(data => setJob(data))
-      .catch(err => console.error("Fetch error:", err));
-  }, [_id]);                             // ✅ correct dependency
+    async function fetchJob() {
+      try {
+        const token = await currentUser.getIdToken();  
+
+        const res = await fetch(`http://localhost:3000/job_postings/${_id}`, {
+          headers: {
+            Authorization: `Bearer ${token}`,         
+          },
+        });
+
+        if (!res.ok) {
+          console.error("Fetch failed:", res.status);
+          return;
+        }
+
+        const data = await res.json();
+        setJob(data);
+      } catch (err) {
+        console.error("Fetch error:", err);
+      }
+    }
+
+    fetchJob();
+  }, [_id, currentUser]); 
 
   if (!job || !currentUser) return <p>Loading...</p>;
 
