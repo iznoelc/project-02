@@ -1,18 +1,21 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import DetailsPage from "../components/DetailsPage";
-import useAuth from "../hooks/useAuth"; // or wherever your user comes from
+import useAuth from "../hooks/useAuth";
 
 export default function JobDetailsPage() {
-  const { id } = useParams();
+  const { _id } = useParams();          // ✅ correct param
   const [job, setJob] = useState(null);
   const { currentUser } = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/job-details/${id}`)
+    if (!_id) return;                   // ✅ wait for param
+
+    fetch(`http://localhost:3000/job_postings/${_id}`)   // ✅ correct backend route
       .then(res => res.json())
-      .then(data => setJob(data));
-  }, [id]);
+      .then(data => setJob(data))
+      .catch(err => console.error("Fetch error:", err));
+  }, [_id]);                             // ✅ correct dependency
 
   if (!job || !currentUser) return <p>Loading...</p>;
 

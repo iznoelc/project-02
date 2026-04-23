@@ -70,7 +70,7 @@ export default function JobFinder(){
         try {
             const token = await user.getIdToken();
 
-            const res = await fetch("http://localhost:3000/job-details", {
+            const res = await fetch("http://localhost:3000/job_postings", {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
