@@ -45,7 +45,7 @@ const MainRouter = [
 
         { path: "recruiter-dashboard",
           element: (
-              <PrivateRoute allowedRoles={["recruiter", "admin"]}>
+              <PrivateRoute allowedRoles={["recruiter"]}>
                 <ApprovalPendingRoute>
                   <RecuiterDashboard />
                 </ApprovalPendingRoute>
@@ -55,7 +55,7 @@ const MainRouter = [
 
         { path: "job-seeker-dashboard",
           element: (
-          <PrivateRoute allowedRoles={["job_seeker", "admin"]}>
+          <PrivateRoute allowedRoles={["job_seeker"]}>
             <JSDashboard />
           </PrivateRoute>
           )
@@ -137,12 +137,6 @@ const MainRouter = [
             </PrivateRoute>
           )
         },
-
-        {path:"/fallback",
-          element: (
-            <FallbackElement />
-          )
-        }
     ],
   },
   { path: "*", Component: ErrorPage }, {path: "/error", Component: ErrorPage}
