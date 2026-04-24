@@ -1,8 +1,11 @@
-/* Data Sorting Function
+/**
+    DataSorter.jsx
+    Allows use of sorting functions
     Input 1: Type : String - Catagory, Location, Salary
     Input 2: Type : Bool - True = Ascending, False = Descending
     Input 3: Type : DataArray
-*/
+    @author Landon Chapin
+**/
 function DataSorter (Type, Ascending, DataArray){
     let returnArray = [...DataArray];
 

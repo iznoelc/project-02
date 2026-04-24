@@ -10,6 +10,15 @@ import { Link } from "react-router-dom";
 import FallbackElement from "../components/FallbackElement.jsx"
 
 
+/**
+ * RecruiterDashboard.jsx
+ * 
+ * Page to allow recruiters to browse jobs posted by thier company
+ * 
+ * @author Landon Chapin
+ */
+
+
 export default function RecuiterDashboard(){
 
     const { user } = useAuth(); 
@@ -354,11 +363,11 @@ export default function RecuiterDashboard(){
                         
 
                         <div className="justify-end card-actions">
-                                {/* <Link to={`/job_postings/${d._id}/applications`} className="no-underline">
+                                {/*<Link to={`/job_postings/${d._id}/applications`} className="no-underline">
                                 <h2 className="card-title primary-font text-1xl hover:underline">
                                     Review Applications
                                 </h2>
-                                </Link> */}
+                                </Link>*/}
                             <button className="btn btn-xs sm:btn-sm md:btn-sm lg:btn-sm xl:btn-xl" 
                                 onClick={() => deletePosting(d._id, user, fetchData, confirmToast)}>
                                 Remove Posting

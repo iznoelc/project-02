@@ -3,6 +3,14 @@ import { toast } from "react-toastify";
 import useAuth from "../hooks/useAuth";
 import { useParams } from "react-router-dom";
 
+/**
+ * JobApplicationPage.jsx
+ * 
+ * Page to allow recruiters to review the applications submitted to a job
+ * 
+ * @author Landon Chapin
+ */
+
 
 
 export default function JobApplicationPage() {

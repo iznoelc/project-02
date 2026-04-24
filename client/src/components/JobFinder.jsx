@@ -9,6 +9,14 @@ import {deletePosting} from "../utils/DeleteCreateJobInDataBase.js";
 import { Link } from "react-router-dom";
 import { normalizeId } from "../utils/NormalizeJobId";
 
+/**
+ * JobFinder.jsx
+ * 
+ * A page where users can search though the job postings on the site
+ * 
+ * @author Landon Chapin
+ */
+
 export default function JobFinder(){
 
     const { user, favJobs, role } = useAuth(); 
