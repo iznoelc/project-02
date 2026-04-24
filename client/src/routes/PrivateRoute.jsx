@@ -1,3 +1,11 @@
+/**
+ * PrivateRoute.jsx
+ * 
+ * Outlines a private route that prevents nonlogged in users from accessing private pages.
+ * 
+ * @author Izzy Carlson
+ */
+
 import { Navigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import FallbackElement from "../components/FallbackElement";

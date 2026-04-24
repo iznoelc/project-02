@@ -1,6 +1,9 @@
 /**
  * db.js
- * Sets up connection to mongodb 
+ * 
+ * Sets up connection to the MongoDB database through Mongoose
+ * 
+ * @author Izzy Carlson
  */
 
 const { MongoClient, ServerApiVersion } = require('mongodb');

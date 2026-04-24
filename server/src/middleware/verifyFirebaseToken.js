@@ -4,7 +4,6 @@
  * middleware to verify the firebase token.
  * 
  * @author Izzy Carlson
- * @date 4-18-26
  */
 
 const admin = require("firebase-admin");

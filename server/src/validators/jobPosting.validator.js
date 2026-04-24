@@ -1,4 +1,4 @@
-// this is not finished
+// *** NOT FINISHED
 const Joi = require("joi");
 
 const jobPostingSchema = Joi.object({

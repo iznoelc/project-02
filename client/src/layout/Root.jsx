@@ -1,3 +1,11 @@
+/**
+ * Root.jsx
+ * 
+ * Sets up the root layout for all pages.
+ * 
+ * @author Izzy Carlson
+ */
+
 import React from "react";
 import { Outlet } from "react-router";
 import NavBar from "../components/NavBar";

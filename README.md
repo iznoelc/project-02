@@ -9,21 +9,22 @@ Universal Careers creates a full stack job portal application. There are three k
 Izzy Carlson (Project Manager), Landon Chapin, Esperanza Paulino
 
 ## TEAM CONTRIBUTIONS
-**Izzy Carlson**
+**Izzy Carlson (Project Manager)**
 - Home Page, Navbar, Footer
 - Job seeker dashboard
 - Consistent design (UI) and debugging
 - User authentication with firebase and user creation and editing through APIs
 - Authentication related pages
+- Database setup
   
 **Esperanza Paulino**
-- Admin Dashboard
+- Admin Dashboard - Delete users, approve recruiters
 - Job Details Page
 - Job Application Page/Creation
   
 **Landon Chapin**
-- Job Search
-- Recruiter Dashboard
+- Job Search - Delete jobs
+- Recruiter Dashboard - Create jobs
 - UML (Component interaction diagram)
 
 ## PROOF OF COLLABORATION:

@@ -1,3 +1,12 @@
+/**
+ * FallbackElement.jsx
+ * 
+ * Element that is displayed when contents or authentication of a page are still loading.
+ * Asset from Uiverse.io by JkHuger.
+ * 
+ * @author Izzy Carlson
+ */
+
 import "../styles/loader.css";
 
 export default function FallbackElement() {

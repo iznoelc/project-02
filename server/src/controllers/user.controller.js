@@ -1,3 +1,11 @@
+/**
+ * user.controller.js
+ * 
+ * Defines API endpoints behavior relating to users.
+ * 
+ * @author Izzy Carlson
+ * @author Esperanza Paulino
+ */
 const User = require("../models/user.model");
 const validator = require("../validators/user.validator");
 const admin = require("firebase-admin");

@@ -1,3 +1,12 @@
+/**
+ * JSDashboard.jsx
+ * 
+ * Displays jobs the job seeker has applied to. Job seeker can search through or filter applications.
+ * 
+ * @author Izzy Carlson
+ * @author LandonChapin
+ */
+
 import { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 

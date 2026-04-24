@@ -1,3 +1,11 @@
+/**
+ * Footer.jsx
+ * 
+ * Displayed at the bottom of the page on all pages. Modified from DaisyUI.
+ * 
+ * @author Izzy Carlson
+ */
+
 import GleebusLogo from "../assets/GleebusLogo.png";
 
 export default function Footer(){

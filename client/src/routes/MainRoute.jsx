@@ -1,3 +1,11 @@
+/**
+ * MainRoute.jsx
+ * 
+ * The main route that outlines paths for all components and utilizes the various private routes to properly handle routing based on role or approval status.
+ * 
+ * @author Izzy Carlson
+ */
+
 import React from "react";
 import Home from "../components/Home";
 import Root from "../layout/Root";

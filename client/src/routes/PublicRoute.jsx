@@ -1,3 +1,11 @@
+/**
+ * PublicRoute.jsx
+ * 
+ * Outlines a route that prevents logged in users from accessing authenticated pages.
+ * 
+ * @author Izzy Carlson
+ */
+
 import { Navigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import FallbackElement from "../components/FallbackElement";

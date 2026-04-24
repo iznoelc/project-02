@@ -1,3 +1,13 @@
+/**
+ * Navbar.jsx
+ * 
+ * Navigational bar shown at the top of the screen for all pages. Changes depending on auth state.
+ * If the user is logged in, show a profile icon on the right with a drop down for profile, dashboard, and logout. Show explore and home buttons in the middle.
+ * If the user is not logged in, show logo on the left side and login/signup buttons on the right.
+ * 
+ * @author Izzy Carlson
+ */
+
 import { useNavigate } from "react-router-dom";
 import { IoPersonCircle } from "react-icons/io5";
 import { GoHomeFill } from "react-icons/go";

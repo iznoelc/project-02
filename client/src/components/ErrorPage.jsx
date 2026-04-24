@@ -1,3 +1,11 @@
+/**
+ * ErrorPage.jsx
+ * 
+ * Shows an error page based on the response code.
+ * 
+ * @author Esperanza Paulino
+ */
+
 import { useLocation } from "react-router-dom"; 
 import { useRouteError } from "react-router-dom"; 
 import ErrorGleebus from "../assets/ErrorGleebus.png";

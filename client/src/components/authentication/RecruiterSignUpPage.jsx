@@ -1,3 +1,11 @@
+/**
+ * RecruiterSignUpPage.jsx
+ * 
+ * Creates a recruiter account in both Firebase and the Database.
+ * 
+ * @author Izzy Carlson
+ */
+
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
@@ -5,7 +13,6 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import useAuth from "../../hooks/useAuth";
 import FallbackElement from "../FallbackElement";
 import fields from "../../utils/RecruiterSignUpFields.js";
-import { createRecruiterInDatabase } from "../../utils/CreateUserInDatabase.js";
 
 import {
   updateProfile,

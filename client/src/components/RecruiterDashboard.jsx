@@ -13,7 +13,7 @@ import FallbackElement from "../components/FallbackElement.jsx"
 /**
  * RecruiterDashboard.jsx
  * 
- * Page to allow recruiters to browse jobs posted by thier company
+ * Page to allow recruiters to browse jobs posted by their company
  * 
  * @author Landon Chapin
  */

@@ -1,3 +1,11 @@
+/**
+ * ForgotPasswordPage.jsx
+ * 
+ * Allows the user to enter their email to receive a forgot password reset request if their account exists.
+ * 
+ * @author Izzy Carlson
+ */
+
 import { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import { errorNotify, successNotify } from "../../utils/ToastifyNotifications";

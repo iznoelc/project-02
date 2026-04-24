@@ -1,6 +1,9 @@
 /**
  * JobSeekerSignUpPage.jsx
- * This is the sign up page for job seekers.
+ * 
+ * Signs up a job seeker account in both Firebase and the Database.
+ * 
+ * @author Izzy Carlson
  */
 
 import { useState } from "react";
@@ -9,7 +12,6 @@ import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import { errorNotify, successNotify } from "../../utils/ToastifyNotifications";
-import { createJobSeekerInDatabase } from "../../utils/CreateUserInDatabase.js";
 
 import {
   GoogleAuthProvider,

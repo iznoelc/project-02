@@ -1,3 +1,11 @@
+/**
+ * FavoriteJobsDisplay.jsx
+ * 
+ * Display's a job seeker's favorite jobs on their profile using profile information.
+ * 
+ * @author Izzy Carlson
+ */
+
 import { IoCloseSharp } from "react-icons/io5";
 import useFavoriteJob from "../../hooks/useFavoriteJobs";
 import useAuth from "../../hooks/useAuth";

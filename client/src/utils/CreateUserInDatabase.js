@@ -1,3 +1,4 @@
+// ********DEPRECATED, but keeping in case needed again.
 export const createRecruiterInDatabase = async (user, formData, setSignUpLoading) => {
     try {
         const response = await fetch(`${import.meta.env.VITE_API_URL}/users`, {

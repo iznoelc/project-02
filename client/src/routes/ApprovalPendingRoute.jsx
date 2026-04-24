@@ -1,3 +1,11 @@
+/**
+ * ApprovalPendingRoute.jsx
+ * 
+ * Outlines a route for redirecting non-approved recruiters to the ApprovalPendingPage.
+ * 
+ * @author Izzy Carlson
+ */
+
 import { Navigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import FallbackElement from "../components/FallbackElement";

@@ -1,6 +1,9 @@
 /**
  * user.model.js
- * use mongoose to enforce user schema at an application level 
+ * 
+ * Defines the schema for the user in the database
+ * 
+ * @author Izzy Carlson
  */
 
 const mongoose = require("mongoose");
