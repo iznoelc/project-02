@@ -33,23 +33,35 @@ Izzy Carlson (Project Manager), Landon Chapin, Esperanza Paulino
 - Met once for the first two weeks and twice in the final week.
 
 ## STATE DIAGRAM:
+<img width="1305" height="839" alt="Screenshot 2026-04-23 224137" src="https://github.com/user-attachments/assets/f8b57da2-43d8-404c-bbda-a4e3b2e32d5c" />
 
 ## UML (COMPONENT INTERACTION DIAGRAM):
 [UML diagram.pdf](https://github.com/user-attachments/files/27031388/UML.diagram.pdf)
 
 
-## Stack 
-- React 19
-- Vite
-- Firebase Authentication and Firestore
-- React Router
-- Tailwind CSS + DaisyUI
-- React Icons
-- React Toastify
-- Cally
-- Ant Design (antd)
-- Copy to Clipboard
-- MongoDB
+## STACK
+### FRONTEND
+- React 19 - Web Framework
+- Tailwind CSS and Daisy UI - Styling
+- Firebase - Authentication
+- Additional packages
+  - React Router
+  - React Router Dom
+  - React Icons
+  - React Toastify
+ 
+### BACKEND
+- Node.js - Server Environment
+- Express - Backend Framework
+- Additional packages
+  - Joi - Validation
+  - FIrebase Admin - Authentication
+  - Mongoose - Enforcing Schema
+  - Dotenv
+  - Cors
+
+### DATABASE
+- MongoDB Atlas
 
 ## Assets
 - [Home page image](https://unsplash.com/photos/business-professionals-collaborating-around-a-conference-table-ob1oe1CGQ1s)
