@@ -2,8 +2,6 @@
 # Uni-Versal Careers
 Project 02 for Software Engineering at New College of Florida:  Full-Stack Academic Job Portal
 
-## Project Description (take this title off after adding discription!)
-
 ## LIVE LINK: 
 
 ## Video Walkthrough:
