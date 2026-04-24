@@ -1,8 +1,6 @@
 # Uni-Versal Careers
 Project 02 for Software Engineering at New College of Florida:  Full-Stack Academic Job Portal
 
-## Project Description (take this title off after adding discription!)
-
 ## LIVE LINK: 
 
 ## Video Walkthrough:
@@ -16,10 +14,12 @@ Landon Chapin, Esperanza Paulino
 - Home Page
 - Formatting & Debugging
 - Authentication (Sign in, etc.)
+  
 **Esperanza Paulino**
 - Admin Dashboard
 - Job Details Page
 - Job Application Page/Creation
+  
 **Landon Chapin**
 - Job Search
 - Recruiter Dashboard
@@ -33,6 +33,8 @@ Landon Chapin, Esperanza Paulino
 ## State Diagram:
 
 ## UML:
+[UML diagram.pdf](https://github.com/user-attachments/files/27031388/UML.diagram.pdf)
+
 
 ## Stack 
 - React 19

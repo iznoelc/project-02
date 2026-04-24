@@ -3,6 +3,14 @@ import { useEffect, useState } from "react";
 import DetailsPage from "../components/DetailsPage";
 import useAuth from "../hooks/useAuth";
 
+/**
+ * JobDetails.jsx
+ * 
+ * Wrapper to assist with the Details Page
+ * 
+ * @author Esperanza Paulino
+ */
+
 export default function JobDetailsPage() {
   const { _id } = useParams();
   const [job, setJob] = useState(null);

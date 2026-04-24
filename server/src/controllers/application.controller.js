@@ -1,5 +1,13 @@
 const Application = require("../models/application.model");
 
+/**
+ * application.controller.js
+ * 
+ * Handles application processes like creating and fetching applications.
+ * 
+ * @author Esperanza Paulino
+ */
+
 async function createApplication(req, res) {
     try {
         const { jobId, applicantId, resumeLink, cover_letter } = req.body;
@@ -57,7 +65,7 @@ async function getApplicationsByUserUID(req, res){
     try {
         console.log("request uid: ", req.user.uid);
         console.log("params uid: ", req.params.applicant_id);
-        
+
         // Allow admins to view everything
         const isAdmin = req.user.admin || req.user.role === "admin" || req.user.isAdmin;
 

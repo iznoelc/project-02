@@ -1,3 +1,11 @@
+/**
+ * jobPosting.routes.js
+ * 
+ * Routes to be fufilled by the model and controller later on.
+ * 
+ * @author Esperanza Paulino
+ */
+
 const express = require("express");
 const router = express.Router();
 const { verifyFirebaseToken } = require("../middleware/verifyFirebaseToken");
