@@ -71,6 +71,7 @@ export async function createPosting(user, fetchData, formData) {
         console.error("Error creating job in database:", error);
         if (user) {
             try {
+                console.log();
             } catch (deleteError) {
                 console.error("Error deleting job posting after failed database creation:", deleteError);   
             }

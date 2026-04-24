@@ -87,15 +87,15 @@ export default function JobFinder(){
     }
 
 
-    const handleButtonClick = (job_id) =>{
+    const handleButtonClick = async (job_id) =>{
         switch(userType){
             case "job_seeker":
                 break;
             case "recruiter":
-                deletePosting(job_id, user, fetchData, confirmToast);
+                await deletePosting(job_id, user, fetchData, confirmToast);
                 break;
             case "admin":
-                deletePosting(job_id, user, fetchData, confirmToast);
+                await deletePosting(job_id, user, fetchData, confirmToast);
                 break;
         }
         return;
