@@ -6,7 +6,7 @@ const { createUser, getUserByUID, deleteUser, getAllUsers, updateUser } = requir
 router.post("/", verifyFirebaseToken, createUser);
 
 //get all users
-router.get("/", getAllUsers);
+router.get("/", verifyFirebaseToken, getAllUsers);
 
 // get a specific user by their uid
 router.get("/:uid", verifyFirebaseToken, getUserByUID);
