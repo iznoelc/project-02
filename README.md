@@ -64,6 +64,10 @@ Izzy Carlson (Project Manager), Landon Chapin, Esperanza Paulino
 ### DATABASE
 - MongoDB Atlas
 
+## DEPLOYED
+- Using Railway for server
+- Using Netlify for client
+
 ## Assets
 - [Home page image](https://unsplash.com/photos/business-professionals-collaborating-around-a-conference-table-ob1oe1CGQ1s)
 - [SVG icon](https://www.flaticon.com/free-icons/planet)
