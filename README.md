@@ -3,7 +3,7 @@ Universal Careers creates a full stack job portal application. There are three k
 
 ## LIVE LINK: https://universal-careers.netlify.app/
 
-## VIDEO WALK THROUGH
+## VIDEO DEMO: https://www.youtube.com/watch?v=NPu-DuXG0aA
 
 ## TEAM
 Izzy Carlson (Project Manager), Landon Chapin, Esperanza Paulino
