@@ -33,7 +33,7 @@ Landon Chapin, Esperanza Paulino
 ## State Diagram:
 
 ## UML:
-[Blank diagram.pdf](https://github.com/user-attachments/files/27031339/Blank.diagram.pdf)
+[UML diagram.pdf](https://github.com/user-attachments/files/27031339/UML.diagram.pdf)
 
 ## Stack 
 - React 19
