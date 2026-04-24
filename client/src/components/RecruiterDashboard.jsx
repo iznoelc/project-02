@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 export default function RecuiterDashboard(){
 
     const { user } = useAuth(); 
-    const userCompany = "Nasa"
+    const userCompany = user.organization;
     const userID = user.uid;
 
     const [data, setData] = useState(null); // the job data
