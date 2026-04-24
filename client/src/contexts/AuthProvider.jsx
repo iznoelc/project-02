@@ -53,6 +53,7 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      console.log("API URL:", import.meta.env.VITE_API_URL);
       console.log("Auth state changed:", currentUser);
       setUser(currentUser);
 
@@ -72,6 +73,7 @@ const AuthProvider = ({ children }) => {
         let res = await fetch(`${import.meta.env.VITE_API_URL}/users/${currentUser.uid}`, {
           headers: {
             Authorization: `Bearer ${token}`,
+            "Cache-Control": "no-cache",
           },
         });
 
