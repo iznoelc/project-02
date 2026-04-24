@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import DataSorter from "../utils/DataSorter";
 import Search from "../utils/Search";
 import useAuth from "../hooks/useAuth";
@@ -6,12 +7,13 @@ import { toast, ToastContainer } from "react-toastify";
 import { errorNotify, successNotify } from "../utils/ToastifyNotifications";
 import {deletePosting, createPosting } from "../utils/DeleteCreateJobInDataBase.js";
 import { Link } from "react-router-dom";
+import FallbackElement from "../components/FallbackElement.jsx"
 
 
 export default function RecuiterDashboard(){
 
     const { user } = useAuth(); 
-    const userCompany = user.organization;
+    const navigate = useNavigate();
     const userID = user.uid;
 
     const [data, setData] = useState(null); // the job data
@@ -20,6 +22,44 @@ export default function RecuiterDashboard(){
 
     const [searchQuery, setSearchQuery] = useState(""); // default search query - empty string
     const [searchType, setSearchType] = useState("Location"); //default search type
+
+    const [profile, setProfile] = useState(null);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        // if (!user || !uid) return;
+
+        async function fetchUser(){
+            setLoading(true);
+            try {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/users/${user.uid}`, {
+            headers: {
+                Authorization: `Bearer ${await user.getIdToken()}`,
+            },
+            });
+
+            const data = await res.json();
+            
+            console.log("USER RESPONSE: ", data);
+
+            if (!res.ok){
+                navigate("/error", { state: { code: res.status } })
+                throw new Error(`HTTP error! status: ${res.status}`)
+            }
+
+            setProfile(data);
+            console.log("Profile: ", data);
+            
+            } catch (err) {
+                console.error("Error fetching user profile:", err);
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        fetchUser();
+
+    }, [user.uid, user]);
 
     /* use useMemo to cache the result of Search that its only updated when its dependencies change. 
        if searchQuery, searchType, or data are updated, the result of Search will also update to display the 
@@ -72,7 +112,7 @@ export default function RecuiterDashboard(){
 
     const [formData, setFormData] = useState({
     job_title: "",
-    institution: userCompany,
+    institution: "",
     category: "",
     location: "",
     salary_range: [],
@@ -120,10 +160,9 @@ export default function RecuiterDashboard(){
 
 
   const addJob = async () => {
-
+    formData.institution = profile.user.organization;
     const {
       job_title,
-      institution,
       category,
       location,
       salary_range,
@@ -134,6 +173,7 @@ export default function RecuiterDashboard(){
       recruiter_id
     } = formData;
 
+    const institution = profile.user.organization;
     // Basic validation
     if (!recruiter_id){
       errorNotify("Recruiter id is not valid: " + recruiter_id)
@@ -143,6 +183,7 @@ export default function RecuiterDashboard(){
       !institution.trim() ||
       !deadline
     ) {
+      console.log("job title=" + job_title, "institution=", institution, "deadline=", deadline);
       errorNotify("Job title, institution, and deadline are required.");
       return;
     }
@@ -155,6 +196,8 @@ export default function RecuiterDashboard(){
         job.deadline === deadline
       );
     });
+
+    
 
     if (alreadyExists) {
       errorNotify("This job posting already exists.");
@@ -172,7 +215,7 @@ export default function RecuiterDashboard(){
     // Reset form
     setFormData({
       job_title: "",
-      institution: userCompany,
+      institution: "",
       category: "",
       location: "",
       salary_range: [],
@@ -226,13 +269,25 @@ export default function RecuiterDashboard(){
       });
   }
 
+    if (loading) return <FallbackElement />
+    if (!profile) return <><h1>We had trouble fetching you as a recruiter. Please contact us.</h1></>
 
     return(
         <>
-        
-        <div > 
+        <div className="hero bg-base-200 gap-2">
+            <div className="hero-content text-center">
+                <div className="max-w-2xl">
+                    <h1 className="text-5xl">RECRUITER DASHBOARD</h1>
+                    <p>
+                        Dear {user.displayName ? user.displayName : "recruiter"}, welcome to the recruiter dashboard. Here, you can review the job postings
+                         you have posted and delete them. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div className="p-8"> 
             <div>
-            <div className="flex items-center justify-front gap-5">
+            <div className="flex items-center justify-center gap-5 p-8">
             {/* search bar */}
             <select onChange={(e) => setSearchType(e.target.value)} className="secondary-font">
                 <option value="location">Location</option>
@@ -283,22 +338,27 @@ export default function RecuiterDashboard(){
         {sortedData.length > 0 && (
             <ul list bg-base-100 rounded-box shadow-md justify-end> 
 
-            {sortedData.filter(data => data.institution.toLowerCase() == (userCompany.toLowerCase())).map((d, index) => (
+            {sortedData.filter(data => data.recruiter_id.toLowerCase() === (profile.user.uid.toLowerCase())).map((d, index) => (
                 <div key={index} className="card w-full bg-base-100 card-xs shadow-sm">
                     <div className="card-body">
                         {/* put the title and description of the movie in the cards */}
-                        <h2 className="card-title primary-font text-1xl" key={index}>{d.job_title}</h2>
-                        <h2 className="card-title primary-font text-1xl"> Salary: ${d.salary_range[0]}- ${d.salary_range[1]}</h2>
-                        <h2 className="card-title primary-font text-1xl">{d.location}</h2>
-                        <p className="secondary-font text-base">Deadline: {d.deadline}</p>
+                        <h2 className="card-title primary-font text-2xl">
+                            {d.job_title}
+                        </h2>
+                        <h3 className="text-lg">{d.location}</h3>
+                        <h2 className="card-title primary-font text-1xl"> Salary: ${d.salary_range[0]} - ${d.salary_range[1]}</h2>
+                        <div className="flex flex-row gap-2">
+                        <div class="badge badge-primary">{d.category}</div>
+                        <div class="badge badge-outline badge-primary">{d.institution}</div>
+                        </div>
                         
 
                         <div className="justify-end card-actions">
-                                <Link to={`/job_postings/${d._id}/applications`} className="no-underline">
+                                {/* <Link to={`/job_postings/${d._id}/applications`} className="no-underline">
                                 <h2 className="card-title primary-font text-1xl hover:underline">
                                     Review Applications
                                 </h2>
-                                </Link>
+                                </Link> */}
                             <button className="btn btn-xs sm:btn-sm md:btn-sm lg:btn-sm xl:btn-xl" 
                                 onClick={() => deletePosting(d._id, user, fetchData, confirmToast)}>
                                 Remove Posting
