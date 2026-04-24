@@ -3,10 +3,10 @@ const router = express.Router();
 const { verifyFirebaseToken } = require("../middleware/verifyFirebaseToken");
 const { createUser, getUserByUID, deleteUser, getAllUsers, updateUser } = require("../controllers/user.controller");
 
-router.post("/", verifyFirebaseToken,   createUser);
+router.post("/", verifyFirebaseToken, createUser);
 
 //get all users
-router.get("/", verifyFirebaseToken, getAllUsers);
+router.get("/", getAllUsers);
 
 // get a specific user by their uid
 router.get("/:uid", verifyFirebaseToken, getUserByUID);

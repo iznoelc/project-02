@@ -20,8 +20,8 @@ export default function AdminDashboard() {
     const [actionQuery, setActionQuery] = useState("");  // Action Needed search
 
     useEffect(() => {
-        fetchUsers(setSeekersList, setRecruitersList);
-    }, []);
+        fetchUsers(setSeekersList, setRecruitersList, user);
+    }, [user]);
 
     const users = [...seekersList, ...recruitersList];
 
@@ -141,10 +141,15 @@ function StatCard({ number, label }) {
     );
 }
 
-async function fetchUsers(setSeekersList, setRecruitersList) {
+async function fetchUsers(setSeekersList, setRecruitersList, user) {
     try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/users`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/users`, {
+            headers: {
+                Authorization: `Bearer ${await user.getIdToken()}`,
+            },
+        });
         const data = await res.json();
+        console.log("users data:", data); // add this
 
         setSeekersList(data.filter(u => u.role === "job_seeker"));
         setRecruitersList(data.filter(u => u.role === "recruiter"));
