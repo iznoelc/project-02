@@ -1,4 +1,3 @@
-[Blank diagram.pdf](https://github.com/user-attachments/files/27031339/Blank.diagram.pdf)
 # Uni-Versal Careers
 Project 02 for Software Engineering at New College of Florida:  Full-Stack Academic Job Portal
 
@@ -34,6 +33,7 @@ Landon Chapin, Esperanza Paulino
 ## State Diagram:
 
 ## UML:
+[Blank diagram.pdf](https://github.com/user-attachments/files/27031339/Blank.diagram.pdf)
 
 ## Stack 
 - React 19
