@@ -112,4 +112,18 @@ async function getAllJobApplications(req, res) {
     }
 }
 
-module.exports = { createApplication, getApplicationsByUserUID, getAllJobApplications };
+
+async function getApplicationsByJobID(req, res) {
+  try {
+    const { job_id } = req.params;
+
+    const applications = await Application.find({ job_id });
+
+    res.status(200).json(applications);
+  } catch (err) {
+    res.status(500).json({ message: "Server Error" });
+  }
+}
+
+
+module.exports = { createApplication, getApplicationsByUserUID, getAllJobApplications, getApplicationsByJobID };

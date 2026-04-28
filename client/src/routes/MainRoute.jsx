@@ -121,7 +121,7 @@ const MainRouter = [
         {
           path: "job_postings/:_id/applications",
           element: (
-            <PrivateRoute allowedRoles={["job_recruiter", "admin"]}>
+            <PrivateRoute allowedRoles={["recruiter", "admin"]}>
               <JobApplicationsPage />
             </PrivateRoute>
           )

@@ -24,8 +24,13 @@ export default function JobApplicationPage() {
 
 
 
+        
     async function fetchData( user) {
+        if (!user) return;
+
         try {
+            console.log("Trying...")
+
             const token = await user.getIdToken();
 
             const res = await fetch(`${import.meta.env.VITE_API_URL}/applications`, {
@@ -36,6 +41,8 @@ export default function JobApplicationPage() {
 
             const rawData = await res.json();
             console.log("FETCHED Job Applications:", data);
+
+            console.log("PARAM job_id:", job_id);
 
             const filtered = filterData(rawData);
             setData(filtered);
@@ -53,6 +60,7 @@ export default function JobApplicationPage() {
     }, [user]);
 
 
+    // Not being used anymore
     const filterData = (applications) => {
 
     return  applications.filter(app =>
