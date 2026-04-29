@@ -56,4 +56,6 @@ router.get("/:applicant_id", verifyFirebaseToken, getApplicationsByUserUID);
 
 router.get("/", verifyFirebaseToken, getAllJobApplications);
 
+
+
 module.exports = router;

@@ -21,10 +21,6 @@ const userRoutes = require("./src/routes/user.routes");
 const applicationRoutes = require("./src/routes/application.routes");
 const jobPostingRoutes = require("./src/routes/jobPosting.routes")
 
-
-// validations
-// import from "validations/..." like const { validateAuth } = require("validations/auth.validations.js");'
-
 // connect to the database
 connectDB(); 
 
@@ -37,25 +33,6 @@ app.get("/", (req, res) => {
 app.use("/applications", applicationRoutes); //use the application route
 
 app.use("/job_postings", jobPostingRoutes); // use the job posting route
-
-// async function run() {
-//   try {
-//     // Connect the client to the server	(optional starting in v4.7)
-//     await client.connect();
-  
-//     // Send a ping to confirm a successful connection
-//     await client.db("admin").command({ ping: 1 });
-//     console.log("Pinged your deployment. You successfully connected to MongoDB!");
-
-//   } catch (err) {
-//     console.error(err);
-//   } 
-//   finally {
-//     // Ensures that the client will close when you finish/error
-//     // await client.close();
-//   }
-// }
-// run().catch(console.dir);
 
 app.listen(port, () => {
   console.log(`Listening to port: ${port}`);

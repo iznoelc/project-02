@@ -1,3 +1,12 @@
+/**
+ * JSDashboard.jsx
+ * 
+ * Displays jobs the job seeker has applied to. Job seeker can search through or filter applications.
+ * 
+ * @author Izzy Carlson
+ * @author LandonChapin
+ */
+
 import { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -41,6 +50,7 @@ export default function JSDashboard(){
        new sortedData.
      */ 
     const sortedData = useMemo(() => {
+        if (searchQuery && !filteredData.length) return []; // active search with no results → empty
         // if there is no filtered data, just use the normal data list
         if (!filteredData.length){
             console.log("null")
@@ -48,7 +58,7 @@ export default function JSDashboard(){
         }
         // otherwise, sort the filtered data
         return DataSorter(sortType, ascending, filteredData);
-    }, [filteredData, sortType, ascending, userApps]);
+    }, [filteredData, sortType, ascending, userApps, searchQuery]);
 
     // fetch applications from database
     useEffect(() => {
@@ -70,17 +80,17 @@ export default function JSDashboard(){
             }
             const data = await res.json();
             console.log("RAW APPLICATION:", data.filteredApplications);
-            const flattenedData = [];
+            let flattenedData = [];
             if (data.filteredApplications.length > 0){
                 console.log("applications[0] id:", data.filteredApplications[0].job_id);
-                const flattenedData = data.filteredApplications.map(app => (
+                flattenedData = data.filteredApplications.map(app => (
                 
                 {
                 ...app,
                 job_title: app.job_id?.job_title ?? "Deleted Job",
                 location: app.job_id?.location ?? "N/A",
                 category: app.job_id?.category ?? "N/A",
-                salary_range: app.job_id?.salary_rang ?? "N/A",
+                salary_range: app.job_id?.salary_range ?? "N/A",
                 institution: app.job_id?.institution ?? "N/A",
                 date: new Date(app.createdAt).toLocaleDateString("en-US", {
                     year: "numeric",
@@ -166,7 +176,7 @@ export default function JSDashboard(){
                     <p><b>{d.institution}</b>, {d.location}</p>
                     <p>You applied on {d.date}</p>
                     <div class="justify-end card-actions">
-                    <button class="btn btn-primary">More...</button>
+                    {/* <button class="btn btn-primary">More...</button> */}
                     </div>
                 </div>
                 </div>

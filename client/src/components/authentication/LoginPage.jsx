@@ -1,6 +1,10 @@
-/** LoginPage.jsx
- *  login page component, which displays a text field for email and password, as well as a button to submit the form and a button to sign in with google.
- *  uses daisyUI form components to make sure a valid password and email are being entered.
+/**
+ * LoginPage.jsx
+ * 
+ * Allows the user to login to their account and also choose an account type. Supports Google and email sign in for job seekers and admins;
+ * supports email only for recruiters.
+ * 
+ * @author Izzy Carlson
  */
 
 import { useState } from "react";
@@ -9,7 +13,6 @@ import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import FallbackElement from "../FallbackElement";
-import { createJobSeekerInDatabase } from "../../utils/CreateUserInDatabase.js";
 
 import { errorNotify, successNotify } from "../../utils/ToastifyNotifications";
 import {
@@ -19,7 +22,7 @@ import useAuth from "../../hooks/useAuth";
 
 export default function LoginPage(){
     const navigate = useNavigate(); // used to navigate to a new page after successful login
-    const { signInUser, signInWithGoogle } = useAuth(); // get the signInUser method from the useAuth custom hook, which uses firebase authentication to sign the user in.
+    const { signInUser, signInWithGoogle, fetchUser } = useAuth(); // get the signInUser method from the useAuth custom hook, which uses firebase authentication to sign the user in.
     const [loginLoading, setLoginLoading] = useState(false); // separate loading to determine if the user is currently being logged in. (this is separate from the loading in useAuth)
     const [passwordVisibility, setPasswordVisibility] = useState(false);
 
@@ -87,7 +90,22 @@ export default function LoginPage(){
             const result = await signInWithGoogle();
             const user = result.user;
 
-            //await createJobSeekerInDatabase(user, setLoginLoading, user.displayName, "job_seeker");
+            // POST to create the user in DB first 
+            const token = await user.getIdToken();
+            await fetch(`${import.meta.env.VITE_API_URL}/users`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify({
+                uid: user.uid,
+                display_name: formData.display_name,
+                role: "job_seeker",
+            }),
+            });
+
+            await fetchUser(user.uid, token); // update user in auth provider ASAP
 
             successNotify("Login Successful!");
             navigate("/", { replace: true });

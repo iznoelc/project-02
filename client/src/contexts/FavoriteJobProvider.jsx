@@ -1,5 +1,9 @@
-/** FavoriteMovieProvider.jsx
- * provides all the functionality to keep track of favorite movies in the website
+/**
+ * FavoriteJobProvider.jsx
+ * 
+ * Outlines functions for removing and adding favorite jobs from the current user's favorite jobs list.
+ * 
+ * @author Izzy Carlson
  */
 
 import useAuth from "../hooks/useAuth";

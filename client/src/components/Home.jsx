@@ -1,3 +1,11 @@
+/**
+ * HomePage.jsx
+ * 
+ * The home page displayed when the user first lands on Universal Careers.
+ * 
+ * @author Izzy Carlson
+ */
+
 import HeroImage from "../assets/HeroImage.jpg"
 
 import useAuth from "../hooks/useAuth";

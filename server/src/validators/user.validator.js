@@ -1,3 +1,11 @@
+/**
+ * user.validator.js
+ * 
+ * Validate user using joi to make sure information passed to the database is formatted correctly and valid.
+ * 
+ * @author Izzy Carlson
+ */
+
 const Joi = require("joi");
 
 const userSchema = Joi.object({

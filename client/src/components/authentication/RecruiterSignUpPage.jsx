@@ -1,3 +1,11 @@
+/**
+ * RecruiterSignUpPage.jsx
+ * 
+ * Creates a recruiter account in both Firebase and the Database.
+ * 
+ * @author Izzy Carlson
+ */
+
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
@@ -5,7 +13,6 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import useAuth from "../../hooks/useAuth";
 import FallbackElement from "../FallbackElement";
 import fields from "../../utils/RecruiterSignUpFields.js";
-import { createRecruiterInDatabase } from "../../utils/CreateUserInDatabase.js";
 
 import {
   updateProfile,
@@ -105,7 +112,7 @@ export default function RecruiterSignUpPage(){
         {loginLoading && (<FallbackElement />)}
         {!loginLoading && (<div className="flex flex-col items-center justify-center gap-5 p-25">
             <div className="flex flex-col items-center justify-center">
-                <h1 className="primary-font text-primary text-4xl">Create a Recruiter Account</h1>
+                <h1 className="primary-font text-primary text-4xl">CREATE A RECRUITER ACCOUNT FOR YOUR ORGANIZATION</h1>
                 <p className="secondary-font">Trying to create a job seeker account? <a href="/job-seeker-signup" className="hover:text-primary text-center"><b>Sign up here instead.</b></a></p>
             </div>
             <form onSubmit={handleSubmit}>

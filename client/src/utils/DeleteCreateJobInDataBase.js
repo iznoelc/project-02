@@ -1,5 +1,13 @@
 import { errorNotify, successNotify } from "../utils/ToastifyNotifications";
 
+/**
+ * DeleteCreateJobInDataBase
+ * 
+ * Functions used within the site to create and delete jobs from the
+ * 
+ * @author Landon Chapin
+ */
+
 
 export async function deletePosting(job_id, user, fetchData, confirmToast ) {
     const confirmed = await confirmToast("Delete this Job Posting?");
@@ -71,6 +79,7 @@ export async function createPosting(user, fetchData, formData) {
         console.error("Error creating job in database:", error);
         if (user) {
             try {
+                console.log();
             } catch (deleteError) {
                 console.error("Error deleting job posting after failed database creation:", deleteError);   
             }

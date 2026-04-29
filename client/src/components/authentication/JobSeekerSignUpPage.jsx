@@ -1,6 +1,9 @@
 /**
  * JobSeekerSignUpPage.jsx
- * This is the sign up page for job seekers.
+ * 
+ * Signs up a job seeker account in both Firebase and the Database.
+ * 
+ * @author Izzy Carlson
  */
 
 import { useState } from "react";
@@ -9,7 +12,6 @@ import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import { errorNotify, successNotify } from "../../utils/ToastifyNotifications";
-import { createJobSeekerInDatabase } from "../../utils/CreateUserInDatabase.js";
 
 import {
   GoogleAuthProvider,
@@ -143,7 +145,7 @@ export default function JobSeekerSignUpPage(){
         {!signUpLoading && (
             <div className="flex flex-col items-center justify-center gap-5 p-25">
             {/*imghere*/}
-            <h1 className="primary-font text-primary text-4xl">Create Your Job Seeker Account</h1>
+            <h1 className="primary-font text-primary text-4xl">CREATE A JOB SEEKER ACCOUNT</h1>
             <p className="secondary-font">Trying to create an recruiter account? <a href="/recruiter-signup" className="hover:text-primary text-center"><b>Sign up here instead.</b></a></p>
             <form onSubmit={handleSubmit}>
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xl border p-4">

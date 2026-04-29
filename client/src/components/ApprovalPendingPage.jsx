@@ -1,3 +1,12 @@
+/**
+ * ApprovalPendingPage.jsx
+ * 
+ * This page shows for the recruiter when they are not yet approved, informing them that their account still requires approval before
+ * they can access private pages.
+ * 
+ * @author Izzy Carlson
+ */
+
 import useAuth from "../hooks/useAuth";
 
 export default function ApprovalPendingPage(){

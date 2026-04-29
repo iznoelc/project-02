@@ -1,3 +1,11 @@
+/**
+ * Search.jsx
+ * 
+ * Allows search functionality
+ * 
+ * @author Landon Chapin
+ */
+
 function Search(data, searchQuery, searchType){
     // if data, searchQuery, or searchType are null or undefined, return the original data list (or an empty list if data is null)
     if (!data || !searchQuery || !searchType) return data || [];

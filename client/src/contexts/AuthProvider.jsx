@@ -1,7 +1,9 @@
-/** AuthProvider.jsx
- * provides the authentication context for the app, using firebase's authentication system.
- * currently provides ways to get the user, loading state, createUser (email & google), signInUser (email & google), and signOutUser.
- * also uses onAuthStateChanged observer from firebase to determine when a user is logged in or not and update states accordingly.
+/**
+ * AuthProvider.jsx
+ * 
+ * Methods for authenticating the user using Firebase. Also retrieves the user from the database to fetch role and favJobs list or approval based on the role.
+ * 
+ * @author Izzy Carlson
  */
 
 import React, { useEffect, useState } from "react";

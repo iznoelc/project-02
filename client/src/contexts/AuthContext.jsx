@@ -1,5 +1,9 @@
-/** AuthContext.jsx
- *  
+/**
+ * AuthContext.jsx
+ * 
+ * Exports the authentication context
+ * 
+ * @author Izzy Carlson
  */
 
 import { createContext } from "react";

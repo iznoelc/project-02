@@ -9,6 +9,14 @@ import {deletePosting} from "../utils/DeleteCreateJobInDataBase.js";
 import { Link } from "react-router-dom";
 import { normalizeId } from "../utils/NormalizeJobId";
 
+/**
+ * JobFinder.jsx
+ * 
+ * A page where users can search though the job postings on the site
+ * 
+ * @author Landon Chapin
+ */
+
 export default function JobFinder(){
 
     const { user, favJobs, role } = useAuth(); 
@@ -87,15 +95,15 @@ export default function JobFinder(){
     }
 
 
-    const handleButtonClick = (job_id) =>{
+    const handleButtonClick = async (job_id) =>{
         switch(userType){
             case "job_seeker":
                 break;
             case "recruiter":
-                deletePosting(job_id, user, fetchData, confirmToast);
+                await deletePosting(job_id, user, fetchData, confirmToast);
                 break;
             case "admin":
-                deletePosting(job_id, user, fetchData, confirmToast);
+                await deletePosting(job_id, user, fetchData, confirmToast);
                 break;
         }
         return;

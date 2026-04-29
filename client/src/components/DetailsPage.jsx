@@ -12,7 +12,7 @@ import { getAuth } from "firebase/auth";
  */
 
 export default function DetailsPage({ job }) {
-  const { user } = useAuth();
+  const { user, role } = useAuth();
   const [showPopup, setShowPopup] = useState(false);
   const [resumeLink, setResumeLink] = useState("");
   const [resumeFile, setResumeFile] = useState("");
@@ -71,9 +71,11 @@ export default function DetailsPage({ job }) {
           </p>
 
           <div className="card-actions justify-end">
+            {role !== "admin" && 
             <button className="btn btn-primary" onClick={() => setShowPopup(true)}>
               Apply Now
             </button>
+            }
           </div>
         </div>
       </div>

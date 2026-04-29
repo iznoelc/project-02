@@ -1,3 +1,13 @@
+/**
+ * UserProfile.jsx
+ * 
+ * Shows the user their account information, including display name, role, and bio.
+ * For job seekers, it also displays their favorited jobs, where they can delete jobs from the list.
+ * For recruiters, it shows their additional profile information like organization, website, and company location.
+ * 
+ * @author Izzy Carlson
+ */
+
 import UserProfilePicPlaceholder from "../../assets/UserProfilePicPlaceholder.png"
 import { MdLabelImportant } from "react-icons/md";
 import { FaPen } from "react-icons/fa";

@@ -1,4 +1,10 @@
-// allows for useFavoriteJob to be used in other files
+/**
+ * useFavoriteJobs.jsx
+ * 
+ * Allows for favorite job functions to be used in other files.
+ * 
+ * @author Izzy Carlson
+ */
 
 import { useContext } from "react";
 import { FavoriteJobContext } from "../contexts/FavoriteJobContext";

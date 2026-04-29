@@ -1,3 +1,11 @@
+/**
+ * ForgotPasswordPage.jsx
+ * 
+ * Allows the user to enter their email to receive a forgot password reset request if their account exists.
+ * 
+ * @author Izzy Carlson
+ */
+
 import { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import { errorNotify, successNotify } from "../../utils/ToastifyNotifications";
@@ -47,8 +55,8 @@ export default function ForgotPasswordPage(){
 
     return (
         <>
-        <div className="flex flex-col items-center justify-center gap-5 p-10">
-            <h1 className="text-3xl">Forget your password?</h1>
+        <div className="flex flex-col items-center justify-center gap-5 p-10 pt-25">
+            <h1 className="text-3xl text-primary">FORGOT YOUR PASSWORD?</h1>
             <h3 className="text-xl">No worries! Enter your email and, if it exists, we'll send you an email to reset.</h3>
             <form className="fieldset bg-base-200 border-base-300 rounded-box w-xl border p-4">
             <legend className="fieldset-legend">Recover your account</legend>
