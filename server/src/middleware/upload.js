@@ -1,5 +1,7 @@
 const multer = require("multer");
 const path = require("path");
+console.log("UPLOAD MIDDLEWARE LOADED");
+
 
 // Storage engine
 const storage = multer.diskStorage({
@@ -24,4 +26,7 @@ const fileFilter = (req, file, cb) => {
   cb(null, true);
 };
 
+// Export the configured Multer instance
 const upload = multer({ storage, fileFilter });
+
+module.exports = upload;

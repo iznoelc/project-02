@@ -160,15 +160,21 @@ async function submitApplication(
   resumeFile,
   cover_letter,
   setResumeLink,
-  setResumeFile,
   setCoverLetter,
   setShowPopup
 ) {
-  console.log("Submitting:", { jobId, applicantId, resumeLink, cover_letter });
+  console.log("Submitting:", { jobId, applicantId, resumeLink, cover_letter, resumeFile });
 
   const urlPattern = /^(https?:\/\/)[^\s$.?#].[^\s]*$/i;
 
-  if (!urlPattern.test(resumeLink)) {
+  // Require at least one: resumeLink OR resumeFile
+  if (!resumeLink && !resumeFile) {
+    toast.error("Please provide a resume link OR upload a file");
+    return;
+  }
+
+  // If resumeLink exists, validate it
+  if (resumeLink && !urlPattern.test(resumeLink)) {
     toast.error("Please enter a valid URL");
     return;
   }
@@ -177,19 +183,24 @@ async function submitApplication(
     const auth = getAuth();
     const token = await auth.currentUser.getIdToken();
 
+    // Use FormData for file uploads
+    const formData = new FormData();
+    formData.append("jobId", jobId);
+    formData.append("applicantId", applicantId);
+    formData.append("resumeLink", resumeLink || "");
+    formData.append("cover_letter", cover_letter || "");
+
+    if (resumeFile) {
+      formData.append("resumeFile", resumeFile); // Multer expects this name
+    }
+
     const response = await fetch(`${import.meta.env.VITE_API_URL}/applications`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
         Authorization: `Bearer ${token}`
+        // ❗ DO NOT set Content-Type — browser sets it automatically
       },
-      body: JSON.stringify({
-        jobId,
-        applicantId,
-        resumeLink,
-        resumeFile,
-        cover_letter
-      })
+      body: formData
     });
 
     const data = await response.json();
