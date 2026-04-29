@@ -15,6 +15,7 @@ export default function DetailsPage({ job }) {
   const { user } = useAuth();
   const [showPopup, setShowPopup] = useState(false);
   const [resumeLink, setResumeLink] = useState("");
+  const [resumeFile, setResumeFile] = useState("");
   const [cover_letter, setCoverLetter] = useState("");
 
   return (
@@ -100,6 +101,12 @@ export default function DetailsPage({ job }) {
               value={cover_letter}
               onChange={(e) => setCoverLetter(e.target.value)}
             />
+            <input
+              type="file"
+              accept=".pdf,.doc,.docx"
+              className="input input-bordered w-full"
+              onChange={(e) => setResumeFile(e.target.files[0])}
+            />
 
             <div className="modal-action">
               <button className="btn" onClick={() => setShowPopup(false)}>
@@ -118,6 +125,7 @@ export default function DetailsPage({ job }) {
                     job._id,
                     user.uid,
                     resumeLink,
+                    resumeFile,
                     cover_letter,
                     setResumeLink,
                     setCoverLetter,
@@ -147,8 +155,10 @@ async function submitApplication(
   jobId,
   applicantId,
   resumeLink,
+  resumeFile,
   cover_letter,
   setResumeLink,
+  setResumeFile,
   setCoverLetter,
   setShowPopup
 ) {
@@ -175,6 +185,7 @@ async function submitApplication(
         jobId,
         applicantId,
         resumeLink,
+        resumeFile,
         cover_letter
       })
     });
