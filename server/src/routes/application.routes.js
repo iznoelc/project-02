@@ -18,8 +18,17 @@ console.log("CREATE:", createApplication);
 
 router.post(
   "/",
-  verifyFirebaseToken,
+  (req, res, next) => {
+    console.log("➡️  POST /applications hit");
+    next();
+  },
+    verifyFirebaseToken,
   upload.single("resumeFile"), //this is the thing!!!
+    (req, res, next) => {
+    console.log("📄 Multer parsed file:", req.file);
+    console.log("📦 Multer parsed body:", req.body);
+    next();
+  },
   createApplication
 );
 

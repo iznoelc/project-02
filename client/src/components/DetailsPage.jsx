@@ -95,6 +95,13 @@ export default function DetailsPage({ job }) {
               value={resumeLink}
               onChange={(e) => setResumeLink(e.target.value)}
             />
+            
+            <input
+              type="file"
+              accept=".pdf,.doc,.docx"
+              className="input input-bordered w-full"
+              onChange={(e) => setResumeFile(e.target.files[0])}
+            />
 
             <input
               type="text"
@@ -102,12 +109,6 @@ export default function DetailsPage({ job }) {
               className="input input-bordered w-full mt-3"
               value={cover_letter}
               onChange={(e) => setCoverLetter(e.target.value)}
-            />
-            <input
-              type="file"
-              accept=".pdf,.doc,.docx"
-              className="input input-bordered w-full"
-              onChange={(e) => setResumeFile(e.target.files[0])}
             />
 
             <div className="modal-action">

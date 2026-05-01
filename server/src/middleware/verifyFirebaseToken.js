@@ -49,4 +49,3 @@ const verifyFireBaseToken = async (req, res, next) => {
 };
 
 module.exports = { verifyFirebaseToken: verifyFireBaseToken };
-
