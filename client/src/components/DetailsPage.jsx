@@ -96,12 +96,15 @@ export default function DetailsPage({ job }) {
               onChange={(e) => setResumeLink(e.target.value)}
             />
             
+            {/*
+            Note: This upload works on the local level but is missing the proper API implimentation that would allow it to work on a deployment level.
             <input
               type="file"
               accept=".pdf,.doc,.docx"
               className="input input-bordered w-full"
               onChange={(e) => setResumeFile(e.target.files[0])}
-            />
+            /> 
+            */ }
 
             <input
               type="text"
